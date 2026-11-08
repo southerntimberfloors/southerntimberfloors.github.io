@@ -29,7 +29,7 @@ The logo (`src/components/Logo.astro`), favicon and all photography come from th
 
 ## Before going live
 
-1. **Enquiry form:** set `business.formEndpoint` in `src/data/site.ts` to a form backend (Formspree, Basin, Netlify Forms, or your own API). Until then the form opens the visitor's email app with the enquiry pre-filled.
+1. **Enquiry form:** add a Web3Forms access key (`formAccessKey`) or a Formspree URL (`formEndpoint`) in `src/data/site.ts`. Until then the form opens the visitor's email app, and the build prints a warning.
 2. **Box coverage:** `boxCoverage()` in `products.ts` uses typical pack sizes. Update it with real figures.
 3. **Copy check:** product descriptions are generated from species and tone. Review them, and the services, FAQ and sustainability text, for accuracy.
 
@@ -60,13 +60,19 @@ The site is a drop-in replacement on the same domain:
 
 Check before deploying: `npm run build`. All 112 old URLs should exist in `dist/` as `<path>.html`.
 
-## Deploying (Cloudflare Pages, free)
+## Deploying
 
-1. Push this repo to GitHub, then in Cloudflare: **Workers & Pages → Create → Pages → Connect to Git**.
-2. Build command `npm run build`, output directory `dist`.
-3. Check the `*.pages.dev` preview URL.
-4. **Before switching DNS:** copy every existing DNS record, especially **MX/TXT records for email**. Lower TTLs a day ahead.
-5. Add the custom domain `www.southerntimberfloors.com` in Pages, and redirect the bare domain to `www`. The canonical URLs use `www`.
-6. After going live, submit `https://www.southerntimberfloors.com/sitemap.xml` in Google Search Console, then watch the Pages and 404 reports for 2–4 weeks.
+**Step-by-step go-live instructions: see [LAUNCH.md](LAUNCH.md).**
+
+- **GitHub Pages (set up):** `.github/workflows/deploy.yml` builds and publishes on every push to `main`. Every deploy runs `npm run check:seo` first and fails if any URL, title or H1 from the previous site has gone missing.
+- **Cloudflare Pages (alternative):** build command `npm run build`, output `dist`. On Cloudflare, `public/_redirects` and `public/_headers` give real 301s and cache headers; GitHub Pages ignores them, and `/contact` falls back to an instant forward page.
+
+Useful commands:
+
+```bash
+npm run check:seo                                   # after a build: all 112 legacy URLs present and matching
+npm run verify:live                                 # check the live site (URLs, canonicals, 404, https, www)
+npm run verify:live -- https://<org>.github.io      # check a preview deployment
+```
 
 Old photo URLs on the agency's image server (`southern-timber-floors-assets.spicyweb.net.au`) will stop working once their hosting ends. Google Images will pick up the new copies over time.

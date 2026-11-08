@@ -3,6 +3,11 @@ import { business, paths } from '../data/site';
 interface Props { compact?: boolean; product?: string }
 const { compact = false, product } = Astro.props;
 const endpoint = business.formEndpoint || (business.formAccessKey ? 'https://api.web3forms.com/submit' : '');
+const g = globalThis as typeof globalThis & { __stfFormWarned?: boolean };
+if (!endpoint && !g.__stfFormWarned) {
+  g.__stfFormWarned = true;
+  console.warn('\n⚠  Enquiry form not connected: set formAccessKey (Web3Forms) or formEndpoint in src/data/site.ts.\n   Until then the form falls back to opening the visitor\'s email app.\n');
+}
 const requestTypes = ['Free samples', 'Spec sheets', 'Showroom consultation', 'Site visit & measure', 'Quote', 'Presentation (trade)'];
 ---
 <form class={`enq ${compact ? 'enq--compact' : ''}`} data-enquiry data-endpoint={endpoint} data-email={business.email} data-thanks={paths.thanks} novalidate>
@@ -100,6 +105,7 @@ const requestTypes = ['Free samples', 'Spec sheets', 'Showroom consultation', 'S
   <div class="enq__trap" aria-hidden="true">
     <label for="f-website">Leave this empty</label>
     <input id="f-website" name="website" tabindex="-1" autocomplete="off" />
+    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" />
   </div>
 
   <div class="enq__submit">
@@ -200,8 +206,9 @@ const requestTypes = ['Free samples', 'Spec sheets', 'Showroom consultation', 'S
         return;
       }
       const data = new FormData(form);
-      if (data.get('website')) return; // bot
+      if (data.get('website') || data.get('botcheck')) return; // bot
       data.delete('website');
+      data.delete('botcheck');
       const requests = data.getAll('request').join(', ');
       const endpoint = form.dataset.endpoint;
       const btn = form.querySelector<HTMLButtonElement>('button[type=submit]')!;

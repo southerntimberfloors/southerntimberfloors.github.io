@@ -7,7 +7,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "check:seo": "node scripts/check-seo.mjs",
+    "verify:live": "node scripts/verify-live.mjs"
   },
   "dependencies": {
     "astro": "^7.4.5"
@@ -15,5 +17,8 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
     "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=22.23.4"
   }
 }
