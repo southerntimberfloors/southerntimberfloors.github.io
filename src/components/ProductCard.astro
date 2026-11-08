@@ -1,0 +1,71 @@
+---
+import Photo from './Photo.astro';
+import { categories, tones } from '../data/site';
+import { productPath, type Product } from '../data/products';
+interface Props { product: Product; showCategory?: boolean; headingLevel?: 'h2' | 'h3' }
+const { product: p, showCategory = true, headingLevel: H = 'h3' } = Astro.props;
+const cat = categories[p.category];
+const widthSpec = p.specs.find(([k]) => k === 'Width' || k === 'Dimensions' || k === 'Width × length' || k === 'Pile style')?.[1];
+---
+<article
+  class="pcard"
+  data-product
+  data-name={p.name.toLowerCase()}
+  data-category={p.category}
+  data-tone={p.tone}
+  data-herringbone={p.herringbone ? '1' : '0'}
+  data-species={(p.species ?? '').toLowerCase()}
+>
+  <a href={productPath(p)} class="pcard__media" tabindex="-1" aria-hidden="true">
+    {p.images[0] && <Photo img={p.images[0]} alt="" sizes="(min-width: 1200px) 300px, (min-width: 640px) 45vw, 100vw" />}
+    {p.category !== 'carpet' && p.images[1] && <Photo img={p.images[1]} alt="" class="pcard__alt" sizes="(min-width: 1200px) 300px, (min-width: 640px) 45vw, 100vw" />}
+  </a>
+  <div class="pcard__body">
+    {showCategory && <span class="pcard__cat">{cat.name}</span>}
+    <H class="pcard__name"><a href={productPath(p)}>{p.name}</a></H>
+    <p class="pcard__meta">
+      <span class="dot" style={`background:${p.color}`}></span>
+      {tones[p.tone].label}{p.species && p.category !== 'hybrid' ? ` · ${p.species}` : ''}
+    </p>
+    {widthSpec && <p class="pcard__spec">{widthSpec}</p>}
+  </div>
+  <button
+    type="button"
+    class="pcard__sample"
+    data-sample-toggle
+    data-slug={p.slug}
+    data-name={p.name}
+    data-category={cat.name}
+    data-color={p.color}
+    aria-pressed="false"
+    aria-label={`Add ${p.name} to samples`}
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+    <span class="sr-only" data-label>Add to samples</span>
+  </button>
+</article>
+<style>
+  .pcard { position: relative; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: box-shadow .2s, transform .2s; }
+  .pcard:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+  .pcard[hidden] { display: none; }
+  .pcard__media { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--sand); }
+  .pcard__media :global(img) { transition: transform .6s ease, opacity .4s ease; }
+  .pcard:hover .pcard__media :global(img) { transform: scale(1.04); }
+  .pcard__media :global(.pcard__alt) { position: absolute; inset: 0; opacity: 0; }
+  .pcard:hover .pcard__media :global(.pcard__alt) { opacity: 1; }
+  .pcard__body { padding: 16px 18px 18px; }
+  .pcard__cat { font: 600 0.7rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--timber); }
+  .pcard__name { font-size: 1.3rem; margin: 4px 0 6px; }
+  .pcard__name a { text-decoration: none; }
+  .pcard__name a::after { content: ''; position: absolute; inset: 0; }
+  .pcard__meta { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--ink-2); margin: 0; }
+  .pcard__spec { font-size: 0.8rem; color: var(--muted); margin: 6px 0 0; }
+  .pcard__sample {
+    position: absolute; z-index: 2; top: 12px; right: 12px; width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer;
+    background: rgb(250 250 250 / 0.92); color: var(--ink); display: grid; place-items: center; box-shadow: 0 2px 10px rgb(0 0 0 / 0.15); transition: .2s;
+  }
+  .pcard__sample svg { width: 18px; height: 18px; transition: transform .2s; }
+  .pcard__sample:hover { background: #fff; transform: scale(1.06); }
+  .pcard__sample[aria-pressed='true'] { background: var(--brand); color: var(--brand-ink); }
+  .pcard__sample[aria-pressed='true'] svg { transform: rotate(45deg); }
+</style>

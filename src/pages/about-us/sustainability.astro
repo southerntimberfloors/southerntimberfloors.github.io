@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import { siteImages } from '../../data/images';
+import CtaBand from '../../components/CtaBand.astro';
+---
+<Base title="Sustainability" description="We believe in the importance of responsible timber sourcing and protecting our forests for future generations." crumbs={[{ label: 'About', href: '/about-us' }, { label: 'Sustainability' }]}>
+  <section class="page-hero">
+    <div class="wrap split">
+      <div>
+        <h1>Sustainability</h1>
+        <h2 class="h3">The Forefront Issue of the Design Industry</h2>
+        <p class="lead">We believe in the importance of responsible timber sourcing and protecting our forests for future generations.</p>
+        <p>We work with carefully selected mills that place environmental sustainability at the forefront of their operations. Our timber is sourced from forests that meet strict, internationally recognised certification standards, ensuring responsible forest management and supporting the long-term sustainability of the timber industry.</p>
+      </div>
+      <div class="media" style="aspect-ratio:5/4"><Photo img={siteImages.sustainability} alt="Natural timber floor in a light-filled home" eager /></div>
+    </div>
+  </section>
+  <section class="section section--paper">
+    <div class="wrap grid grid-3">
+      <div class="pillar reveal"><h2 class="h3">Built to last</h2><p>The most sustainable floor is one you don't need to replace. Solid timber can be sanded and polished in the future, giving it a new lease on life.</p></div>
+      <div class="pillar reveal"><h2 class="h3">Engineered efficiency</h2><p>Engineered boards use a genuine timber surface over a multi-layer plywood core, making efficient use of premium hardwood.</p></div>
+      <div class="pillar reveal"><h2 class="h3">Australian species</h2><p>Our solid range is led by Australian hardwoods such as Spotted Gum, Blackbutt and Tasmanian Oak.</p></div>
+    </div>
+  </section>
+  <CtaBand />
+</Base>
+<style>
+  .h3 { font-size: 1.4rem; }
+  .pillar { border-left: 3px solid var(--gum); padding-left: 20px; }
+  .pillar p { color: var(--ink-2); margin: 0; }
+</style>

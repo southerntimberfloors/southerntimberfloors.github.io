@@ -1,0 +1,2237 @@
+[
+ {
+  "slug": "american-oak-rustic",
+  "name": "American Oak Rustic",
+  "category": "solid",
+  "species": "American Oak",
+  "color": "#ab8261",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "American Oak"
+   ],
+   [
+    "Width",
+    "85mm / 110mm / 130mm / 155mm / 205mm / 230mm"
+   ],
+   [
+    "Thickness",
+    "14mm / 19mm"
+   ],
+   [
+    "Length",
+    "Varied"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Parquetry"
+   ],
+   [
+    "Grade",
+    "Rustic"
+   ]
+  ],
+  "originalDescription": "American Oak has proven itself to be very popular in Australian homes with it's sought after prominent circular grain patterns. Generally, colours range from golden browns, honeys to pale browns. It is grown predominantly on the East Coast of the United States and creates a stunning feature floor in any home. American Oak is avalable in Premium and Rustic grades"
+ },
+ {
+  "slug": "american-oak",
+  "name": "American Oak",
+  "category": "solid",
+  "species": "American Oak",
+  "color": "#aa784e",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "American Oak"
+   ],
+   [
+    "Width",
+    "85mm / 110mm / 130mm / 155mm / 180mm / 205mm / 230mm"
+   ],
+   [
+    "Thickness",
+    "14mm / 19mm"
+   ],
+   [
+    "Length",
+    "Varied"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Parquetry"
+   ],
+   [
+    "Grade",
+    "Prime / Rustic"
+   ]
+  ],
+  "originalDescription": "American Oak has proven itself to be very popular in Australian homes with its sought after prominent circular grain patterns. Generally colours range from soft straw, light browns and honey shades. It is grown prodominantly on the East coast of the United States and creates a stunning feature floor in any home. American oak is available in Premium and Rustic grades."
+ },
+ {
+  "slug": "antique",
+  "name": "Heritage",
+  "category": "hybrid",
+  "species": null,
+  "color": "#45362f",
+  "tone": "dark",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "arthurs-st-engineered-timber",
+  "name": "Arthurs Seat",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#a1876c",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 600mm × 1200mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "avola-natural",
+  "name": "Oceanic",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#a47f52",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "back-beach",
+  "name": "Back Beach",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#9e7c51",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "barnside",
+  "name": "Cottage",
+  "category": "hybrid",
+  "species": null,
+  "color": "#9b8d79",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. made with a unique Stone polymer composite that delivers Interioir water resistant qualities combined with an acoustic 6 star foam layer back with excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "beach-16",
+  "name": "Beach 16",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#77694f",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Natural Character"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for commercial and residential spaces."
+ },
+ {
+  "slug": "beach-house",
+  "name": "Beach House",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#c0b7a7",
+  "tone": "light",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ]
+  ]
+ },
+ {
+  "slug": "beachwood",
+  "name": "Beachwood",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#a98d67",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190 × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
+ },
+ {
+  "slug": "birdrock",
+  "name": "Birdrock",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#b09e8c",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "blackbutt-engineered-parquetry-herringbone",
+  "name": "Blackbutt",
+  "category": "parquetry",
+  "species": "Blackbutt",
+  "color": "#8f6544",
+  "tone": "rich",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "Blackbutt"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm"
+   ]
+  ],
+  "originalDescription": "Engineered timber parquetry in a Herringbone pattern comines the best from old and new. Australian Species backed with up to seven layers of cross laminated ply to create stable large board option. Perfectly suitable for modern living with no sanding required. Suitable for Commerical and Residential Spaces."
+ },
+ {
+  "slug": "blairgowrie-carpet",
+  "name": "Blairgowrie",
+  "category": "carpet",
+  "species": null,
+  "color": "#a38972",
+  "tone": "natural",
+  "pattern": "loop",
+  "herringbone": false,
+  "specs": [
+   [
+    "Pile style",
+    "Patterned Loop Pile"
+   ],
+   [
+    "Fibre",
+    "100% New Zealand Wool"
+   ],
+   [
+    "Grade",
+    "Residential Heavy Duty"
+   ]
+  ],
+  "originalDescription": "Stylish, natural and sophisticated best describe this 100% New Zealand Wool Carpet. Crafted with a defined chunky textured loop pile, Blairgowrie will bring a feel of Costal Elegance into your home.\n\n\n\nAvailable in:\n\nBack Beach, Boulder, Fogarty, Moonah, Offshore, Rockpool, Shipwreck"
+ },
+ {
+  "slug": "briars",
+  "name": "Briars",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#6c5034",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "brightmore",
+  "name": "Brightmore",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#c59e71",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Select AB"
+   ]
+  ]
+ },
+ {
+  "slug": "cinderhill",
+  "name": "Cinderhill",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#b89a72",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Select AB"
+   ]
+  ]
+ },
+ {
+  "slug": "crossley-twist-carpet",
+  "name": "Crossley Twist",
+  "category": "carpet",
+  "species": null,
+  "color": "#b3aa9f",
+  "tone": "grey",
+  "pattern": "twist",
+  "herringbone": false,
+  "specs": [
+   [
+    "Pile style",
+    "Twist Pile"
+   ],
+   [
+    "Fibre",
+    "Solution Dyed Nylon"
+   ],
+   [
+    "Grade",
+    "Residential Extra Heavy Duty"
+   ]
+  ],
+  "originalDescription": "Crossley Twist is a luxurious plush carpet that has been a favourite in Australian homes for over a decade.Designed to stand the test of time with its on-trend colours, it remains the perfect option for Residential and commercial Installation.\n\n\n\nAvailable in:\n\nAntique, Birdi, Casper, Cedar plank, Evening haze, Grey, Mole Grey, Nordica, Shadow, Surf mist, Vellum, White Duck, Winding path, Zinia"
+ },
+ {
+  "slug": "deep-brown",
+  "name": "Deep Brown",
+  "category": "hybrid",
+  "species": null,
+  "color": "#382d26",
+  "tone": "dark",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made witha unique stone composite that delivers Interior water resistant qualities. Combined with an acoustic 6 star foam back with excellent sound dampening qualities creating a perfect floor for modern Interiors."
+ },
+ {
+  "slug": "doeskin",
+  "name": "Doeskin",
+  "category": "hybrid",
+  "species": null,
+  "color": "#b6b1ab",
+  "tone": "grey",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "engineered-australian-species---blackbutt",
+  "name": "Blackbutt",
+  "category": "engineered",
+  "species": "Blackbutt",
+  "color": "#886040",
+  "tone": "rich",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Blackbutt"
+   ],
+   [
+    "Dimensions",
+    "180mm × 14.5mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-australian-species---firestreak",
+  "name": "Firestreak",
+  "category": "engineered",
+  "species": "Australian hardwood",
+  "color": "#7d5538",
+  "tone": "rich",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Australian hardwood"
+   ],
+   [
+    "Dimensions",
+    "180mm × 14.5/3mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-australian-species---rustic-blackbutt",
+  "name": "Rustic Blackbutt",
+  "category": "engineered",
+  "species": "Blackbutt",
+  "color": "#754e30",
+  "tone": "rich",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Blackbutt"
+   ],
+   [
+    "Dimensions",
+    "135mm × 14/2mm / 180mm × 14/3mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-australian-species---spotted-gum",
+  "name": "Spotted Gum",
+  "category": "engineered",
+  "species": "Spotted Gum",
+  "color": "#5c3a29",
+  "tone": "dark",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Spotted Gum"
+   ],
+   [
+    "Dimensions",
+    "180mm × 14/5mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-australian-species---tasmanian-oak",
+  "name": "Tasmanian Oak",
+  "category": "engineered",
+  "species": "Tasmanian Oak",
+  "color": "#896141",
+  "tone": "rich",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Tasmanian Oak"
+   ],
+   [
+    "Dimensions",
+    "180mm × 14.5/3mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-australian-species---victorian-ash",
+  "name": "Victorian Ash",
+  "category": "engineered",
+  "species": "Victorian Ash",
+  "color": "#a3785a",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Victorian Ash"
+   ],
+   [
+    "Dimensions",
+    "180mm × 14.5/3mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-chevron-colour---dark-brown",
+  "name": "Shoreline",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#49372a",
+  "tone": "dark",
+  "pattern": "chevron",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry Chevron combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone---beach-stone",
+  "name": "Beach House",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#a88c73",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600 × 120 × 15/4mm"
+   ],
+   [
+    "Matching planks",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry Herringbone flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone---half-moon-bay",
+  "name": "Half Moon Bay",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#423224",
+  "tone": "dark",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600 × 120 × 15/4mm"
+   ],
+   [
+    "Matching planks",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry Herringbone combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone---jetty",
+  "name": "Jetty",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#86653f",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600 × 120 × 15/4mm"
+   ],
+   [
+    "Matching planks",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Herringbone combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone---main-st",
+  "name": "Main St",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#a4835b",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600 × 120 × 15/4mm"
+   ],
+   [
+    "Matching planks",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry Herringbone combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone---martha",
+  "name": "Martha",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#a1835b",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600 × 120 × 15/4mm"
+   ],
+   [
+    "Matching planks",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry Herringbone combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone---moondah",
+  "name": "Moonda",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#846b54",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600 × 120 × 15/4mm"
+   ],
+   [
+    "Matching planks",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone-colour---castle-grey",
+  "name": "Cove",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#5c4f4a",
+  "tone": "grey",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone-colour---cognac",
+  "name": "Cognac",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#714f2e",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone-colour---gunnamatta",
+  "name": "Gunnamatta",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#ab998a",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone-colour---pier-st",
+  "name": "Pier St",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#a28a76",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone-colour---red-hill",
+  "name": "Red Hill",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#805b3d",
+  "tone": "rich",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm"
+   ],
+   [
+    "Matching planks",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone-colour--arthurs-st",
+  "name": "Arthurs Seat",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#a08264",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm"
+   ],
+   [
+    "Matching planks",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "engineered-european-oak-parquetry-herringbone-colour--st-andrew",
+  "name": "St Andrews",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#a38872",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "flint-grey",
+  "name": "Flint Grey",
+  "category": "hybrid",
+  "species": null,
+  "color": "#857f7e",
+  "tone": "grey",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "fort",
+  "name": "Fort",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#997b5a",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "grey-iron-bark",
+  "name": "Grey Iron Bark",
+  "category": "solid",
+  "species": "Grey Ironbark",
+  "color": "#693127",
+  "tone": "dark",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Grey Ironbark"
+   ],
+   [
+    "Width",
+    "85mm / 130mm / 180mm"
+   ]
+  ],
+  "originalDescription": "Grey Ironbark offers a large variety of colour from dark chocolate to nutty honey with heart wood in a dark reddish brown. Grey Iron Bark is a truly stunning timber floor, and is recognised as one of the hardest timber flooring worldwide, which makes it perfect for high traffic commercial and domestic situations. Grey Ironbark is a large size tree that grows along the coast of New South Wales and Southern Queensland."
+ },
+ {
+  "slug": "grey-stone",
+  "name": "Grey Stone",
+  "category": "hybrid",
+  "species": null,
+  "color": "#616064",
+  "tone": "grey",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "gunnamatta",
+  "name": "Gunnamatta",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#c3b49e",
+  "tone": "light",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Natural Character"
+   ]
+  ]
+ },
+ {
+  "slug": "gympie-messmate",
+  "name": "Gympie Messmate",
+  "category": "solid",
+  "species": "Gympie Messmate",
+  "color": "#a98560",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Gympie Messmate"
+   ],
+   [
+    "Thickness",
+    "14mm / 19mm"
+   ],
+   [
+    "Width",
+    "85mm / 108mm / 133mm"
+   ],
+   [
+    "Length",
+    "Varied"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Standard or better"
+   ]
+  ]
+ },
+ {
+  "slug": "hemisphere-carpet",
+  "name": "Hemisphere",
+  "category": "carpet",
+  "species": null,
+  "color": "#ae9982",
+  "tone": "natural",
+  "pattern": "twist",
+  "herringbone": false,
+  "specs": [
+   [
+    "Pile style",
+    "Twist Pile"
+   ],
+   [
+    "Fibre",
+    "Solution Dyed Polyester"
+   ],
+   [
+    "Grade",
+    "Residential Heavy Duty"
+   ]
+  ],
+  "originalDescription": "Hemisphere is a dense Polyester Twist Pile Carpet with beautiful softness underfoot. Hemisphere has the look and the comfort and has been designed for those looking for a better-quality carpet with a budget in mind.\n\n\n\nAvailable in:\n\nElk, Espresso, Jetstream, Maverick, Pitch, Seal, Sienna, Squirrel"
+ },
+ {
+  "slug": "jarrah",
+  "name": "Jarrah",
+  "category": "hybrid",
+  "species": null,
+  "color": "#3e2a26",
+  "tone": "dark",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 180mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone polymer composite that delivers Interior water resistant qualities combined with acoustic 6 star foam layer backing with excellent sound dampening qualities, creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "jetty",
+  "name": "Jetty",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#90714c",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "lightfall",
+  "name": "Lightfall",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#dec9ab",
+  "tone": "light",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 850mm × 150mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Select AB"
+   ]
+  ]
+ },
+ {
+  "slug": "linen",
+  "name": "Ashen",
+  "category": "hybrid",
+  "species": null,
+  "color": "#a39273",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "magnolia",
+  "name": "Magnolia",
+  "category": "hybrid",
+  "species": null,
+  "color": "#aba9a8",
+  "tone": "grey",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "main-st",
+  "name": "Main St",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#ab8d68",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 150mm × 900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "maize",
+  "name": "Sunfield",
+  "category": "hybrid",
+  "species": null,
+  "color": "#8a704b",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Also available",
+    "Herringbone / Chevron"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone polymer composite that delivers Interioir water resistant qualities combined with an acouistic 6 star foam layer backing with excellent sound dampening qualities creating a perfect flooring for modern Interiors"
+ },
+ {
+  "slug": "martha",
+  "name": "Martha",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#ad916b",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "mistgrove",
+  "name": "Mistgrove",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#c2a785",
+  "tone": "light",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 850mm × 150mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Select AB"
+   ]
+  ]
+ },
+ {
+  "slug": "moondah",
+  "name": "Moonda",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#896f5c",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "natural-blackbutt",
+  "name": "Natural Blackbutt",
+  "category": "hybrid",
+  "species": null,
+  "color": "#917558",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 180mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "natural-spotted-gum",
+  "name": "Natural Spotted Gum",
+  "category": "hybrid",
+  "species": null,
+  "color": "#705332",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 180mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "nsw-blackbutt",
+  "name": "NSW Blackbutt",
+  "category": "solid",
+  "species": "NSW Blackbutt",
+  "color": "#b07551",
+  "tone": "rich",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "NSW Blackbutt"
+   ],
+   [
+    "Width",
+    "85mm / 130mm / 180mm"
+   ]
+  ],
+  "originalDescription": "Native to South Eastern Australia, the Blackbutt tree is renowned for its straight and uniform trunk. Blackbutt has a distinctive pale brown to blonde color with the timber is prized for its natural durability and resistance to termites, making it a popular choice for flooring in both residential and commercial settings. Blackbutt flooring is celebrated for its versatile aesthetic appeal, seamlessly complementing various interior styles."
+ },
+ {
+  "slug": "oak-natural",
+  "name": "Pure Oak",
+  "category": "hybrid",
+  "species": null,
+  "color": "#846746",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "pewter",
+  "name": "Quantum",
+  "category": "hybrid",
+  "species": null,
+  "color": "#a0a3a9",
+  "tone": "grey",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "pier-st-engineered-timber",
+  "name": "Pier St",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#a58b75",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ],
+   [
+    "Also available",
+    "Herringbone"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "pillars",
+  "name": "Pillars",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#62492e",
+  "tone": "dark",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Natural Character"
+   ]
+  ]
+ },
+ {
+  "slug": "porcelain",
+  "name": "Alabaster",
+  "category": "hybrid",
+  "species": null,
+  "color": "#aaa497",
+  "tone": "grey",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Also available",
+    "Herringbone / Chevron"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hyrid flooring combines durability and beauty. Made with a uniques stone polymer composite that delivers Interior water resistant qualities. Combined with an acoustic 6 star foam layer back with excellent sound dampening qualities, creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "red-hill-engineered-timber",
+  "name": "Red Hill",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#745438",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ],
+   [
+    "Also available",
+    "Herringbone"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "red-stone",
+  "name": "Ember",
+  "category": "hybrid",
+  "species": null,
+  "color": "#584e46",
+  "tone": "grey",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "sauvignon",
+  "name": "Horizon",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#8f6c49",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "seabright",
+  "name": "Seabright",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#d1bca4",
+  "tone": "light",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Select AB"
+   ]
+  ]
+ },
+ {
+  "slug": "silvery-grey",
+  "name": "Silver Grey",
+  "category": "hybrid",
+  "species": null,
+  "color": "#7f807f",
+  "tone": "grey",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520 × 228 × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid Flooring combines durability and Beauty. Made with a unique Stone Polymer Composite that delivers Interior water resistant qualities combined with an acoustic 6-star rated foam layer backed with excellent sound dampening qualities creating a perfect flooring for Modern Interiors."
+ },
+ {
+  "slug": "smoked-spotted-gum",
+  "name": "Smoked Spotted Gum",
+  "category": "hybrid",
+  "species": null,
+  "color": "#4c3b2d",
+  "tone": "dark",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 180mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid Flooring combines durability and beauty. Made with a Unique Stone Polyer composite that delivers Interior water resistant qualities combined with an Acoustic 6 star foam layer backing with excellent sound dampening qualitites, creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "southern-blackbutt",
+  "name": "Southern Blackbutt",
+  "category": "solid",
+  "species": "Southern Blackbutt",
+  "color": "#a06e45",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Southern Blackbutt"
+   ],
+   [
+    "Width",
+    "85mm / 130mm"
+   ]
+  ],
+  "originalDescription": "Southern Blackbutt is a sustainable and local product and is milled Victoria. Colours generally range from mellow straw through to light chocolate browns. Southern Blackbutt is a hard wearing and versatile timber floor that gives a sophisticated natural beauty to any interior. Its distinct gum veins and patterns give Southern Blackbutt appeal for many Architects and Designers."
+ },
+ {
+  "slug": "spotted-gum-3",
+  "name": "Spotted Gum",
+  "category": "solid",
+  "species": "Spotted Gum",
+  "color": "#743c23",
+  "tone": "dark",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Spotted Gum"
+   ],
+   [
+    "Width",
+    "85mm / 130mm / 180mm"
+   ],
+   [
+    "Thickness",
+    "14mm / 19mm"
+   ],
+   [
+    "Length",
+    "Varied"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Parquetry"
+   ],
+   [
+    "Grade",
+    "Select or better"
+   ]
+  ],
+  "originalDescription": "Spotted Gum is a highly desirable timber, particularly for its striking back sawn grain structure, attractive and vibrant colour palette from creams, to light and rich browns. Spotted gum is a large native hardwood that is grown along the NSW coastal strip into Queensland. The word “spotted” refers to large spot like features that form on the tree as it sheds its bark in strips. Its attraction is added to with Spotted Gums hardness rating of 11 which makes it very appealing as a hard wearing timber."
+ },
+ {
+  "slug": "spotted-gum-engineered-parquetry-herringbone",
+  "name": "Spotted Gum",
+  "category": "parquetry",
+  "species": "Spotted Gum",
+  "color": "#5f3b28",
+  "tone": "dark",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "Spotted Gum"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber Parquetry in a Herringbone pattern combines the best from old and new. Solid Auistralian Species backed with up to seven layers of cross laminated ply to create a stable large board option. Perfectly suitable for modern living with no sanding required. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "st-andrew-engineered-timber",
+  "name": "St Andrews",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#97775a",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "starfield",
+  "name": "Starfield",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#c8ad8a",
+  "tone": "light",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 850mm × 150mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Select AB"
+   ]
+  ]
+ },
+ {
+  "slug": "tasmanian-driftwwod",
+  "name": "Tasmanian Driftwood",
+  "category": "solid",
+  "species": "Mixed Tasmanian species",
+  "color": "#b47f35",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Mixed Tasmanian species"
+   ],
+   [
+    "Width",
+    "85mm / 130mm"
+   ]
+  ],
+  "originalDescription": "We are excited to introduce this beautiful new solid timber flooring from Tasmania. Tasmanian Driftwood is created from a mix of species and exclusive to Southern Timber Floors. It’s easy to fall in love with its subtle colourways and lightly featured nature. Perfect for contemporary and country style homes alike. You will be surprised by how reasonably priced Tasmanian Driftwood is to have installed in your home."
+ },
+ {
+  "slug": "tasmanian-oak",
+  "name": "Tasmanian Oak",
+  "category": "solid",
+  "species": "Tasmanian Oak",
+  "color": "#ab7c51",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Tasmanian Oak"
+   ],
+   [
+    "Width",
+    "65mm / 85mm / 108mm / 130mm / 185mm"
+   ],
+   [
+    "Thickness",
+    "12mm / 19mm"
+   ],
+   [
+    "Length",
+    "Varied"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Parquetry"
+   ],
+   [
+    "Grade",
+    "Prime"
+   ]
+  ],
+  "originalDescription": "Tasmanian Oak has stood the test of time with its classic style. Valued for its light warm colour, straight grain and versatility within the modern home. Our new popular extra wide 185 wide boards look stunning with a water based coating."
+ },
+ {
+  "slug": "the-eagle",
+  "name": "The Eagle",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#a49181",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "190mm × 15/4mm"
+   ],
+   [
+    "Also available",
+    "Herringbone"
+   ]
+  ],
+  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "tideway",
+  "name": "Tideway",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#8a7154",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "14mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Natural Character"
+   ]
+  ]
+ },
+ {
+  "slug": "vintage",
+  "name": "Vantage",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#5c4937",
+  "tone": "dark",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Dimensions",
+    "600mm × 120mm × 15/4mm"
+   ],
+   [
+    "Matching planks",
+    "190mm × 15/4mm"
+   ]
+  ],
+  "originalDescription": "Engineered European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+ },
+ {
+  "slug": "washed-coral",
+  "name": "Firestorm",
+  "category": "hybrid",
+  "species": null,
+  "color": "#685747",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "wheat",
+  "name": "Wheat",
+  "category": "hybrid",
+  "species": null,
+  "color": "#908166",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Construction",
+    "Rigid-core hybrid plank"
+   ],
+   [
+    "Dimensions",
+    "1520mm × 228mm × 7.5mm"
+   ]
+  ],
+  "originalDescription": "Southern Hybrid flooring combines durability and beauty. Made with a unique stone composite that delivers Interior water-resistant qualities. Combined with an acoustic foam layer back with an excellent sound dampening qualities creating a perfect flooring for modern Interiors."
+ },
+ {
+  "slug": "white-haven",
+  "name": "White Haven",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#9d845e",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Natural Character"
+   ]
+  ]
+ },
+ {
+  "slug": "windslow-carpet",
+  "name": "Windslow",
+  "category": "carpet",
+  "species": null,
+  "color": "#64513c",
+  "tone": "natural",
+  "pattern": "loop",
+  "herringbone": false,
+  "specs": [
+   [
+    "Pile style",
+    "Loop Pile"
+   ],
+   [
+    "Fibre",
+    "100% New Zealand Wool"
+   ],
+   [
+    "Grade",
+    "Residential Heavy Duty"
+   ]
+  ],
+  "originalDescription": "This 100% New Zealand Natural Wool Carpet as made in Australia and is made with a level loop pile and is very affordable. This classic style carpet is warm and comfortable and is designed in a Boutique range of colours.\n\n\n\nAvailable in:\n\nBack Beach, Boulder, Moonah, Offshore, Rockpool, Shipwreck"
+ },
+ {
+  "slug": "wormy-chestnut-qld",
+  "name": "Wormy Chestnut QLD",
+  "category": "solid",
+  "species": "Queensland Wormy Chestnut",
+  "color": "#bb9067",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Queensland Wormy Chestnut"
+   ],
+   [
+    "Thickness",
+    "14mm / 18mm"
+   ],
+   [
+    "Width",
+    "85mm / 108mm / 133mm"
+   ],
+   [
+    "Length",
+    "Varied"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Standard or better"
+   ]
+  ]
+ }
+]

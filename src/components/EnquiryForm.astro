@@ -1,0 +1,248 @@
+---
+import { business, paths } from '../data/site';
+interface Props { compact?: boolean; product?: string }
+const { compact = false, product } = Astro.props;
+const endpoint = business.formEndpoint || (business.formAccessKey ? 'https://api.web3forms.com/submit' : '');
+const requestTypes = ['Free samples', 'Spec sheets', 'Showroom consultation', 'Site visit & measure', 'Quote', 'Presentation (trade)'];
+---
+<form class={`enq ${compact ? 'enq--compact' : ''}`} data-enquiry data-endpoint={endpoint} data-email={business.email} data-thanks={paths.thanks} novalidate>
+  <fieldset class="enq__types">
+    <legend>I'd like to request <span class="muted">(choose any)</span></legend>
+    <div class="enq__chips">
+      {requestTypes.map((t) => (
+        <label class="enq__chip">
+          <input type="checkbox" name="request" value={t} />
+          <span>{t}</span>
+        </label>
+      ))}
+    </div>
+  </fieldset>
+
+  <div class="enq__samples" data-enq-samples hidden>
+    <p class="enq__samples-title">Samples on your list</p>
+    <ul data-enq-sample-list></ul>
+    <input type="hidden" name="samples" />
+  </div>
+
+  <div class="enq__grid">
+    <div class="field">
+      <label for="f-first">First name *</label>
+      <input id="f-first" name="firstName" autocomplete="given-name" required />
+      <span class="err" aria-live="polite"></span>
+    </div>
+    <div class="field">
+      <label for="f-last">Last name</label>
+      <input id="f-last" name="lastName" autocomplete="family-name" />
+      <span class="err"></span>
+    </div>
+    <div class="field">
+      <label for="f-email">Email *</label>
+      <input id="f-email" name="email" type="email" autocomplete="email" required />
+      <span class="err" aria-live="polite"></span>
+    </div>
+    <div class="field">
+      <label for="f-phone">Phone</label>
+      <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9 +()\-]{8,}" />
+      <span class="err" aria-live="polite"></span>
+    </div>
+    {
+      !compact && (
+        <>
+          <div class="field">
+            <label for="f-type">I am a…</label>
+            <select id="f-type" name="customerType">
+              <option>Homeowner</option>
+              <option>Owner builder</option>
+              <option>Builder / developer</option>
+              <option>Designer / decorator</option>
+              <option>Architect</option>
+              <option>Other</option>
+            </select>
+            <span class="err"></span>
+          </div>
+          <div class="field">
+            <label for="f-suburb">Project suburb</label>
+            <input id="f-suburb" name="suburb" autocomplete="address-level2" />
+            <span class="err"></span>
+          </div>
+          <div class="field">
+            <label for="f-area">Approx. area (m²)</label>
+            <input id="f-area" name="area" type="number" min="1" inputmode="decimal" />
+            <span class="err"></span>
+          </div>
+          <div class="field">
+            <label for="f-when">Timeframe</label>
+            <select id="f-when" name="timeframe">
+              <option value="">Select…</option>
+              <option>As soon as possible</option>
+              <option>1–3 months</option>
+              <option>3–6 months</option>
+              <option>6+ months / just researching</option>
+            </select>
+            <span class="err"></span>
+          </div>
+        </>
+      )
+    }
+    <div class="field enq__full">
+      <label for="f-msg">Message</label>
+      <textarea id="f-msg" name="message" rows="5">{product ? `I'm interested in ${product}.` : ''}</textarea>
+      <span class="err"></span>
+    </div>
+  </div>
+
+  {business.formAccessKey && <input type="hidden" name="access_key" value={business.formAccessKey} />}
+  <input type="hidden" name="subject" value="New website enquiry – Southern Timber Floors" />
+  <input type="hidden" name="_subject" value="New website enquiry – Southern Timber Floors" />
+  <input type="hidden" name="from_name" value="southerntimberfloors.com" />
+
+  <!-- Spam trap: hidden from people and assistive tech -->
+  <div class="enq__trap" aria-hidden="true">
+    <label for="f-website">Leave this empty</label>
+    <input id="f-website" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div class="enq__submit">
+    <button class="btn btn--timber" type="submit">Send enquiry</button>
+    <p class="muted">We usually reply within one business day. Prefer to talk? Call <a href={business.phoneHref}>{business.phone}</a>.</p>
+  </div>
+  <div class="enq__status" role="status" aria-live="polite" data-enq-status></div>
+</form>
+
+<style>
+  .enq { display: grid; gap: 22px; }
+  .enq__types { border: 0; padding: 0; margin: 0; }
+  .enq__types legend { font-weight: 600; font-size: 0.9rem; margin-bottom: 10px; }
+  .enq__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .enq__chip { position: relative; cursor: pointer; }
+  .enq__chip input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+  .enq__chip span { display: inline-flex; padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font-size: 0.88rem; transition: .15s; }
+  .enq__chip input:checked + span { background: var(--ink); color: var(--brand); border-color: var(--ink); }
+  .enq__chip input:focus-visible + span { outline: 2px solid var(--timber); outline-offset: 2px; }
+  .enq__grid { display: grid; gap: 14px 16px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .enq__grid { grid-template-columns: 1fr 1fr; } .enq__full { grid-column: 1 / -1; } }
+  .enq__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .enq__submit { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+  .enq__submit p { margin: 0; font-size: 0.85rem; flex: 1; min-width: 200px; }
+  .enq__status:empty { display: none; }
+  .enq__status { padding: 14px 16px; border-radius: var(--radius-sm); background: #e7f1e9; color: #1f4d2c; }
+  .enq__status.is-error { background: #f7e4e1; color: #6b2117; }
+  .enq__samples { background: var(--sand); border-radius: var(--radius-sm); padding: 14px 16px; }
+  .enq__samples-title { font-weight: 600; font-size: 0.9rem; margin: 0 0 8px; }
+  .enq__samples ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .enq__samples li { display: inline-flex; align-items: center; gap: 8px; background: #fff; border-radius: 999px; padding: 5px 12px 5px 6px; font-size: 0.85rem; }
+</style>
+
+<script>
+  import { getSamples } from '../scripts/site';
+
+  document.querySelectorAll<HTMLFormElement>('[data-enquiry]').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('[data-enq-status]')!;
+    const params = new URLSearchParams(location.search);
+
+    // Pre-select request types from ?request=samples|consultation|site-visit|quote
+    const map: Record<string, string> = { samples: 'Free samples', consultation: 'Showroom consultation', 'site-visit': 'Site visit & measure', quote: 'Quote', specs: 'Spec sheets' };
+    params.getAll('request').forEach((r) => {
+      const box = form.querySelector<HTMLInputElement>(`input[name="request"][value="${map[r] ?? r}"]`);
+      if (box) box.checked = true;
+    });
+    const productParam = params.get('product');
+    const msg = form.querySelector<HTMLTextAreaElement>('textarea[name="message"]')!;
+    if (productParam && !msg.value) msg.value = `I'm interested in ${productParam}.`;
+
+    const sampleBox = form.querySelector<HTMLElement>('[data-enq-samples]')!;
+    const sampleList = form.querySelector<HTMLElement>('[data-enq-sample-list]')!;
+    const sampleInput = form.querySelector<HTMLInputElement>('input[name="samples"]')!;
+    const renderSamples = () => {
+      const s = getSamples();
+      sampleBox.hidden = s.length === 0;
+      sampleList.replaceChildren(
+        ...s.map((x) => {
+          const li = document.createElement('li');
+          const dot = document.createElement('span');
+          dot.className = 'dot';
+          dot.style.background = x.color;
+          li.append(dot, `${x.name} (${x.category})`);
+          return li;
+        }),
+      );
+      sampleInput.value = s.map((x) => `${x.name} (${x.category})`).join(', ');
+      if (s.length) {
+        const box = form.querySelector<HTMLInputElement>('input[value="Free samples"]');
+        if (box) box.checked = true;
+      }
+    };
+    renderSamples();
+    window.addEventListener('samples:change', renderSamples);
+
+    const validate = (el: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement) => {
+      const err = el.parentElement?.querySelector<HTMLElement>('.err');
+      let message = '';
+      if (el.validity.valueMissing) message = 'This field is required.';
+      else if (el.validity.typeMismatch && el.type === 'email') message = 'Please enter a valid email address.';
+      else if (el.validity.patternMismatch) message = 'Please enter a valid phone number.';
+      el.setAttribute('aria-invalid', String(!!message));
+      if (err) err.textContent = message;
+      return !message;
+    };
+    form.querySelectorAll<HTMLInputElement>('input[required], input[type=email], input[type=tel]').forEach((el) =>
+      el.addEventListener('blur', () => validate(el)),
+    );
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = '';
+      status.classList.remove('is-error');
+      const fields = [...form.querySelectorAll<HTMLInputElement>('input[required], input[type=email], input[type=tel]')];
+      const ok = fields.map(validate).every(Boolean);
+      if (!ok) {
+        fields.find((f) => f.getAttribute('aria-invalid') === 'true')?.focus();
+        return;
+      }
+      const data = new FormData(form);
+      if (data.get('website')) return; // bot
+      data.delete('website');
+      const requests = data.getAll('request').join(', ');
+      const endpoint = form.dataset.endpoint;
+      const btn = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+
+      if (endpoint) {
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        try {
+          const res = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+          if (!res.ok) throw new Error(String(res.status));
+          form.reset();
+          // Same thank-you URL as the previous site, so analytics conversion goals keep working.
+          location.href = form.dataset.thanks!;
+          return;
+        } catch {
+          status.classList.add('is-error');
+          status.textContent = `Sorry, something went wrong sending your enquiry. Please try again, or email ${form.dataset.email}.`;
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'Send enquiry';
+        }
+        return;
+      }
+
+      // No backend configured: compose an email in the visitor's mail client.
+      const lines = [
+        `Name: ${data.get('firstName')} ${data.get('lastName') ?? ''}`.trim(),
+        `Email: ${data.get('email')}`,
+        data.get('phone') ? `Phone: ${data.get('phone')}` : null,
+        data.get('customerType') ? `I am a: ${data.get('customerType')}` : null,
+        data.get('suburb') ? `Suburb: ${data.get('suburb')}` : null,
+        data.get('area') ? `Area: ${data.get('area')} m²` : null,
+        data.get('timeframe') ? `Timeframe: ${data.get('timeframe')}` : null,
+        requests ? `Requesting: ${requests}` : null,
+        data.get('samples') ? `Samples: ${data.get('samples')}` : null,
+        '',
+        String(data.get('message') ?? ''),
+      ].filter((l): l is string => typeof l === 'string');
+      const subject = `Website enquiry${requests ? ` – ${requests}` : ''}`;
+      location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+      status.textContent = 'Your email app should open with your enquiry ready to send. If it does not, email us at ' + form.dataset.email + '.';
+    });
+  });
+</script>

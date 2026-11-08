@@ -1,0 +1,32 @@
+---
+import Photo from './Photo.astro';
+import { projectImages } from '../data/images';
+import type { Project } from '../data/site';
+interface Props { project: Project; large?: boolean }
+const { project: pr, large = false } = Astro.props;
+const cover = projectImages[pr.slug]?.[0];
+---
+<article class={`prj ${large ? 'prj--large' : ''}`}>
+  <a href={`/projects/${pr.slug}`} class="prj__media" aria-hidden="true" tabindex="-1">
+    {cover && <Photo img={cover} alt="" sizes={large ? '(min-width: 900px) 50vw, 100vw' : '(min-width: 1200px) 300px, (min-width: 640px) 45vw, 100vw'} />}
+  </a>
+  <div class="prj__body">
+    <span class="prj__loc">{pr.location}</span>
+    {large ? <h2 class="prj__h"><a href={`/projects/${pr.slug}`}>{pr.name}</a></h2> : <h3><a href={`/projects/${pr.slug}`}>{pr.name}</a></h3>}
+    <p>{large && pr.story[0] ? pr.story[0] : pr.summary}</p>
+  </div>
+</article>
+<style>
+  .prj { position: relative; }
+  .prj__media { position: relative; display: block; aspect-ratio: 4 / 4.4; border-radius: var(--radius); overflow: hidden; background: var(--sand); }
+  .prj--large .prj__media { aspect-ratio: 16 / 11; }
+  .prj__media :global(img) { transition: transform .8s ease; }
+  .prj:hover .prj__media :global(img) { transform: scale(1.05); }
+  .prj__body { padding-top: 14px; }
+  .prj__loc { font: 600 0.72rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--timber); }
+  .prj h3, .prj__h { margin: 4px 0 6px; }
+  .prj__h { font-size: clamp(1.4rem, 2vw, 1.8rem); }
+  .prj h3 a, .prj__h a { text-decoration: none; }
+  .prj h3 a::after, .prj__h a::after { content: ''; position: absolute; inset: 0; }
+  .prj p { color: var(--ink-2); font-size: 0.95rem; margin: 0; }
+</style>

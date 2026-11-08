@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import Photo from '../../components/Photo.astro';
+import { services, ctaLine } from '../../data/site';
+import { siteImages } from '../../data/images';
+// Same order as the previous Our Services page, with Consultations first.
+const order = ['consultations', 'home-renovations', 'owner-builders', 'builders-developers', 'installation', 'sanding-polishing', 'decorators'];
+const list = order.map((slug) => services.find((s) => s.slug === slug)!);
+const label: Record<string, string> = { 'home-renovations': 'Home Renovators' };
+---
+<Base title="Our Services" description="Consultations, installation, sanding and polishing, and flooring for home renovators, owner builders, builders, developers and decorators." crumbs={[{ label: 'Our Services' }]}>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Supply · Installation · Finishing</span>
+      <h1>Our Services</h1>
+      <p class="lead">From your first consultation through to installation, sanding and polishing, one experienced team looks after your floors.</p>
+    </div>
+  </section>
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap svc-list">
+      {list.map((s, i) => (
+        <article class={`svc reveal ${i % 2 ? 'svc--flip' : ''}`}>
+          <div class="svc__img media"><Photo img={siteImages[`svc-${s.slug}`]} alt={s.name} sizes="(min-width: 900px) 45vw, 100vw" /></div>
+          <div class="svc__body">
+            <h2 class="svc__h">{label[s.slug] ?? s.name}</h2>
+            {s.summary.map((p) => <p>{p}</p>)}
+            <a class="link-arrow" href={`/our-services/${s.slug}`}>{s.name} →</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+  <CtaBand title="Enquire now" body={ctaLine} />
+</Base>
+<style>
+  .svc-list { display: grid; gap: clamp(40px, 6vw, 80px); }
+  .svc { display: grid; gap: 24px; align-items: center; }
+  @media (min-width: 900px) { .svc { grid-template-columns: 1fr 1fr; gap: 56px; } .svc--flip .svc__img { order: 2; } }
+  .svc__img { aspect-ratio: 4 / 3; }
+  .svc__h { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+  .svc__body p { color: var(--ink-2); }
+</style>

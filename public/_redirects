@@ -1,0 +1,7 @@
+# Real 301 redirects (Cloudflare Pages / Netlify format).
+# Every page URL from the previous site is served at the same address, so only aliases live here.
+/contact                         /about-us/frequently-asked-questions/contact   301
+/contact/                        /about-us/frequently-asked-questions/contact   301
+# Previous site's sub-sitemaps (may be submitted in Google Search Console)
+/sitemap_sections_2_0.xml        /sitemap.xml   301
+/sitemap_sections_4_0.xml        /sitemap.xml   301

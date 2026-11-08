@@ -1,0 +1,31 @@
+---
+import type { Faq } from '../data/site';
+interface Props { items: Faq[] }
+const { items } = Astro.props;
+---
+<div class="faq">
+  {
+    items.map((f) => (
+      <details class="faq__item" data-topic={f.topic}>
+        <summary>
+          <span>{f.q}</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+        </summary>
+        <div class="faq__a">{f.a.map((p) => <p>{p}</p>)}</div>
+      </details>
+    ))
+  }
+</div>
+<style>
+  .faq { border-top: 1px solid var(--line); }
+  .faq__item { border-bottom: 1px solid var(--line); }
+  .faq__item[hidden] { display: none; }
+  summary { list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 20px 0; cursor: pointer; font: 400 1.15rem/1.35 var(--serif); }
+  summary::-webkit-details-marker { display: none; }
+  summary svg { width: 22px; height: 22px; flex: none; transition: transform .25s; color: var(--timber); }
+  details[open] summary svg { transform: rotate(45deg); }
+  summary:hover span { color: var(--timber); }
+  .faq__a { padding: 0 40px 22px 0; color: var(--ink-2); max-width: 75ch; }
+  .faq__a p { margin: 0 0 0.8em; }
+  .faq__a p:last-child { margin-bottom: 0; }
+</style>

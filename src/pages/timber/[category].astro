@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import Catalogue from '../../components/Catalogue.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { categories, categoryOrder, paths, projects, type CategoryKey } from '../../data/site';
+import { productsIn } from '../../data/products';
+
+export function getStaticPaths() {
+  return categoryOrder.map((k) => ({ params: { category: categories[k].path.split('/').pop() }, props: { k } }));
+}
+const { k } = Astro.props as { k: CategoryKey };
+const c = categories[k];
+const list = productsIn(k);
+const others = categoryOrder.filter((x) => x !== k);
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: c.name,
+  description: c.short,
+  hasPart: list.map((p) => ({ '@type': 'Product', name: p.name, url: `/flooring/${p.slug}` })),
+};
+---
+<Base
+  title={`${c.name} Flooring`}
+  description={`${c.short} Browse ${list.length} ${c.name.toLowerCase()} options at Southern Timber Floors, Mornington.`}
+  crumbs={[{ label: 'Products', href: '/timber' }, { label: c.name }]}
+  schema={schema}
+>
+  <section class="page-hero">
+    <div class="wrap split split--wide-left" style="align-items:start">
+      <div>
+        <h1 class="cat-h1">Flooring solutions for every project</h1>
+        <h2 class="cat-h2">{c.name}</h2>
+        {c.intro.map((p, i) => <p class={i === 0 ? 'lead' : ''}>{p}</p>)}
+        <p class="muted">{list.length} options in our range.</p>
+      </div>
+      <div class="card card--pad facts">
+        <h2 class="facts__h">Best for</h2>
+        <ul class="checklist">{c.bestFor.map((b) => <li>{b}</li>)}</ul>
+        <h2 class="facts__h">Good to know</h2>
+        <ul class="facts__list">{c.considerations.map((b) => <li>{b}</li>)}</ul>
+        <a class="btn btn--timber btn--sm" href="/about-us/frequently-asked-questions/contact?request=samples">Request samples</a>
+      </div>
+    </div>
+  </section>
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap"><Catalogue initial={k} /></div>
+  </section>
+  <section class="section section--sand">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">Projects</span><h2>See how our flooring solutions have transformed homes</h2></div>
+        <a class="link-arrow" href="/projects">All projects →</a>
+      </div>
+      <div class="grid grid-4">{projects.map((p) => <ProjectCard project={p} />)}</div>
+    </div>
+  </section>
+  <section class="section--tight">
+    <div class="wrap">
+      <h2 class="h3">Explore other flooring types</h2>
+      <div class="others">{others.map((o) => <a class="btn btn--ghost" href={categories[o].path}>{categories[o].name}</a>)}</div>
+    </div>
+  </section>
+  <CtaBand />
+</Base>
+<style>
+  .cat-h1 { max-width: none !important; font: 600 0.8rem var(--sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--timber); margin-bottom: 14px; }
+  .cat-h2 { font-size: clamp(2.3rem, 5.2vw, 4.4rem); }
+  .facts__h { font: 600 0.75rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--timber); margin-bottom: 12px; }
+  .facts__list { padding-left: 18px; margin: 0 0 20px; color: var(--ink-2); display: grid; gap: 6px; }
+  .others { display: flex; flex-wrap: wrap; gap: 10px; }
+  .h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
+</style>

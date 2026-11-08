@@ -1,0 +1,117 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import { projectImages } from '../../data/images';
+import ProductCard from '../../components/ProductCard.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { projects, type Project } from '../../data/site';
+import { bySlug } from '../../data/products';
+
+export function getStaticPaths() {
+  return projects.map((p) => ({ params: { slug: p.slug }, props: { pr: p } }));
+}
+const { pr } = Astro.props as { pr: Project };
+const prods = pr.productSlugs.map((s) => bySlug.get(s)).filter((x) => !!x);
+// The first image is the card cover; the gallery shows the rest (as on the original site).
+const all = projectImages[pr.slug] ?? [];
+const photos = all.length > 1 ? all.slice(1) : all;
+const others = projects.filter((x) => x.slug !== pr.slug).slice(0, 3);
+---
+<Base title={pr.name} description={pr.story[0] ?? pr.summary} crumbs={[{ label: 'Projects', href: '/projects' }, { label: pr.name }]}>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1><span class="eyebrow h1-eyebrow">Project</span> {pr.name}</h1>
+      <p class="lead">{pr.location}</p>
+    </div>
+  </section>
+  <section class="wrap">
+    <div class={`gal gal--${Math.min(photos.length, 5)}`}>
+      {photos.map((img, i) => (
+        <a class="gal__item media" href={img.src} data-lightbox={i} aria-label={`Open photo ${i + 1} of ${photos.length}`}>
+          <Photo img={img} alt={`${pr.name}, ${pr.location}: photo ${i + 1}`} eager={i === 0} sizes={i === 0 ? '(min-width: 800px) 66vw, 100vw' : '(min-width: 800px) 33vw, 100vw'} />
+        </a>
+      ))}
+    </div>
+  </section>
+  <dialog class="lb" data-lb aria-label="Photo viewer">
+    <img alt="" data-lb-img />
+    <button type="button" class="lb__btn lb__close" data-lb-close aria-label="Close">×</button>
+    <button type="button" class="lb__btn lb__prev" data-lb-prev aria-label="Previous photo">‹</button>
+    <button type="button" class="lb__btn lb__next" data-lb-next aria-label="Next photo">›</button>
+  </dialog>
+  {(pr.story.length > 0 || pr.details.length > 0) && (
+    <section class="section">
+      <div class="wrap split" style="align-items:start">
+        <div>
+          <h2>{pr.location}</h2>
+          {pr.story.map((p) => <p class="lead">{p}</p>)}
+        </div>
+        <dl class="card card--pad pdl">
+          {pr.details.map(([k, v]) => (<><dt>{k}</dt><dd>{v}</dd></>))}
+          <dt>Location</dt><dd>{pr.location}</dd>
+        </dl>
+      </div>
+    </section>
+  )}
+  {prods.length > 0 && (
+    <section class="section section--paper">
+      <div class="wrap">
+        <div class="section-head"><div><span class="eyebrow">Featured Timber</span><h2>{prods[0].name}</h2>{pr.featured && <p class="lead">{pr.featured}</p>}</div><a class="link-arrow" href={`/flooring/${prods[0].slug}`}>View Product →</a></div>
+        <div class="grid grid-4">{prods.map((p) => <ProductCard product={p} />)}</div>
+      </div>
+    </section>
+  )}
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><div><h2>More projects</h2></div><a class="link-arrow" href="/projects">All projects →</a></div>
+      <div class="grid grid-3">{others.map((p) => <ProjectCard project={p} />)}</div>
+    </div>
+  </section>
+  <CtaBand />
+</Base>
+<style>
+  .gal { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+  .gal__item { display: block; aspect-ratio: 4 / 3; cursor: zoom-in; }
+  .gal__item:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+  @media (min-width: 800px) {
+    .gal { grid-template-columns: 2fr 1fr; grid-auto-rows: minmax(0, 1fr); height: min(60vw, 640px); }
+    .gal__item, .gal__item:first-child { aspect-ratio: auto; }
+    .gal__item:first-child { grid-column: 1; grid-row: 1 / span 2; }
+    .gal--1 { grid-template-columns: 1fr; } .gal--1 .gal__item { grid-row: 1 / -1; }
+    .gal--4, .gal--5 { grid-template-columns: 2fr 1fr 1fr; }
+    .gal--4 .gal__item:last-child { grid-column: 2 / -1; }
+  }
+  .lb { padding: 0; border: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; }
+  .lb::backdrop { background: rgb(20 20 20 / 0.92); }
+  .lb[open] { display: grid; place-items: center; }
+  .lb img { max-width: 92vw; max-height: 86vh; object-fit: contain; border-radius: 8px; }
+  .lb__btn { position: fixed; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgb(255 255 255 / 0.14); color: #fff; font-size: 1.8rem; line-height: 1; cursor: pointer; }
+  .lb__btn:hover { background: rgb(255 255 255 / 0.28); }
+  .lb__close { top: 16px; right: 16px; }
+  .lb__prev { left: 16px; top: 50%; translate: 0 -50%; }
+  .lb__next { right: 16px; top: 50%; translate: 0 -50%; }
+  .h1-eyebrow { display: block; margin-bottom: 10px; }
+  .pdl { display: grid; grid-template-columns: auto 1fr; gap: 0 20px; margin: 0; }
+  .pdl dt, .pdl dd { padding: 12px 0; border-bottom: 1px solid var(--line); margin: 0; }
+  .pdl dt { color: var(--muted); font-size: 0.9rem; }
+</style>
+<script>
+  const lb = document.querySelector<HTMLDialogElement>('[data-lb]');
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('[data-lightbox]')];
+  if (lb && links.length) {
+    const img = lb.querySelector<HTMLImageElement>('[data-lb-img]')!;
+    let cur = 0;
+    const show = (i: number) => {
+      cur = (i + links.length) % links.length;
+      img.src = links[cur].href;
+      img.alt = links[cur].querySelector('img')?.alt ?? '';
+    };
+    links.forEach((a, i) => a.addEventListener('click', (e) => { e.preventDefault(); show(i); lb.showModal(); }));
+    lb.querySelector('[data-lb-close]')!.addEventListener('click', () => lb.close());
+    lb.querySelector('[data-lb-prev]')!.addEventListener('click', () => show(cur - 1));
+    lb.querySelector('[data-lb-next]')!.addEventListener('click', () => show(cur + 1));
+    lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
+    lb.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+  }
+</script>

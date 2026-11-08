@@ -1,0 +1,40 @@
+---
+import { categories } from '../data/site';
+const rows: [string, string, string, string, string][] = [
+  ['Real timber surface', 'Yes, solid throughout', 'Yes, 2–5mm wear layer', 'Yes, solid or engineered', 'No, printed timber visual'],
+  ['Water resistance', 'Low', 'Moderate', 'Moderate', 'Water-resistant core'],
+  ['Scratch resistance', 'Depends on species & coating', 'Good (factory finish)', 'Good (factory finish)', 'Excellent'],
+  ['Can be re-sanded', 'Many times', '1–2 times (wear-layer dependent)', '1–2 times', 'No'],
+  ['Install time', 'Longest (sand & coat on site)', 'Fast, pre-finished', 'Moderate, pattern laying', 'Fastest, click-lock'],
+  ['Underfloor heating', 'Generally not recommended', 'Many products suitable', 'Many products suitable', 'Many products suitable'],
+  ['Best for', 'Forever homes, renovations', 'Slabs, apartments, wide boards', 'Statement spaces', 'Kitchens, families, rentals'],
+];
+---
+<div class="cmp" role="region" aria-label="Flooring comparison" tabindex="0">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col"><span class="sr-only">Feature</span></th>
+        <th scope="col"><a href={categories.solid.path}>Solid</a></th>
+        <th scope="col"><a href={categories.engineered.path}>Engineered</a></th>
+        <th scope="col"><a href={categories.parquetry.path}>Parquetry</a></th>
+        <th scope="col"><a href={categories.hybrid.path}>Hybrid</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map(([h, ...cells]) => (<tr><th scope="row">{h}</th>{cells.map((c) => <td>{c}</td>)}</tr>))}
+    </tbody>
+  </table>
+</div>
+<p class="muted cmp__note">General guide only. Performance varies by product, so check the individual spec sheet or ask us.</p>
+<style>
+  .cmp { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
+  table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tbody tr:last-child > * { border-bottom: 0; }
+  thead th { font: 400 1.15rem var(--serif); background: var(--sand); }
+  thead a { text-decoration: none; }
+  thead a:hover { color: var(--timber); }
+  tbody th { font-weight: 600; color: var(--ink-2); width: 20%; }
+  .cmp__note { font-size: 0.8rem; margin-top: 10px; }
+</style>

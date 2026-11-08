@@ -1,0 +1,136 @@
+---
+import { business, nav } from '../data/site';
+import Logo from './Logo.astro';
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href: string) => (href === '/' ? path === '/' : path === href || path.startsWith(href + '/'));
+---
+<header class="header" data-header>
+  <div class="wrap header__in">
+    <a href="/" class="header__logo" aria-label={`${business.name}, home`}><Logo /></a>
+
+    <nav class="nav" aria-label="Main" data-nav>
+      <ul class="nav__list">
+        {
+          nav.map((item, i) => (
+            <li class={`nav__item ${item.children ? 'has-children' : ''}`}>
+              {item.children ? (
+                <>
+                  <button
+                    type="button"
+                    class={`nav__link ${isActive(item.href) ? 'is-active' : ''}`}
+                    aria-expanded="false"
+                    aria-controls={`menu-${i}`}
+                    data-menu-toggle
+                  >
+                    {item.label}
+                    <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" /></svg>
+                  </button>
+                  <div class="menu" id={`menu-${i}`} data-menu>
+                    <ul>
+                      {item.children.map((c) => (
+                        <li>
+                          <a href={c.href} aria-current={path === c.href ? 'page' : undefined}>
+                            <strong>{c.label}</strong>
+                            <span>{c.desc}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                    <a class="menu__all" href={item.href}>View all {item.label.toLowerCase()} →</a>
+                  </div>
+                </>
+              ) : (
+                <a href={item.href} class={`nav__link ${isActive(item.href) ? 'is-active' : ''}`} aria-current={isActive(item.href) ? 'page' : undefined}>
+                  {item.label}
+                </a>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+      <div class="nav__mobile-extra">
+        <a class="btn btn--timber" href="/about-us/frequently-asked-questions/contact">Enquire now</a>
+        <a class="btn btn--ghost" href={business.phoneHref}>Call {business.phone}</a>
+      </div>
+    </nav>
+
+    <div class="header__actions">
+      <a class="header__search" href="/timber#search" aria-label="Search products">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>
+      </a>
+      <button type="button" class="header__samples" data-open-samples aria-label="Open sample list">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a4 4 0 018 0v2" /></svg>
+        <span class="header__samples-label">Samples</span>
+        <span class="count-badge" data-sample-count hidden>0</span>
+      </button>
+      <a class="btn btn--timber btn--sm header__cta" href="/about-us/frequently-asked-questions/contact">Enquire now</a>
+      <button type="button" class="burger" aria-label="Open menu" aria-expanded="false" data-burger>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<style>
+
+  .header { position: sticky; top: 0; z-index: 50; background: rgb(241 238 233 / 0.92); backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color .2s, box-shadow .2s; }
+  .header.is-scrolled { border-color: var(--line); box-shadow: 0 6px 20px -16px rgb(0 0 0 / 0.4); }
+  .header__in { display: flex; align-items: center; gap: 24px; height: var(--header-h); }
+  .header__logo { display: inline-flex; color: var(--ink); text-decoration: none; flex: none; }
+  .header__actions { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+  .header__search, .header__samples {
+    display: inline-flex; align-items: center; gap: 6px; height: 40px; min-width: 40px; justify-content: center; padding: 0 10px;
+    border-radius: 999px; border: 1px solid transparent; background: none; color: var(--ink); cursor: pointer; font: 500 0.88rem var(--sans); text-decoration: none; position: relative;
+  }
+  .header__search:hover, .header__samples:hover { border-color: var(--line); background: var(--paper); }
+  .header__search svg, .header__samples svg { width: 20px; height: 20px; }
+  .header__samples-label { display: none; }
+  .header__cta { display: none; }
+  @media (min-width: 1100px) { .header__samples-label { display: inline; } .header__cta { display: inline-flex; } }
+
+  .nav__list { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; }
+  .nav__link {
+    display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border-radius: 999px; border: 0; background: none;
+    font: 500 0.95rem var(--sans); color: var(--ink); text-decoration: none; cursor: pointer;
+  }
+  .nav__link svg { width: 12px; height: 12px; transition: transform .2s; }
+  .nav__link:hover, .nav__link[aria-expanded='true'] { background: var(--sand); }
+  .nav__link.is-active { box-shadow: inset 0 -2px 0 var(--ink); border-radius: 0; }
+  .nav__link[aria-expanded='true'] svg { transform: rotate(180deg); }
+  .nav__item { position: relative; }
+  .menu {
+    position: absolute; top: calc(100% + 10px); left: -8px; width: 380px; padding: 10px; background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--radius); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: .18s ease;
+  }
+  .menu.is-open { opacity: 1; visibility: visible; transform: none; }
+  .menu ul { list-style: none; margin: 0; padding: 0; display: grid; }
+  .menu li a { display: grid; gap: 2px; padding: 10px 12px; border-radius: 10px; text-decoration: none; }
+  .menu li a:hover, .menu li a[aria-current='page'] { background: var(--sand); }
+  .menu strong { font-weight: 600; font-size: 0.95rem; }
+  .menu span { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+  .menu__all { display: block; padding: 10px 12px 6px; font-size: 0.85rem; font-weight: 600; color: var(--timber); text-decoration: none; border-top: 1px solid var(--line); margin-top: 6px; }
+  .nav__mobile-extra { display: none; }
+
+  .burger { display: none; width: 44px; height: 44px; border: 0; background: none; cursor: pointer; padding: 12px 10px; flex-direction: column; justify-content: space-between; }
+  .burger span { display: block; height: 2px; background: var(--ink); border-radius: 2px; transition: .25s; }
+  .burger[aria-expanded='true'] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .burger[aria-expanded='true'] span:nth-child(2) { opacity: 0; }
+  .burger[aria-expanded='true'] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  @media (max-width: 899px) {
+    .burger { display: flex; }
+    .nav {
+      position: fixed; inset: var(--header-h) 0 0 0; background: var(--cream); padding: 16px var(--gutter) 120px; overflow-y: auto;
+      opacity: 0; transform: translateY(-8px); visibility: hidden; pointer-events: none; transition: opacity .25s ease, transform .25s ease, visibility .25s;
+    }
+    .nav.is-open { opacity: 1; transform: none; visibility: visible; pointer-events: auto; }
+    .nav__list { flex-direction: column; gap: 0; }
+    .nav__item { border-bottom: 1px solid var(--line); }
+    .nav__link { width: 100%; justify-content: space-between; height: 58px; padding: 0 4px; font-size: 1.1rem; border-radius: 0; }
+    .nav__link:hover, .nav__link[aria-expanded='true'] { background: none; }
+    .nav__link.is-active { box-shadow: none; color: var(--timber); }
+    .menu { position: static; width: auto; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: 0; padding: 0 0 12px; background: none; display: none; }
+    .menu.is-open { display: block; }
+    .nav__mobile-extra { display: grid; gap: 10px; margin-top: 24px; }
+  }
+</style>

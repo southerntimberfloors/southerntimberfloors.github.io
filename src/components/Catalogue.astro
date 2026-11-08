@@ -1,0 +1,138 @@
+---
+import ProductCard from './ProductCard.astro';
+import { categories, categoryOrder, tones, type CategoryKey } from '../data/site';
+import { products } from '../data/products';
+interface Props { initial?: CategoryKey }
+const { initial } = Astro.props;
+const list = initial ? products.filter((p) => p.category === initial) : products;
+---
+<div class="cat-ui" data-catalogue data-initial={initial ?? ''}>
+  <div class="cat-ui__bar" id="search">
+    <label class="cat-ui__search">
+      <span class="sr-only">Search flooring</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>
+      <input type="search" placeholder="Search by name or species, e.g. “Spotted Gum”" data-q autocomplete="off" />
+    </label>
+    {
+      !initial && (
+        <div class="cat-ui__group" role="group" aria-label="Flooring type">
+          <button type="button" class="pill" data-cat="" aria-pressed="true">All</button>
+          {categoryOrder.map((k) => (
+            <button type="button" class="pill" data-cat={k} aria-pressed="false">{categories[k].name}</button>
+          ))}
+        </div>
+      )
+    }
+  </div>
+  <div class="cat-ui__bar cat-ui__bar--secondary">
+    <div class="cat-ui__group" role="group" aria-label="Colour tone">
+      <span class="cat-ui__label">Tone</span>
+      {
+        (Object.keys(tones) as (keyof typeof tones)[]).map((t) => (
+          <button type="button" class="pill pill--tone" data-tone={t} aria-pressed="false">
+            <span class="dot" style={`background:${tones[t].swatch}`}></span>{tones[t].label}
+          </button>
+        ))
+      }
+    </div>
+    {
+      initial !== 'carpet' && initial !== 'hybrid' && (
+        <label class="cat-ui__toggle">
+          <input type="checkbox" data-herringbone /> Available in herringbone
+        </label>
+      )
+    }
+    <span class="cat-ui__count" aria-live="polite"><strong data-count>{list.length}</strong> floors</span>
+  </div>
+
+  <div class="grid grid-4" data-grid>
+    {list.map((p) => <ProductCard product={p} showCategory={!initial} />)}
+  </div>
+  <div class="cat-ui__empty" data-empty hidden>
+    <h3>No floors match those filters</h3>
+    <p class="muted">Try removing a filter, or ask us. We can often source species and colours not listed here.</p>
+    <button type="button" class="btn btn--ghost" data-reset>Clear filters</button>
+  </div>
+</div>
+
+<style>
+  .cat-ui__bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 12px; }
+  .cat-ui__bar--secondary { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .cat-ui__search { position: relative; flex: 1 1 300px; max-width: 460px; }
+  .cat-ui__search svg { position: absolute; left: 14px; top: 50%; translate: 0 -50%; width: 18px; height: 18px; color: var(--muted); }
+  .cat-ui__search input { width: 100%; height: 48px; padding: 0 16px 0 42px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font: inherit; }
+  .cat-ui__search input:focus { outline: 2px solid var(--timber); border-color: transparent; }
+  .cat-ui__group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .cat-ui__label { font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-right: 4px; }
+  .pill { display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font: 500 0.86rem var(--sans); color: var(--ink); cursor: pointer; transition: .15s; }
+  .pill:hover { border-color: var(--ink-2); }
+  .pill[aria-pressed='true'] { background: var(--ink); color: var(--brand); border-color: var(--ink); }
+  .cat-ui__toggle { display: inline-flex; gap: 8px; align-items: center; font-size: 0.88rem; cursor: pointer; }
+  .cat-ui__toggle input { width: 18px; height: 18px; accent-color: var(--timber); }
+  .cat-ui__count { margin-left: auto; font-size: 0.88rem; color: var(--muted); }
+  .cat-ui__empty { text-align: center; padding: 60px 0; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-catalogue]').forEach((root) => {
+    const q = root.querySelector<HTMLInputElement>('[data-q]')!;
+    const catBtns = [...root.querySelectorAll<HTMLButtonElement>('[data-cat]')];
+    const toneBtns = [...root.querySelectorAll<HTMLButtonElement>('[data-tone]')];
+    const herr = root.querySelector<HTMLInputElement>('[data-herringbone]');
+    const cards = [...root.querySelectorAll<HTMLElement>('[data-product]')];
+    const count = root.querySelector('[data-count]')!;
+    const empty = root.querySelector<HTMLElement>('[data-empty]')!;
+
+    const state = { q: '', cat: '', tones: new Set<string>(), herr: false };
+
+    // Restore from URL (?q=&type=&tone=a,b&herringbone=1) so filtered views can be shared/bookmarked.
+    const params = new URLSearchParams(location.search);
+    state.q = params.get('q') ?? '';
+    state.cat = params.get('type') ?? '';
+    (params.get('tone') ?? '').split(',').filter(Boolean).forEach((t) => state.tones.add(t));
+    state.herr = params.get('herringbone') === '1';
+
+    function apply(push = true) {
+      const term = state.q.trim().toLowerCase();
+      let n = 0;
+      for (const c of cards) {
+        const show =
+          (!term || c.dataset.name!.includes(term) || c.dataset.species!.includes(term) || c.dataset.category!.includes(term)) &&
+          (!state.cat || c.dataset.category === state.cat) &&
+          (!state.tones.size || state.tones.has(c.dataset.tone!)) &&
+          (!state.herr || c.dataset.herringbone === '1');
+        c.hidden = !show;
+        if (show) n++;
+      }
+      count.textContent = String(n);
+      empty.hidden = n > 0;
+      q.value = state.q;
+      catBtns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.cat === state.cat)));
+      toneBtns.forEach((b) => b.setAttribute('aria-pressed', String(state.tones.has(b.dataset.tone!))));
+      if (herr) herr.checked = state.herr;
+      if (push) {
+        const p = new URLSearchParams();
+        if (state.q) p.set('q', state.q);
+        if (state.cat) p.set('type', state.cat);
+        if (state.tones.size) p.set('tone', [...state.tones].join(','));
+        if (state.herr) p.set('herringbone', '1');
+        history.replaceState(null, '', `${location.pathname}${p.size ? '?' + p : ''}${location.hash}`);
+      }
+    }
+
+    let t: number | undefined;
+    q.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => { state.q = q.value; apply(); }, 120); });
+    catBtns.forEach((b) => b.addEventListener('click', () => { state.cat = b.dataset.cat!; apply(); }));
+    toneBtns.forEach((b) => b.addEventListener('click', () => {
+      const v = b.dataset.tone!;
+      state.tones.has(v) ? state.tones.delete(v) : state.tones.add(v);
+      apply();
+    }));
+    herr?.addEventListener('change', () => { state.herr = herr.checked; apply(); });
+    root.querySelector('[data-reset]')?.addEventListener('click', () => {
+      state.q = ''; state.cat = ''; state.tones.clear(); state.herr = false; apply();
+    });
+    if (location.hash === '#search') q.focus({ preventScroll: true });
+    apply(false);
+  });
+</script>

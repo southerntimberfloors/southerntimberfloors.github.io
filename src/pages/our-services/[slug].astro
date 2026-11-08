@@ -1,0 +1,101 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import EnquiryForm from '../../components/EnquiryForm.astro';
+import FaqList from '../../components/FaqList.astro';
+import { business, faqs, paths, promos, services, type Service } from '../../data/site';
+import { siteImages } from '../../data/images';
+
+export function getStaticPaths() {
+  return services.map((s) => ({ params: { slug: s.slug }, props: { s } }));
+}
+const { s } = Astro.props as { s: Service };
+const others = services.filter((x) => x.slug !== s.slug);
+const topic = s.slug === 'installation' ? 'Installation' : s.slug === 'sanding-polishing' ? 'Care' : null;
+const relatedFaqs = topic ? faqs.filter((f) => f.topic === topic).slice(0, 3) : [];
+const request = s.slug === 'consultations' ? 'consultation' : s.slug === 'installation' || s.slug === 'sanding-polishing' ? 'site-visit' : 'quote';
+const photo = siteImages[`svc-${s.slug}`] ?? siteImages['showroom-1'];
+---
+<Base
+  title={s.name}
+  description={`${s.body[0].slice(0, 150)}`}
+  crumbs={[{ label: 'Our Services', href: '/our-services' }, { label: s.name }]}
+  schema={{ '@context': 'https://schema.org', '@type': 'Service', name: s.name, description: s.body.join(' '), provider: { '@type': 'LocalBusiness', name: business.name }, areaServed: 'Victoria, Australia' }}
+>
+  <section class="page-hero">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">{s.audience === 'trade' ? 'Trade services' : 'Our services'}</span>
+        <h1>{s.h1}</h1>
+        <div class="row">
+          <a class="btn btn--timber" href={`${paths.contact}?request=${request}`}>{s.slug === 'consultations' ? 'Book a free consultation' : 'Enquire Now'}</a>
+          <a class="btn btn--ghost" href={business.phoneHref}>Call {business.phone}</a>
+        </div>
+      </div>
+      <div class="media sv-media"><Photo img={photo} alt={s.name} eager /></div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap split" style="align-items:start">
+      <h2>{s.h2}</h2>
+      <div class="sv-body">
+        {s.body.map((p, i) => <p class={i === 0 ? 'lead' : ''}>{p}</p>)}
+        {s.list && (
+          <>
+            {s.list.intro && <p class="sv-list-intro">{s.list.intro}</p>}
+            <ul class="checklist">{s.list.items.map((it) => <li>{it}</li>)}</ul>
+          </>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap promos">
+      {promos.map((p) => (
+        <div class="promo reveal">
+          <h3>{p.title}</h3>
+          <p>{p.body}</p>
+          <a class="link-arrow" href={p.link.href}>{p.link.label} →</a>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {relatedFaqs.length > 0 && (
+    <section class="section--tight">
+      <div class="wrap split" style="align-items:start">
+        <div><span class="eyebrow">Common questions</span><h2>Good to know</h2><a class="link-arrow" href={paths.faq}>All FAQs →</a></div>
+        <FaqList items={relatedFaqs} />
+      </div>
+    </section>
+  )}
+
+  <section class="section section--sand">
+    <div class="wrap split" style="align-items:start">
+      <div>
+        <span class="eyebrow">Enquire now</span>
+        <h2>Let us bring your architectural vision to life</h2>
+        <p class="lead">Get in touch with our dedicated team to request samples, spec sheets and presentations.</p>
+        <h3 class="others-h">Our services</h3>
+        <ul class="others">{others.map((o) => <li><a href={`/our-services/${o.slug}`}>{o.name}</a></li>)}</ul>
+      </div>
+      <div class="card card--pad"><EnquiryForm /></div>
+    </div>
+  </section>
+</Base>
+<style>
+  .row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .sv-media { aspect-ratio: 5 / 4; }
+  .sv-body p { color: var(--ink-2); }
+  .sv-list-intro { font-weight: 600; color: var(--ink) !important; margin-top: 1.4em; }
+  .promos { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+  .promo { border-top: 2px solid var(--timber); padding-top: 18px; }
+  .promo h3 { font-size: 1.25rem; }
+  .promo p { color: var(--ink-2); font-size: 0.95rem; }
+  .others-h { font: 600 0.78rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin-top: 32px; }
+  .others { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .others a { display: inline-block; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); text-decoration: none; font-size: 0.88rem; }
+  .others a:hover { border-color: var(--ink); }
+</style>

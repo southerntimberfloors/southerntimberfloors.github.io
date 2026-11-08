@@ -1,0 +1,235 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import { siteImages } from '../data/images';
+import ProductCard from '../components/ProductCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { business, categories, categoryOrder, choosingCopy, ctaLine, paths, projects, promos } from '../data/site';
+import { bySlug, products, productsIn } from '../data/products';
+
+const featured = ['tasmanian-oak', 'white-haven', 'engineered-european-oak-parquetry-herringbone---main-st', 'spotted-gum-3', 'lightfall', 'natural-blackbutt', 'pillars', 'blairgowrie-carpet']
+  .map((s) => bySlug.get(s)!)
+  .filter(Boolean);
+// Category tile photos: a lifestyle shot from each range.
+const catPhoto = {
+  solid: siteImages['display-home-floor'],
+  engineered: bySlug.get('main-st')!.images[1] ?? bySlug.get('main-st')!.images[0],
+  parquetry: bySlug.get('engineered-european-oak-parquetry-herringbone---jetty')!.images[0],
+  hybrid: bySlug.get('natural-spotted-gum')!.images[0],
+  carpet: siteImages['carpet-promo'],
+};
+const carpets = productsIn('carpet');
+---
+<Base title="Southern Timber Floors | Mornington & Melbourne Timber Floor Specialists" description={business.description}>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <Photo img={siteImages.hero} alt="" eager sizes="100vw" />
+    </div>
+    <div class="wrap hero__in">
+      <span class="eyebrow">Australian timber solutions</span>
+      <h1>Discover the Enduring Beauty of Timber Floors</h1>
+      <p class="lead">Find the perfect variety to transform your next project. Supply, installation and finishing of solid, engineered, parquetry and hybrid flooring, plus Australian-made carpet.</p>
+      <div class="hero__actions">
+        <a class="btn btn--light" href="/timber">Explore Our Range</a>
+        <a class="btn btn--ghost-light" href="/about-us/frequently-asked-questions/contact?request=consultation">Book a free consultation</a>
+      </div>
+      <ul class="hero__facts">
+        <li><strong>{products.length}</strong><span>floors in range</span></li>
+        <li><strong>Est. {business.founded}</strong><span>Mornington Peninsula</span></li>
+        <li><strong>Free</strong><span>samples &amp; 1-hr consults</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Our Products</span>
+          <h2>Beautiful flooring solutions for modern Australian homes</h2>
+          <p class="lead">Solid, engineered, parquetry and hybrid timber, plus Australian-made carpet. Compare the options or browse by type.</p>
+        </div>
+        <a class="link-arrow" href="/timber">Browse all {products.length} floors →</a>
+      </div>
+      <div class="cats">
+        {
+          categoryOrder.map((k, i) => {
+            const c = categories[k];
+            return (
+              <a href={c.path} class={`cat reveal ${i === 0 ? 'cat--big' : ''}`}>
+                <div class="cat__media"><Photo img={catPhoto[k]} alt="" sizes={i === 0 ? '(min-width: 1000px) 40vw, 100vw' : '(min-width: 1000px) 30vw, 50vw'} /></div>
+                <div class="cat__body">
+                  <h3>{c.name}</h3>
+                  <p>{c.short}</p>
+                  <span class="cat__count">{productsIn(k).length} options →</span>
+                </div>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Statement -->
+  <section class="section--tight statement">
+    <div class="wrap">
+      <span class="eyebrow">inspired living</span>
+      <h2 class="statement__h">Unlock the possibilities of wood and create extraordinary environments that highlight the natural elegance and warmth of timber floors</h2>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Popular right now</span>
+          <h2>Customer favourites</h2>
+        </div>
+        <a class="link-arrow" href="/timber">See the full range →</a>
+      </div>
+      <div class="grid grid-4">{featured.map((p) => <ProductCard product={p} />)}</div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">How it works</span>
+          <h2>From first sample to finished floor</h2>
+        </div>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><span>01</span><h3>Explore</h3><p>Browse online, save up to six free samples, or drop into the Mornington showroom.</p></li>
+        <li class="reveal"><span>02</span><h3>Consult</h3><p>A free one-hour session to test boards against your finishes and talk budget and timing.</p></li>
+        <li class="reveal"><span>03</span><h3>Measure &amp; quote</h3><p>We visit site to check moisture and level, then give you a clear written quote.</p></li>
+        <li class="reveal"><span>04</span><h3>Install &amp; finish</h3><p>Our own crews prepare, lay and finish your floor, then leave the site clean.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section section--sand">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Projects</span>
+          <h2>Get inspired</h2>
+          <p class="lead">See how our flooring solutions have transformed homes.</p>
+        </div>
+        <a class="link-arrow" href="/projects">View Full Gallery →</a>
+      </div>
+      <div class="grid grid-4">{projects.map((p) => <ProjectCard project={p} />)}</div>
+    </div>
+  </section>
+
+  <!-- Carpet feature -->
+  <section class="section">
+    <div class="wrap split">
+      <div class="media carpet-media reveal">
+        <Photo img={siteImages['carpet-promo']} alt="Crossley Twist carpet in a living room" />
+        <div class="carpet-grid">
+          {carpets.map((c) => (
+            <a href={`/flooring/${c.slug}`} class="carpet-tile">
+              <Photo img={c.images[0]} alt="" small />
+              <span>{c.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Multiple colour options available for our Blairgowrie, Crossley Twist, Hemisphere and Windslow carpet ranges</span>
+        <h2>Carpet solutions now available at Southern Timber Floors</h2>
+        <p class="lead">Southern timber floors is pleased to offer the best of Australian made Carpets to provide our builders and clients a beautiful selection to bring warmth and softness into the home.</p>
+        <p>Our focus has been to find the best quality and durability to offer a selection of on-trend colours and styles.</p>
+        <ul class="checklist">
+          {carpets.map((c) => <li><strong>{c.name}</strong>: {c.specs.map(([, v]) => v).join(' · ')}</li>)}
+        </ul>
+        <a class="btn" href="/timber/carpet">View Carpet Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value props -->
+  <section class="section section--ink">
+    <div class="wrap">
+      <div class="values">
+        {promos.map((p) => (
+          <div class="reveal">
+            <h3>{p.title}</h3>
+            <p>{p.body}</p>
+            <a class="link-arrow" href={p.link.href}>{p.link.label} →</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Choosing a floor (original copy) -->
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Solid, Hybrid, Engineered &amp; Parquetry Timber</span>
+        <h2>{choosingCopy.heading}</h2>
+        {choosingCopy.body.map((p) => <p class="lead">{p}</p>)}
+        <a class="btn" href="/timber">View Our Range</a>
+      </div>
+      <div class="media" style="aspect-ratio:4/3"><Photo img={siteImages['showroom-frame']} alt="Southern Timber Floors showroom displays" /></div>
+    </div>
+  </section>
+
+  <CtaBand title="Enquire now" body={ctaLine} />
+</Base>
+
+<style>
+  .hero { position: relative; color: var(--cream); isolation: isolate; overflow: hidden; min-height: min(86vh, 760px); display: flex; align-items: end; }
+  .hero__bg { position: absolute; inset: 0; z-index: -1; }
+  .hero__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(25 25 25 / 0.1), rgb(25 25 25 / 0.75) 80%), linear-gradient(90deg, rgb(25 25 25 / 0.55), transparent 65%); }
+  .hero__in { padding-top: clamp(80px, 14vw, 160px); padding-bottom: clamp(40px, 7vw, 80px); }
+  .hero h1 { color: #fff; max-width: 16ch; }
+  .hero .eyebrow { color: var(--brand); }
+  .hero .lead { color: #ebe9e5; }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 40px; }
+  .hero__facts { list-style: none; padding: 24px 0 0; margin: 0; display: flex; flex-wrap: wrap; gap: 20px 48px; border-top: 1px solid rgb(255 255 255 / 0.18); max-width: 640px; }
+  .hero__facts li { display: grid; }
+  .hero__facts strong { font: 400 1.9rem/1 var(--serif); color: #fff; }
+  .hero__facts span { font-size: 0.82rem; color: #d4d2ce; margin-top: 4px; }
+
+  .cats { display: grid; gap: 16px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .cats { grid-template-columns: 1fr 1fr; } .cat--big { grid-column: 1 / -1; } }
+  @media (min-width: 1000px) { .cats { grid-template-columns: 1.3fr 1fr 1fr; grid-template-rows: auto auto; } .cat--big { grid-column: 1; grid-row: 1 / 3; } }
+  .cat { position: relative; display: flex; flex-direction: column; justify-content: end; min-height: 260px; border-radius: var(--radius); overflow: hidden; text-decoration: none; color: #fff; isolation: isolate; }
+  .cat--big { min-height: 380px; }
+  .cat__media { position: absolute; inset: 0; z-index: -1; }
+  .cat__media :global(img) { transition: transform .8s ease; }
+  .cat:hover .cat__media :global(img) { transform: scale(1.05); }
+  .cat::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, transparent 20%, rgb(25 25 25 / 0.85)); }
+  .cat__body { padding: 22px; }
+  .cat h3 { margin: 0 0 6px; color: #fff; }
+  .cat p { font-size: 0.92rem; color: #eeece8; margin: 0 0 10px; max-width: 44ch; }
+  .cat__count { font-size: 0.85rem; font-weight: 600; color: var(--brand); }
+
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+  .steps li { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .steps span { font: 400 2rem var(--serif); color: var(--timber); }
+  .steps h3 { margin: 10px 0 8px; }
+  .steps p { color: var(--ink-2); font-size: 0.95rem; margin: 0; }
+
+  .carpet-media { background: none; display: grid; gap: 12px; border-radius: 0; overflow: visible; }
+  .carpet-media > :global(img) { aspect-ratio: 4 / 3; border-radius: var(--radius); }
+  .carpet-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .carpet-tile { position: relative; aspect-ratio: 1; border-radius: var(--radius-sm); overflow: hidden; text-decoration: none; }
+  .carpet-tile span { position: absolute; left: 6px; right: 6px; bottom: 6px; background: rgb(250 250 250 / 0.94); padding: 3px 6px; border-radius: 999px; font-size: 0.72rem; font-weight: 600; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  .statement__h { font-size: clamp(1.5rem, 2.8vw, 2.3rem); max-width: 30ch; line-height: 1.25; }
+  .values { display: grid; gap: 36px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+  .values h3 { color: #fff; }
+  .values p { color: #c9c7c3; font-size: 0.95rem; }
+  .values .link-arrow { color: var(--brand); }
+</style>

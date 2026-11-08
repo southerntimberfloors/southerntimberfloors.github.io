@@ -1,0 +1,53 @@
+---
+// Slide-out list of samples the visitor has saved. State lives in localStorage (see scripts/site.ts).
+---
+<div class="drawer" data-drawer hidden>
+  <div class="drawer__scrim" data-close-samples></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <header class="drawer__head">
+      <h2 id="drawer-title">Your sample list</h2>
+      <button type="button" class="drawer__close" data-close-samples aria-label="Close sample list">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" /></svg>
+      </button>
+    </header>
+    <p class="drawer__intro muted">Choose up to 6 free samples. We will confirm details and postage, or have them ready for pickup at the showroom.</p>
+    <ul class="drawer__list" data-sample-list></ul>
+    <div class="drawer__empty" data-sample-empty>
+      <p>Your list is empty.</p>
+      <p class="muted">Tap <strong>“Add to samples”</strong> on any product to save it here.</p>
+      <a class="btn btn--ghost" href="/timber">Browse flooring</a>
+    </div>
+    <footer class="drawer__foot" data-sample-foot hidden>
+      <a class="btn btn--timber" href="/about-us/frequently-asked-questions/contact?request=samples" style="width:100%">Request these samples</a>
+      <button type="button" class="drawer__clear" data-clear-samples>Clear list</button>
+    </footer>
+  </aside>
+</div>
+<style>
+  .drawer { position: fixed; inset: 0; z-index: 80; }
+  .drawer[hidden] { display: none; }
+  .drawer__scrim { position: absolute; inset: 0; background: rgb(25 25 25 / 0.45); animation: fade .2s ease; }
+  .drawer__panel {
+    position: absolute; top: 0; right: 0; bottom: 0; width: min(420px, 100%); background: var(--paper); display: flex; flex-direction: column;
+    padding: 24px; box-shadow: -20px 0 50px -20px rgb(0 0 0 / 0.4); animation: slide .25s ease;
+  }
+  @keyframes fade { from { opacity: 0; } }
+  @keyframes slide { from { transform: translateX(100%); } }
+  .drawer__head { display: flex; justify-content: space-between; align-items: center; }
+  .drawer__head h2 { font-size: 1.6rem; margin: 0; }
+  .drawer__close { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: none; cursor: pointer; display: grid; place-items: center; }
+  .drawer__close svg { width: 18px; height: 18px; }
+  .drawer__intro { font-size: 0.9rem; margin: 12px 0 16px; }
+  .drawer__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; overflow-y: auto; flex: 1; align-content: start; }
+  .drawer__empty { text-align: center; padding: 40px 0; flex: 1; }
+  .drawer__foot { display: grid; gap: 10px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .drawer__clear { background: none; border: 0; color: var(--muted); font: inherit; font-size: 0.85rem; cursor: pointer; text-decoration: underline; }
+  :global(.sample-row) { display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; padding: 8px; border: 1px solid var(--line); border-radius: 12px; }
+  :global(.sample-row__sw) { width: 56px; height: 56px; border-radius: 8px; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.1); }
+  :global(.sample-row a) { font-weight: 600; text-decoration: none; }
+  :global(.sample-row small) { display: block; color: var(--muted); }
+  :global(.sample-row button) { border: 0; background: none; color: var(--muted); cursor: pointer; padding: 8px; font-size: 1.2rem; line-height: 1; }
+  :global(.count-badge) { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--brand); color: var(--brand-ink); font: 600 0.7rem/18px var(--sans); text-align: center; }
+  :global(.header__samples .count-badge) { position: absolute; top: 2px; right: 0; }
+  @media (min-width: 1100px) { :global(.header__samples .count-badge) { position: static; } }
+</style>

@@ -1,0 +1,270 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import { colourwayName, siteImages } from '../../data/images';
+import ProductCard from '../../components/ProductCard.astro';
+import EnquiryForm from '../../components/EnquiryForm.astro';
+import { business, categories, choosingCopy, ctaLine, paths, tones } from '../../data/site';
+import { boxCoverage, products, related, type Product } from '../../data/products';
+
+export function getStaticPaths() {
+  return products.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+const { p } = Astro.props as { p: Product };
+const cat = categories[p.category];
+const rel = related(p);
+const coverage = boxCoverage(p);
+const isCarpet = p.category === 'carpet';
+const rawLabels = p.images.map((img, i) => (isCarpet ? colourwayName(img, p.name) : i === 0 ? `${p.name} board` : `${p.name} in a room`));
+// Styled room shots share a colourway name with their swatch; mark them so the labels stay distinct.
+const labels = rawLabels.map((l, i) =>
+  isCarpet && (/styled|2480/i.test(p.images[i].name ?? '') || rawLabels.indexOf(l) !== rawLabels.lastIndexOf(l) && rawLabels.indexOf(l) === i) ? `${l} (room)` : l,
+);
+const defaultWaste = p.category === 'parquetry' || p.herringbone ? 12 : p.category === 'carpet' ? 10 : 7;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: p.name,
+  description: p.description,
+  category: cat.name,
+  brand: { '@type': 'Brand', name: business.name },
+  material: p.species ?? undefined,
+  color: tones[p.tone].label,
+  additionalProperty: p.specs.map(([name, value]) => ({ '@type': 'PropertyValue', name, value })),
+};
+---
+<Base
+  title={`${p.name} — ${cat.name}`}
+  description={p.description.slice(0, 155)}
+  ogImage={p.images[0]?.src}
+  crumbs={[{ label: 'Products', href: '/timber' }, { label: cat.name, href: cat.path }, { label: p.name }]}
+  schema={schema}
+>
+  <section class="pd section--tight">
+    <div class="wrap pd__grid">
+      <div class="pd__gallery" data-gallery>
+        <div class="pd__main">
+          {p.images.map((img, i) => (
+            <div class="pd__slide" data-slide hidden={i !== 0}>
+              <Photo img={img} alt={`${p.name}${isCarpet ? ` carpet in ${labels[i]}` : i === 0 ? ' flooring' : ' flooring installed'}`} eager={i === 0} sizes="(min-width: 960px) 55vw, 100vw" />
+            </div>
+          ))}
+          {isCarpet && <span class="pd__label" data-gallery-label>{labels[0]}</span>}
+        </div>
+        {p.images.length > 1 && (
+          <div class={`pd__thumbs ${isCarpet ? 'pd__thumbs--swatches' : ''}`} role="group" aria-label={isCarpet ? 'Colourways' : 'Photos'}>
+            {p.images.map((img, i) => (
+              <button type="button" class="pd__thumb" data-thumb={i} data-label={labels[i]} aria-pressed={i === 0 ? 'true' : 'false'} aria-label={`Show ${labels[i]}`}>
+                <Photo img={img} alt="" small />
+                {isCarpet && <span>{labels[i]}</span>}
+              </button>
+            ))}
+          </div>
+        )}
+        <p class="pd__note muted">{isCarpet ? `${labels.filter((l) => !l.endsWith('(room)')).length} colourways shown. Ask to see the full colour card in our showroom.` : 'Natural timber varies board to board. Order free samples or visit the showroom before you choose.'}</p>
+      </div>
+
+      <div class="pd__info">
+        <a class="pd__cat" href={cat.path}>{cat.name}</a>
+        <h1>{p.name}</h1>
+        <p class="pd__tone"><span class="dot" style={`background:${p.color}`}></span>{tones[p.tone].label}{p.species && p.category !== 'hybrid' ? ` · ${p.species}` : ''}</p>
+        <p class="lead">{p.description}</p>
+        <ul class="checklist">{p.highlights.map((h) => <li>{h}</li>)}</ul>
+
+        <div class="pd__actions">
+          <button type="button" class="btn btn--timber" data-sample-toggle data-slug={p.slug} data-name={p.name} data-category={cat.name} data-color={p.color} aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+            <span data-label>Add to samples</span>
+          </button>
+          <a class="btn btn--ghost" href={`/about-us/frequently-asked-questions/contact?request=quote&product=${encodeURIComponent(p.name + ' (' + cat.name + ')')}`}>Get a quote</a>
+          <a class="btn btn--ghost" href={`/about-us/frequently-asked-questions/contact?request=specs&product=${encodeURIComponent(p.name + ' (' + cat.name + ')')}`}>Request spec sheet</a>
+        </div>
+
+        <h2 class="pd__h">Specifications</h2>
+        <dl class="specs">
+          <dt>Category</dt><dd>{cat.name}</dd>
+          {p.specs.map(([k, v]) => (<><dt>{k}</dt><dd>{v}</dd></>))}
+        </dl>
+
+        <details class="calc" open>
+          <summary><h2 class="pd__h">How much do I need?</h2></summary>
+          <div class="calc__body" data-calc data-coverage={coverage ?? ''}>
+            <div class="calc__rooms" data-rooms>
+              <div class="calc__room">
+                <label>Length (m)<input type="number" min="0" step="0.01" inputmode="decimal" data-l value="5" /></label>
+                <span aria-hidden="true">×</span>
+                <label>Width (m)<input type="number" min="0" step="0.01" inputmode="decimal" data-w value="4" /></label>
+              </div>
+            </div>
+            <button type="button" class="calc__add" data-add-room>+ Add another room</button>
+            <label class="calc__waste">Allowance for cuts &amp; waste <output data-waste-out>{defaultWaste}%</output>
+              <input type="range" min="0" max="20" value={defaultWaste} data-waste />
+            </label>
+            <div class="calc__result" aria-live="polite">
+              <div><span>Floor area</span><strong data-area>20.0 m²</strong></div>
+              <div><span>Order (incl. waste)</span><strong data-total>—</strong></div>
+              {coverage && <div><span>Approx. boxes</span><strong data-boxes>—</strong></div>}
+            </div>
+            <p class="muted calc__fine">
+              {coverage ? `Based on a typical ${coverage} m² per box. Exact pack sizes are confirmed on your quote.` : 'Solid timber and carpet are ordered by the square metre. We confirm exact quantities on site.'}
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <h2>{choosingCopy.heading}</h2>
+        {choosingCopy.body.map((t) => <p class="lead">{t}</p>)}
+        <div class="row-btns">
+          <a class="btn" href={paths.contact}>Contact Us</a>
+          <a class="btn btn--ghost" href="/our-services">Our Services</a>
+        </div>
+      </div>
+      <div class="media" style="aspect-ratio:4/3"><Photo img={siteImages['showroom-frame']} alt="Southern Timber Floors showroom" /></div>
+    </div>
+  </section>
+
+  {rel.length > 0 && (
+    <section class="section section--paper">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">You might also like</span><h2>Explore more {cat.name} solutions</h2></div>
+          <a class="link-arrow" href={cat.path}>View all {cat.name.toLowerCase()} →</a>
+        </div>
+        <div class="grid grid-4">{rel.map((r) => <ProductCard product={r} showCategory={false} />)}</div>
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="wrap split" style="align-items:start">
+      <div>
+        <span class="eyebrow">Ask about {p.name}</span>
+        <h2>Samples, pricing or advice</h2>
+        <p class="lead">Tell us a little about your project and we will come back with pricing, availability and lead times. Or visit the showroom at {business.address.street}, {business.address.suburb} to see it in person.</p>
+        <p><a class="link-arrow" href={business.phoneHref}>Call {business.phone}</a></p>
+      </div>
+      <div class="card card--pad"><EnquiryForm compact product={`${p.name} (${cat.name})`} /></div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .row-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+  .pd__grid { display: grid; gap: clamp(28px, 5vw, 64px); }
+  @media (min-width: 960px) { .pd__grid { grid-template-columns: 1.1fr 1fr; } .pd__gallery { position: sticky; top: calc(var(--header-h) + 20px); align-self: start; } }
+  .pd__main { position: relative; aspect-ratio: 9 / 7; border-radius: var(--radius); overflow: hidden; background: var(--sand); }
+  .pd__slide { position: absolute; inset: 0; }
+  .pd__slide[hidden] { display: none; }
+  .pd__label { position: absolute; left: 14px; bottom: 14px; background: rgb(250 250 250 / 0.94); padding: 6px 14px; border-radius: 999px; font-size: 0.88rem; font-weight: 600; }
+  .pd__thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 10px; margin-top: 12px; }
+  .pd__thumb { padding: 0; border: 2px solid transparent; border-radius: var(--radius-sm); overflow: hidden; aspect-ratio: 1; cursor: pointer; background: var(--sand); display: grid; transition: border-color .15s; }
+  .pd__thumb[aria-pressed='true'] { border-color: var(--ink); }
+  .pd__thumb:hover { border-color: var(--timber); }
+  .pd__thumbs--swatches .pd__thumb { aspect-ratio: auto; grid-template-rows: 1fr auto; background: var(--paper); border-color: var(--line); }
+  .pd__thumbs--swatches .pd__thumb :global(img) { aspect-ratio: 1; }
+  .pd__thumbs--swatches .pd__thumb[aria-pressed='true'] { border-color: var(--ink); }
+  .pd__thumb span { font: 500 0.75rem var(--sans); padding: 6px 4px; color: var(--ink-2); }
+  .pd__note { font-size: 0.78rem; margin-top: 10px; }
+  .pd__cat { font: 600 0.75rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--timber); text-decoration: none; }
+  .pd h1 { margin: 8px 0 10px; font-size: clamp(2.2rem, 4vw, 3.4rem); }
+  .pd__tone { display: flex; align-items: center; gap: 8px; color: var(--ink-2); font-size: 0.92rem; }
+  .pd__actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 36px; }
+  .pd__actions [aria-pressed='true'] { --bg: var(--ink); --fg: var(--brand); border-color: var(--ink); }
+  .pd__actions [aria-pressed='true'] svg { transform: rotate(45deg); }
+  .pd__h { font: 600 0.78rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 14px; }
+  .specs { display: grid; grid-template-columns: minmax(120px, auto) 1fr; margin: 0 0 32px; border-top: 1px solid var(--line); }
+  .specs dt, .specs dd { padding: 12px 0; border-bottom: 1px solid var(--line); margin: 0; font-size: 0.93rem; }
+  .specs dt { color: var(--muted); padding-right: 16px; }
+  .calc { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+  .calc summary { list-style: none; cursor: pointer; }
+  .calc summary::-webkit-details-marker { display: none; }
+  .calc summary .pd__h { margin: 0; display: flex; justify-content: space-between; }
+  .calc summary .pd__h::after { content: '−'; font-size: 1.2rem; }
+  .calc:not([open]) summary .pd__h::after { content: '+'; }
+  .calc__body { margin-top: 16px; display: grid; gap: 14px; }
+  .calc__rooms { display: grid; gap: 10px; }
+  .calc__room { display: grid; grid-template-columns: 1fr auto 1fr auto; gap: 10px; align-items: end; }
+  .calc__room label { display: grid; gap: 4px; font-size: 0.8rem; font-weight: 600; color: var(--ink-2); }
+  .calc__room input { height: 44px; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 0 12px; font: inherit; width: 100%; background: #fff; }
+  .calc__room > span { padding-bottom: 12px; color: var(--muted); }
+  .calc__room button { height: 44px; width: 36px; border: 0; background: none; font-size: 1.2rem; color: var(--muted); cursor: pointer; }
+  .calc__add { justify-self: start; background: none; border: 0; padding: 0; color: var(--timber); font: 600 0.88rem var(--sans); cursor: pointer; }
+  .calc__waste { display: grid; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--ink-2); }
+  .calc__waste output { float: right; color: var(--ink); }
+  .calc__waste input { accent-color: var(--timber); }
+  .calc__result { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; }
+  .calc__result div { background: var(--sand); border-radius: var(--radius-sm); padding: 12px 14px; display: grid; }
+  .calc__result span { font-size: 0.75rem; color: var(--muted); }
+  .calc__result strong { font: 400 1.4rem var(--serif); }
+  .calc__fine { font-size: 0.78rem; margin: 0; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-gallery]').forEach((g) => {
+    const slides = [...g.querySelectorAll<HTMLElement>('[data-slide]')];
+    const thumbs = [...g.querySelectorAll<HTMLButtonElement>('[data-thumb]')];
+    const label = g.querySelector('[data-gallery-label]');
+    const show = (i: number) => {
+      slides.forEach((s, j) => (s.hidden = j !== i));
+      thumbs.forEach((t, j) => t.setAttribute('aria-pressed', String(j === i)));
+      if (label) label.textContent = thumbs[i]?.dataset.label ?? '';
+    };
+    thumbs.forEach((t) => t.addEventListener('click', () => show(Number(t.dataset.thumb))));
+    // swipe on touch devices
+    let x0: number | null = null;
+    const main = g.querySelector<HTMLElement>('.pd__main')!;
+    main.addEventListener('touchstart', (e) => (x0 = e.touches[0].clientX), { passive: true });
+    main.addEventListener('touchend', (e) => {
+      if (x0 === null || slides.length < 2) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      x0 = null;
+      if (Math.abs(dx) < 40) return;
+      const cur = slides.findIndex((s) => !s.hidden);
+      show((cur + (dx < 0 ? 1 : slides.length - 1)) % slides.length);
+    });
+  });
+
+  document.querySelectorAll<HTMLElement>('[data-calc]').forEach((root) => {
+    const rooms = root.querySelector<HTMLElement>('[data-rooms]')!;
+    const waste = root.querySelector<HTMLInputElement>('[data-waste]')!;
+    const wasteOut = root.querySelector('[data-waste-out]')!;
+    const coverage = parseFloat(root.dataset.coverage || '');
+    const out = (sel: string) => root.querySelector(sel);
+
+    const calc = () => {
+      let area = 0;
+      rooms.querySelectorAll('.calc__room').forEach((r) => {
+        const l = parseFloat((r.querySelector('[data-l]') as HTMLInputElement).value) || 0;
+        const w = parseFloat((r.querySelector('[data-w]') as HTMLInputElement).value) || 0;
+        area += Math.max(0, l) * Math.max(0, w);
+      });
+      const pct = Number(waste.value);
+      const total = area * (1 + pct / 100);
+      wasteOut.textContent = `${pct}%`;
+      out('[data-area]')!.textContent = `${area.toFixed(1)} m²`;
+      out('[data-total]')!.textContent = area ? `${total.toFixed(1)} m²` : '—';
+      const boxes = out('[data-boxes]');
+      if (boxes) boxes.textContent = area && coverage ? String(Math.ceil(total / coverage)) : '—';
+    };
+    root.querySelector('[data-add-room]')!.addEventListener('click', () => {
+      const first = rooms.querySelector('.calc__room')!;
+      const clone = first.cloneNode(true) as HTMLElement;
+      clone.querySelectorAll('input').forEach((i) => (i.value = ''));
+      const rm = document.createElement('button');
+      rm.type = 'button';
+      rm.textContent = '×';
+      rm.setAttribute('aria-label', 'Remove room');
+      rm.onclick = () => { clone.remove(); calc(); };
+      clone.append(rm);
+      rooms.append(clone);
+      clone.querySelector('input')?.focus();
+    });
+    root.addEventListener('input', calc);
+    calc();
+  });
+</script>

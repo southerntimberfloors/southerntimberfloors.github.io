@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import { categories, categoryOrder } from '../data/site';
+---
+<Base title="Page not found" description="The page you were looking for could not be found.">
+  <section class="section">
+    <div class="wrap" style="max-width:720px">
+      <span class="eyebrow">404</span>
+      <h1>We couldn't find that page</h1>
+      <p class="lead">It may have moved when we refreshed the site. Try one of these instead:</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin:24px 0">
+        <a class="btn" href="/timber">Browse all flooring</a>
+        {categoryOrder.map((k) => <a class="btn btn--ghost" href={categories[k].path}>{categories[k].name}</a>)}
+        <a class="btn btn--ghost" href="/about-us/frequently-asked-questions/contact">Contact us</a>
+      </div>
+    </div>
+  </section>
+</Base>

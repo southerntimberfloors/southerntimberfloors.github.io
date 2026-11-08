@@ -1,0 +1,38 @@
+---
+import { business } from '../data/site';
+import Photo from './Photo.astro';
+import { siteImages } from '../data/images';
+interface Props { title?: string; body?: string }
+const {
+  title = 'See and feel it in person',
+  body = 'Photos only go so far with timber. Visit our Mornington showroom to compare full-size boards under different light, bring along your finishes, and get honest advice from people who lay floors every week.',
+} = Astro.props;
+---
+<section class="cta section--tight">
+  <div class="wrap">
+    <div class="cta__box">
+      <div class="cta__bg" aria-hidden="true"><Photo img={siteImages['showroom-1']} alt="" sizes="100vw" /></div>
+      <div class="cta__content">
+        <span class="eyebrow">Mornington showroom</span>
+        <h2>{title}</h2>
+        <p>{body}</p>
+        <div class="cta__actions">
+          <a class="btn btn--light" href="/about-us/frequently-asked-questions/contact?request=consultation">Book a free consultation</a>
+          <a class="btn btn--ghost-light" href="/about-us/mornington-showroom">Showroom details</a>
+        </div>
+        <p class="cta__small">{business.address.street}, {business.address.suburb} · Mon–Fri 8:30am–4:00pm · Sat by appointment</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .cta__box { position: relative; border-radius: calc(var(--radius) * 1.5); overflow: hidden; color: var(--cream); isolation: isolate; }
+  .cta__bg { position: absolute; inset: 0; z-index: -1; }
+  .cta__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, rgb(25 25 25 / 0.9) 30%, rgb(25 25 25 / 0.35)); }
+  .cta__content { padding: clamp(32px, 6vw, 72px); max-width: 720px; }
+  .cta .eyebrow { color: var(--brand); }
+  .cta h2 { color: #fff; }
+  .cta p { color: #e2e0dc; }
+  .cta__actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 18px; }
+  .cta__small { font-size: 0.82rem; opacity: 0.8; margin: 0; }
+</style>

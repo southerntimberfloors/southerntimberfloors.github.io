@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import { siteImages } from '../../data/images';
+import ProjectCard from '../../components/ProjectCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { business, projects } from '../../data/site';
+---
+<Base title="About us" description={business.description} crumbs={[{ label: 'About Us' }]}>
+  <section class="page-hero">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">inspired living</span>
+        <h1>About Southern Timber Floors</h1>
+        <p class="lead">Based on the Mornington Peninsula, Southern Timber Floors specialises in the supply, installation and finishing of solid and engineered timber flooring.</p>
+        <p>Established in 2005, we bring together extensive industry experience, quality craftsmanship and a genuine commitment to personal service. Over the years, we've built a reputation for delivering considered flooring solutions, with a focus on quality products, attention to detail and getting the right result for every project.</p>
+      </div>
+      <div class="media" style="aspect-ratio:5/4"><Photo img={siteImages['about-1']} alt="Red Hill engineered timber floor in a living room" eager /></div>
+    </div>
+  </section>
+  <section class="section section--paper">
+    <div class="wrap split" style="align-items:start">
+      <div>
+        <span class="eyebrow">our industry experience</span>
+        <h2>Industry experience, knowledge and genuine service</h2>
+      </div>
+      <div>
+        <p class="lead">Our team brings together extensive industry experience and practical knowledge across all aspects of timber flooring. We take pride in providing knowledgeable advice and personalised service, helping our clients navigate the many choices available in flooring, colours, finishes and installation methods.</p>
+        <p>With so many options to consider, we believe it's important to understand how different flooring products perform and how they suit individual environments. We take the time to guide our clients through the selection process, helping them make informed decisions that balance design preferences, practical considerations and lifestyle needs.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section--tight">
+    <div class="wrap about-pics">
+      <div class="media"><Photo img={siteImages['about-2']} alt="Timber floor in a home styled by Latitude 37" /></div>
+      <div class="media"><Photo img={siteImages['about-3']} alt="Timber floor in a living space" /></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap stats">
+      <div><strong>{business.founded}</strong><span>established</span></div>
+      <div><strong>5</strong><span>flooring categories</span></div>
+      <div><strong>100%</strong><span>Melbourne owned</span></div>
+      <div><strong>1 hr</strong><span>free consultations</span></div>
+    </div>
+  </section>
+  <section class="section section--sand">
+    <div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">Our work</span><h2>See how our flooring solutions have transformed homes</h2></div><a class="link-arrow" href="/projects">All projects →</a></div>
+      <div class="grid grid-4">{projects.map((p) => <ProjectCard project={p} />)}</div>
+    </div>
+  </section>
+  <CtaBand />
+</Base>
+<style>
+  .h3 { font-size: 1.45rem; }
+  .about-pics { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  .about-pics .media { aspect-ratio: 4 / 3; }
+  @media (min-width: 700px) { .about-pics { grid-template-columns: 1.4fr 1fr; } }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; text-align: center; }
+  .stats strong { display: block; font: 300 clamp(2.6rem, 5vw, 3.6rem)/1 var(--serif); color: var(--timber); }
+  .stats span { color: var(--muted); font-size: 0.9rem; }
+</style>

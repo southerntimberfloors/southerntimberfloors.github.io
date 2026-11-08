@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import Catalogue from '../../components/Catalogue.astro';
+import CompareTable from '../../components/CompareTable.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { products } from '../../data/products';
+import { rangeIntro } from '../../data/site';
+---
+<Base
+  title="Timber Flooring Range: Solid, Engineered, Parquetry, Hybrid & Carpet"
+  description={`Browse ${products.length} timber floors and carpets. Filter by type, colour tone and herringbone availability, then order free samples.`}
+  crumbs={[{ label: 'Products' }]}
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">What type are you looking for?</span>
+      <h1>Flooring solutions for every project</h1>
+      {rangeIntro.map((p, i) => <p class={i === 0 ? 'lead' : 'intro-p'}>{p}</p>)}
+      <p class="muted">Search and filter all {products.length} floors in our range. Save up to six samples as you browse, then request them in one go.</p>
+    </div>
+  </section>
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap"><Catalogue /></div>
+  </section>
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Which type is right for me?</span>
+          <h2>Compare flooring types</h2>
+          <p class="lead">A quick guide to how each type of floor performs.</p>
+        </div>
+      </div>
+      <CompareTable />
+    </div>
+  </section>
+  <CtaBand />
+</Base>

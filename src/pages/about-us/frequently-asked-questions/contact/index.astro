@@ -1,0 +1,56 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import EnquiryForm from '../../../../components/EnquiryForm.astro';
+import { business } from '../../../../data/site';
+import Photo from '../../../../components/Photo.astro';
+import { siteImages } from '../../../../data/images';
+---
+<Base title="Contact Us" description={`Request samples, spec sheets, a consultation or site visit. Call ${business.phone} or visit ${business.address.street}, ${business.address.suburb}.`} crumbs={[{ label: 'About Us', href: '/about-us' }, { label: 'Contact Us' }]}>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Contact Us</h1>
+      <p class="lead">Our team is here to help. Get in touch to request samples, product information or presentations, or to arrange a showroom consultation or site visit.</p>
+    </div>
+  </section>
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap contact">
+      <div class="card card--pad"><EnquiryForm /></div>
+      <aside class="contact__side">
+        <div class="card">
+          <div class="contact__img"><Photo img={siteImages['showroom-exterior']} alt="Southern Timber Floors showroom, Mornington" sizes="(min-width: 960px) 35vw, 100vw" /></div>
+          <div class="card--pad">
+          <h2 class="lbl">Call</h2>
+          <p class="big"><a href={business.phoneHref}>{business.phone}</a></p>
+          <h2 class="lbl">Email</h2>
+          <p><a href={`mailto:${business.email}`}>{business.email}</a></p>
+          <h2 class="lbl">Showroom</h2>
+          <p><a href={business.mapsUrl} target="_blank" rel="noopener">{business.address.street}<br />{business.address.suburb} {business.address.state} {business.address.postcode}</a></p>
+          <h2 class="lbl">Hours</h2>
+          <dl class="hours">{business.hours.map((h) => (<><dt>{h.days}</dt><dd>{h.note ?? `${h.open} – ${h.close}`}</dd></>))}</dl>
+          <p class="status"><span class="dot" data-open-dot></span><span data-open-text></span></p>
+          <h2 class="lbl">Stay up to date by following our socials</h2>
+          <p>
+            <a href={business.social.instagram.url} target="_blank" rel="noopener">Instagram: {business.social.instagram.handle}</a><br />
+            <a href={business.social.facebook.url} target="_blank" rel="noopener">Facebook: {business.social.facebook.handle}</a>
+          </p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</Base>
+<style>
+  .contact { display: grid; gap: 24px; }
+  @media (min-width: 960px) { .contact { grid-template-columns: 1.6fr 1fr; align-items: start; } .contact__side { position: sticky; top: calc(var(--header-h) + 20px); } }
+  .contact__img { aspect-ratio: 16 / 9; }
+  .lbl { font: 600 0.72rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--timber); margin: 18px 0 6px; }
+  .lbl:first-child { margin-top: 0; }
+  .big { font: 400 1.6rem var(--serif); margin: 0; }
+  .contact a { text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+  .hours { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; margin: 0; font-size: 0.9rem; }
+  .hours dd { margin: 0; font-weight: 600; }
+  .status { display: flex; gap: 8px; align-items: center; font-size: 0.85rem; color: var(--ink-2); margin-top: 10px; }
+  .status .dot { background: #b5ab9e; }
+  .status :global(.dot.is-open) { background: var(--ok); }
+</style>

@@ -1,0 +1,75 @@
+---
+import Base from '../../../layouts/Base.astro';
+import FaqList from '../../../components/FaqList.astro';
+import { business, faqs } from '../../../data/site';
+import Photo from '../../../components/Photo.astro';
+import { siteImages } from '../../../data/images';
+const topics = [...new Set(faqs.map((f) => f.topic))];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a.join(' ') } })),
+};
+---
+<Base title="Frequently Asked Questions" description="Answers about choosing, installing and caring for timber, hybrid and parquetry floors, plus samples, ordering and service areas." crumbs={[{ label: 'About', href: '/about-us' }, { label: 'FAQ' }]} schema={schema}>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Help centre</span>
+      <h1>Frequently Asked Questions</h1>
+      <p class="lead">Can't find what you need? Call <a href={business.phoneHref}>{business.phone}</a> or <a href="/about-us/frequently-asked-questions/contact">send us a message</a>.</p>
+    </div>
+  </section>
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap faq-wrap" data-faq>
+      <aside class="faq-side">
+        <label class="sr-only" for="faq-q">Search questions</label>
+        <input id="faq-q" class="input" type="search" placeholder="Search questions…" data-faq-q />
+        <div class="faq-topics" role="group" aria-label="Filter by topic">
+          <button type="button" class="pill" data-topic="" aria-pressed="true">All</button>
+          {topics.map((t) => <button type="button" class="pill" data-topic={t} aria-pressed="false">{t}</button>)}
+        </div>
+        <a class="faq-promo card" href="/timber">
+          <div class="faq-promo__img"><Photo img={siteImages.samples} alt="" sizes="280px" /></div>
+          <div class="card--pad"><strong>Free samples</strong><p class="muted">Save up to six as you browse, then request them in one go.</p></div>
+        </a>
+      </aside>
+      <div>
+        <FaqList items={faqs} />
+        <p class="muted" data-faq-empty hidden>No questions match. Try another word, or <a href="/about-us/frequently-asked-questions/contact">ask us directly</a>.</p>
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .faq-wrap { display: grid; gap: 28px; }
+  @media (min-width: 900px) { .faq-wrap { grid-template-columns: 280px 1fr; gap: 56px; } .faq-side { position: sticky; top: calc(var(--header-h) + 20px); align-self: start; } }
+  .faq-promo { display: none; margin-top: 24px; text-decoration: none; }
+  .faq-promo p { margin: 4px 0 0; font-size: 0.88rem; }
+  .faq-promo__img { aspect-ratio: 4 / 3; }
+  @media (min-width: 900px) { .faq-promo { display: block; } }
+  .faq-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .pill { height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font: 500 0.86rem var(--sans); cursor: pointer; }
+  .pill[aria-pressed='true'] { background: var(--ink); color: var(--brand); border-color: var(--ink); }
+</style>
+<script>
+  const root = document.querySelector<HTMLElement>('[data-faq]')!;
+  const q = root.querySelector<HTMLInputElement>('[data-faq-q]')!;
+  const btns = [...root.querySelectorAll<HTMLButtonElement>('[data-topic]')].filter((b) => b.tagName === 'BUTTON');
+  const items = [...root.querySelectorAll<HTMLDetailsElement>('details[data-topic]')];
+  const empty = root.querySelector<HTMLElement>('[data-faq-empty]')!;
+  let topic = '';
+  const apply = () => {
+    const term = q.value.trim().toLowerCase();
+    let n = 0;
+    items.forEach((d) => {
+      const show = (!topic || d.dataset.topic === topic) && (!term || d.textContent!.toLowerCase().includes(term));
+      d.hidden = !show;
+      if (show) n++;
+      if (term && show) d.open = true;
+    });
+    empty.hidden = n > 0;
+    btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.topic === topic)));
+  };
+  q.addEventListener('input', apply);
+  btns.forEach((b) => b.addEventListener('click', () => { topic = b.dataset.topic!; apply(); }));
+</script>

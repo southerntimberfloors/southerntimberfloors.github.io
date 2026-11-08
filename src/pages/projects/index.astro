@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { projects } from '../../data/site';
+---
+<Base title="Projects" description="See how our flooring solutions have transformed homes: Tasmanian Oak, Tasmanian Driftwood, White Haven engineered oak and more." crumbs={[{ label: 'Projects' }]}>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Get inspired</span>
+      <h1>Projects</h1>
+      <p class="lead">See how our flooring solutions have transformed homes.</p>
+    </div>
+  </section>
+  <section class="section--tight" style="padding-top:0">
+    <div class="wrap grid grid-2">{projects.map((p) => <ProjectCard project={p} large />)}</div>
+  </section>
+  <CtaBand title="Have a project in mind?" body="Tell us what you are building or renovating. We will help you find the floor, and if you like the result, we would love to feature it here." />
+</Base>

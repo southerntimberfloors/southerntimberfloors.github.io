@@ -1,0 +1,17 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import { business } from '../../../../data/site';
+---
+<Base title="Thanks" description="Your message has been sent." crumbs={[{ label: 'Contact Us', href: '/about-us/frequently-asked-questions/contact' }, { label: 'Thanks' }]}>
+  <section class="section">
+    <div class="wrap" style="max-width:720px">
+      <h1>Thanks</h1>
+      <p class="lead">Your message has been sent. We will get back to you as soon as possible.</p>
+      <p>Need us sooner? Call <a href={business.phoneHref}>{business.phone}</a>.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
+        <a class="btn" href="/timber">Keep browsing flooring</a>
+        <a class="btn btn--ghost" href="/projects">See our projects</a>
+      </div>
+    </div>
+  </section>
+</Base>

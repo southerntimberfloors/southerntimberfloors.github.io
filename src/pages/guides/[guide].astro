@@ -1,0 +1,75 @@
+---
+import Base from '../../layouts/Base.astro';
+import { business } from '../../data/site';
+
+type Section = { h: string; items: string[] };
+type Guide = { slug: string; title: string; intro: string; sections: Section[] };
+
+const guides: Guide[] = [
+  {
+    slug: 'engineered-care',
+    title: 'Engineered Flooring: Maintenance & Care',
+    intro: 'Engineered floors have a factory-applied finish over a real timber wear layer. With the right care, that finish protects the timber for many years.',
+    sections: [
+      { h: 'Everyday cleaning', items: ['Vacuum (hard-floor head, no beater bar) or dry-mop several times a week to remove grit.', 'Damp-mop with a well-wrung microfibre mop and a pH-neutral timber floor cleaner.', 'Wipe up spills straight away. Do not let liquid sit on joins.', 'Never use steam mops, bleach, ammonia, vinegar or oil soaps.'] },
+      { h: 'Protecting your floor', items: ['Place quality mats inside and outside every external door.', 'Fit felt pads to all furniture legs and replace them as they wear.', 'Use chair mats under office chairs with castors.', 'Lift, don\'t drag, heavy furniture. Avoid stiletto heels and spiked shoes.'] },
+      { h: 'Climate & sunlight', items: ['Keep indoor humidity between roughly 40–60% where possible.', 'Use blinds or curtains to reduce strong direct sun, which changes timber colour over time.', 'Move rugs occasionally in the first year so the floor ages evenly.'] },
+      { h: 'Repairs & refinishing', items: ['Minor scuffs can often be buffed out. Ask us about touch-up kits.', 'When the finish looks dull in high-traffic areas, a professional maintenance coat can restore it.', 'Depending on wear-layer thickness, the floor can be lightly sanded and recoated.'] },
+    ],
+  },
+  {
+    slug: 'hybrid-care',
+    title: 'Hybrid Flooring: Maintenance & Care',
+    intro: 'Hybrid floors are waterproof and very hard-wearing, but a little routine care keeps the surface looking its best.',
+    sections: [
+      { h: 'Everyday cleaning', items: ['Vacuum or sweep regularly to remove grit.', 'Mop with warm water and a pH-neutral cleaner suitable for hybrid or vinyl floors.', 'Avoid wax, polish, oil soaps and abrasive cleaners. Hybrid does not need polishing.', 'Steam mops are not recommended because heat can affect the joins.'] },
+      { h: 'Protecting your floor', items: ['Use felt pads on furniture and chair mats under castors.', 'Use mats without rubber or latex backing, which can discolour the surface.', 'Keep pet nails trimmed.'] },
+      { h: 'Heat & sunlight', items: ['Prolonged, intense direct sun through glass can cause expansion. Use window coverings in very sunny rooms.', 'Do not place hot items directly on the floor.'] },
+      { h: 'Repairs', items: ['Individual planks can be replaced if damaged. Keep a few spare planks from your install.', 'Contact us for advice before attempting any repair yourself.'] },
+    ],
+  },
+  {
+    slug: 'installation-care',
+    title: 'General Flooring: Installation & Care',
+    intro: 'A floor is only as good as its preparation. This guide covers what happens before, during and after installation.',
+    sections: [
+      { h: 'Before installation', items: ['The site should be weathertight and lock-up stage, with wet trades (plastering, tiling) finished and dry.', 'Concrete slabs must be dry. We test moisture before laying.', 'Subfloors need to be flat within tolerance. Grinding or levelling may be required.', 'Timber may need time to acclimatise on site. We will advise how long for your product.'] },
+      { h: 'During installation', items: ['Keep the area clear of other trades while the floor is being laid.', 'Maintain normal living temperatures. Avoid running heating or cooling at extremes.', 'For solid timber, stay off the floor between coats as directed by your installer.'] },
+      { h: 'After installation', items: ['Wait the recommended curing time before replacing rugs (usually 1–2 weeks for site-coated floors).', 'Fit felt pads to furniture before moving it back in.', 'Introduce underfloor heating gradually, following the manufacturer\'s guidelines.'] },
+      { h: 'Ongoing care', items: ['Follow the specific care guide for your floor type.', 'Normal seasonal movement, such as small gaps in winter, is a natural characteristic of timber.', `Questions? Call us on ${business.phone}.`] },
+    ],
+  },
+];
+
+export function getStaticPaths() {
+  return ['engineered-care', 'hybrid-care', 'installation-care'].map((g) => ({ params: { guide: g } }));
+}
+const g = guides.find((x) => x.slug === Astro.params.guide)!;
+---
+<Base title={g.title} description={g.intro} crumbs={[{ label: 'Catalogues & Guides', href: '/about-us/catalogues-guides' }, { label: g.title }]}>
+  <article class="wrap guide">
+    <header class="page-hero">
+      <span class="eyebrow">Care guide</span>
+      <h1>{g.title}</h1>
+      <p class="lead">{g.intro}</p>
+      <button type="button" class="btn btn--ghost btn--sm no-print" onclick="window.print()">Print or save as PDF</button>
+    </header>
+    {g.sections.map((s) => (
+      <section class="guide__s">
+        <h2>{s.h}</h2>
+        <ul class="checklist">{s.items.map((i) => <li>{i}</li>)}</ul>
+      </section>
+    ))}
+    <p class="muted guide__fine">General guidance only. Always follow the manufacturer's care and warranty instructions for your specific product. {business.name} · {business.phone} · {business.email}</p>
+  </article>
+</Base>
+<style>
+  .guide { max-width: 820px; padding-bottom: 80px; }
+  .guide__s { padding: 28px 0; border-top: 1px solid var(--line); }
+  .guide__s h2 { font-size: 1.6rem; }
+  .guide__fine { font-size: 0.82rem; border-top: 1px solid var(--line); padding-top: 20px; }
+  @media print {
+    :global(.topbar), :global(.header), :global(.footer), :global(.mobile-bar), :global(.crumbs), .no-print { display: none !important; }
+    :global(body) { background: #fff; padding: 0; }
+  }
+</style>
