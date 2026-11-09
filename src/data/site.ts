@@ -32,7 +32,7 @@ export const business = {
   //  • Web3Forms (free, 250/month): get a key at https://web3forms.com using enquiries@… and paste it in formAccessKey.
   //  • Formspree (free, 50/month): create a form at https://formspree.io and paste its URL in formEndpoint.
   // If both are empty, the form falls back to opening the visitor's email app.
-  formAccessKey: '',
+  formAccessKey: 'baa6fad0-5419-4cf5-b1d4-92b42255d401',
   formEndpoint: '',
 };
 
