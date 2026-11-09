@@ -211,8 +211,21 @@ export function toast(msg: string, action?: { label: string; fn: () => void }) {
   toastTimer = window.setTimeout(() => toastEl?.classList.remove('show'), 4000);
 }
 
-/* ---------- Reveal on scroll ---------- */
-const io = 'IntersectionObserver' in window
-  ? new IntersectionObserver((entries) => entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('in'); io!.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px' })
+/* ---------- Reveal on scroll ----------
+   Elements with .reveal or [data-reveal] fade in as they enter the viewport (like the previous site).
+   Items that arrive together are staggered slightly so rows cascade in. */
+const revealEls = document.querySelectorAll<HTMLElement>('.reveal, [data-reveal]');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io = 'IntersectionObserver' in window && !reduceMotion
+  ? new IntersectionObserver((entries) => {
+      let i = 0;
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        const el = en.target as HTMLElement;
+        el.style.transitionDelay = `${Math.min(i++, 6) * 0.12}s`;
+        el.classList.add('in');
+        io!.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 })
   : null;
-document.querySelectorAll('.reveal').forEach((el) => (io ? io.observe(el) : el.classList.add('in')));
+revealEls.forEach((el) => (io ? io.observe(el) : el.classList.add('in')));

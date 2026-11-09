@@ -1,10 +1,13 @@
 ---
 import { business, categories, categoryOrder, services } from '../data/site';
 import Logo from './Logo.astro';
+interface Props { cta?: boolean }
+const { cta = true } = Astro.props;
 const year = new Date().getFullYear();
 ---
 <footer class="footer">
   <div class="wrap">
+    {cta && (
     <div class="footer__cta">
       <div>
         <span class="eyebrow">Start your project</span>
@@ -15,6 +18,7 @@ const year = new Date().getFullYear();
         <a class="btn btn--ghost-light" href={business.phoneHref}>{business.phone}</a>
       </div>
     </div>
+    )}
 
     <div class="footer__grid">
       <div class="footer__brand">

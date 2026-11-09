@@ -20,7 +20,9 @@
   --radius: 14px;
   --radius-sm: 8px;
   --shadow: 0 1px 2px rgb(25 25 25 / 0.06), 0 8px 24px -12px rgb(25 25 25 / 0.18);
-  --serif: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  /* Headings: a clean grotesk, close to the previous site's RM Neue. (--serif kept as the token name used across components.) */
+  --display: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif;
+  --serif: var(--display);
   --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --wrap: 1240px;
   --gutter: clamp(16px, 4vw, 40px);
@@ -37,7 +39,7 @@ body {
 }
 img, svg { max-width: 100%; }
 a { color: inherit; }
-h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.12; letter-spacing: -0.01em; margin: 0 0 0.5em; text-wrap: balance; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.08; letter-spacing: -0.025em; margin: 0 0 0.5em; text-wrap: balance; }
 h1 { font-size: clamp(2.3rem, 5.2vw, 4.4rem); }
 h2 { font-size: clamp(1.8rem, 3.4vw, 2.8rem); }
 h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
@@ -129,9 +131,12 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .field [aria-invalid='true'] { border-color: var(--danger); }
 .field .err { color: var(--danger); font-size: 0.8rem; min-height: 1em; }
 
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.in { opacity: 1; transform: none; }
-.no-js .reveal { opacity: 1; transform: none; }
+/* Scroll reveal (see scripts/site.ts). Hidden only when JS is running, so content never disappears without it. */
+.js .reveal, .js [data-reveal] { opacity: 0; transition: opacity 1.4s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
+.js .reveal, .js [data-reveal='up'] { transform: translateY(40px); }
+.js [data-reveal='down'] { transform: translateY(-40px); }
+.js .reveal.in, .js [data-reveal].in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js .reveal, .js [data-reveal] { opacity: 1; transform: none; } }
 
 /* Toast */
 .toast {

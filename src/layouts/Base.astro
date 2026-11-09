@@ -12,8 +12,12 @@ interface Props {
   crumbs?: { label: string; href?: string }[];
   schema?: Record<string, unknown> | Record<string, unknown>[];
   ogImage?: string;
+  /** Homepage: header floats transparently over the hero photo. */
+  overlayHeader?: boolean;
+  /** Hide the footer's own call-to-action (when the page already ends with one). */
+  footerCta?: boolean;
 }
-const { title, description, crumbs, schema, ogImage = '/og.png' } = Astro.props;
+const { title, description, crumbs, schema, ogImage = '/og.png', overlayHeader = false, footerCta = true } = Astro.props;
 const site = Astro.site ?? new URL('https://www.southerntimberfloors.com');
 // Canonical URLs match the previous site exactly: no trailing slash, no .html.
 const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/index$/, '').replace(/(.)\/$/, '$1') || '/';
@@ -92,7 +96,7 @@ const schemas = [localBusiness, crumbSchema, ...(Array.isArray(schema) ? schema 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..500&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Inter:wght@400;500;600&display=swap"
     />
     <script is:inline>document.documentElement.classList.replace('no-js', 'js');</script>
     {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
@@ -100,7 +104,7 @@ const schemas = [localBusiness, crumbSchema, ...(Array.isArray(schema) ? schema 
   <body>
     <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${gtm}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a class="skip" href="#main">Skip to content</a>
-    <Header />
+    <Header overlay={overlayHeader} />
     <main id="main">
       {
         crumbs && (
@@ -116,7 +120,7 @@ const schemas = [localBusiness, crumbSchema, ...(Array.isArray(schema) ? schema 
       }
       <slot />
     </main>
-    <Footer />
+    <Footer cta={footerCta} />
     <SampleDrawer />
 
     <nav class="mobile-bar" aria-label="Quick actions">

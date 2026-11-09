@@ -1,235 +1,313 @@
 ---
+// Homepage: follows the flow of the previous site (hero → product carousel → statement →
+// "Get inspired" projects → carpet → value props → choosing a floor → enquiry CTA),
+// with the same soft fade-ins as you scroll.
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
-import { siteImages } from '../data/images';
-import ProductCard from '../components/ProductCard.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import CtaBand from '../components/CtaBand.astro';
-import { business, categories, categoryOrder, choosingCopy, ctaLine, paths, projects, promos } from '../data/site';
-import { bySlug, products, productsIn } from '../data/products';
+import { siteImages, projectImages } from '../data/images';
+import { business, categories, categoryOrder, choosingCopy, projects, promos } from '../data/site';
+import { products } from '../data/products';
 
-const featured = ['tasmanian-oak', 'white-haven', 'engineered-european-oak-parquetry-herringbone---main-st', 'spotted-gum-3', 'lightfall', 'natural-blackbutt', 'pillars', 'blairgowrie-carpet']
-  .map((s) => bySlug.get(s)!)
-  .filter(Boolean);
-// Category tile photos: a lifestyle shot from each range.
-const catPhoto = {
-  solid: siteImages['display-home-floor'],
-  engineered: bySlug.get('main-st')!.images[1] ?? bySlug.get('main-st')!.images[0],
-  parquetry: bySlug.get('engineered-european-oak-parquetry-herringbone---jetty')!.images[0],
-  hybrid: bySlug.get('natural-spotted-gum')!.images[0],
-  carpet: siteImages['carpet-promo'],
-};
-const carpets = productsIn('carpet');
+// Every floor, grouped by type in menu order (the previous homepage carousel did the same).
+const rail = categoryOrder.flatMap((k) => products.filter((p) => p.category === k));
 ---
-<Base title="Southern Timber Floors | Mornington & Melbourne Timber Floor Specialists" description={business.description}>
+<Base
+  title="Southern Timber Floors | Mornington & Melbourne Timber Floor Specialists"
+  description={business.description}
+  overlayHeader
+  footerCta={false}
+>
   <!-- Hero -->
   <section class="hero">
     <div class="hero__bg" aria-hidden="true">
       <Photo img={siteImages.hero} alt="" eager sizes="100vw" />
     </div>
-    <div class="wrap hero__in">
-      <span class="eyebrow">Australian timber solutions</span>
-      <h1>Discover the Enduring Beauty of Timber Floors</h1>
-      <p class="lead">Find the perfect variety to transform your next project. Supply, installation and finishing of solid, engineered, parquetry and hybrid flooring, plus Australian-made carpet.</p>
-      <div class="hero__actions">
-        <a class="btn btn--light" href="/timber">Explore Our Range</a>
-        <a class="btn btn--ghost-light" href="/about-us/frequently-asked-questions/contact?request=consultation">Book a free consultation</a>
-      </div>
-      <ul class="hero__facts">
-        <li><strong>{products.length}</strong><span>floors in range</span></li>
-        <li><strong>Est. {business.founded}</strong><span>Mornington Peninsula</span></li>
-        <li><strong>Free</strong><span>samples &amp; 1-hr consults</span></li>
-      </ul>
+    <div class="hero__in">
+      <h1 class="hero__h1">
+        <span class="line"><span>Discover the Enduring</span></span>
+        <span class="line"><span>Beauty of Timber Floors</span></span>
+      </h1>
+      <a class="arrow-btn hero__btn" href="/timber">
+        <span class="arrow-btn__label">Explore Our Range</span>
+        <span class="arrow-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg></span>
+      </a>
     </div>
   </section>
 
-  <!-- Categories -->
-  <section class="section">
+  <!-- Products carousel -->
+  <section class="block">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">Our Products</span>
-          <h2>Beautiful flooring solutions for modern Australian homes</h2>
-          <p class="lead">Solid, engineered, parquetry and hybrid timber, plus Australian-made carpet. Compare the options or browse by type.</p>
-        </div>
-        <a class="link-arrow" href="/timber">Browse all {products.length} floors →</a>
-      </div>
-      <div class="cats">
+      <span class="eyebrow" data-reveal>Our Products</span>
+      <h2 class="block__h" data-reveal>Beautiful flooring solutions<br /> for modern Australian homes</h2>
+      <ul class="pills" data-reveal>
+        {categoryOrder.map((k) => <li><a class="btn btn--timber btn--sm" href={categories[k].path}>{categories[k].name}</a></li>)}
+      </ul>
+    </div>
+    <div class="rail" data-rail>
+      <div class="rail__track" data-rail-track tabindex="0" aria-label="Our flooring range">
         {
-          categoryOrder.map((k, i) => {
-            const c = categories[k];
+          rail.map((p, i) => {
+            const swatch = p.images[0];
+            const bg = p.images[1];
             return (
-              <a href={c.path} class={`cat reveal ${i === 0 ? 'cat--big' : ''}`}>
-                <div class="cat__media"><Photo img={catPhoto[k]} alt="" sizes={i === 0 ? '(min-width: 1000px) 40vw, 100vw' : '(min-width: 1000px) 30vw, 50vw'} /></div>
-                <div class="cat__body">
-                  <h3>{c.name}</h3>
-                  <p>{c.short}</p>
-                  <span class="cat__count">{productsIn(k).length} options →</span>
+              <a href={`/flooring/${p.slug}`} class="pcard" data-reveal={i < 6 ? '' : undefined}>
+                <div class={`pcard__media ${bg ? '' : 'pcard__media--plain'}`}>
+                  {bg && <div class="pcard__bg"><Photo img={bg} alt="" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 80vw" /></div>}
+                  {swatch && <div class="pcard__swatch"><Photo img={swatch} alt="" sizes="(min-width: 1200px) 18vw, 50vw" /></div>}
                 </div>
+                <span class="pcard__meta">
+                  <span class="pcard__name">{p.name}</span>
+                  <span class="pcard__cat">{categories[p.category].name}</span>
+                </span>
               </a>
             );
           })
         }
       </div>
+      <div class="wrap rail__ui">
+        <div class="rail__bar" aria-hidden="true"><span data-rail-progress></span></div>
+        <div class="rail__nav">
+          <button type="button" class="rail__btn" data-rail-prev aria-label="Previous floors"><svg viewBox="0 0 24 24"><path d="M19 12H6M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg></button>
+          <button type="button" class="rail__btn" data-rail-next aria-label="Next floors"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg></button>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Statement -->
-  <section class="section--tight statement">
-    <div class="wrap">
+  <!-- Statement + projects (one soft gradient band, as on the previous site) -->
+  <section class="block block--gradient">
+    <div class="wrap statement" data-reveal>
       <span class="eyebrow">inspired living</span>
       <h2 class="statement__h">Unlock the possibilities of wood and create extraordinary environments that highlight the natural elegance and warmth of timber floors</h2>
     </div>
-  </section>
 
-  <!-- Featured -->
-  <section class="section section--paper">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">Popular right now</span>
-          <h2>Customer favourites</h2>
-        </div>
-        <a class="link-arrow" href="/timber">See the full range →</a>
+    <div class="inspired">
+      <div class="wrap inspired__head">
+        <h2 class="display" data-reveal="down">Get inspired</h2>
+        <a class="arrow-btn" href="/projects">
+          <span class="arrow-btn__label">View Full Gallery</span>
+          <span class="arrow-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg></span>
+        </a>
       </div>
-      <div class="grid grid-4">{featured.map((p) => <ProductCard product={p} />)}</div>
+      <div class="rail rail--projects" data-rail>
+        <div class="rail__track" data-rail-track tabindex="0" aria-label="Projects">
+          {
+            projects.map((pr) => {
+              const cover = projectImages[pr.slug]?.[0];
+              return (
+                <a href={`/projects/${pr.slug}`} class="prcard" data-reveal>
+                  {cover && <Photo img={cover} alt="" sizes="(min-width: 1200px) 34vw, (min-width: 640px) 50vw, 85vw" />}
+                  <span class="prcard__name">{pr.name}</span>
+                </a>
+              );
+            })
+          }
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Process -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">How it works</span>
-          <h2>From first sample to finished floor</h2>
-        </div>
-      </div>
-      <ol class="steps">
-        <li class="reveal"><span>01</span><h3>Explore</h3><p>Browse online, save up to six free samples, or drop into the Mornington showroom.</p></li>
-        <li class="reveal"><span>02</span><h3>Consult</h3><p>A free one-hour session to test boards against your finishes and talk budget and timing.</p></li>
-        <li class="reveal"><span>03</span><h3>Measure &amp; quote</h3><p>We visit site to check moisture and level, then give you a clear written quote.</p></li>
-        <li class="reveal"><span>04</span><h3>Install &amp; finish</h3><p>Our own crews prepare, lay and finish your floor, then leave the site clean.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="section section--sand">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">Projects</span>
-          <h2>Get inspired</h2>
-          <p class="lead">See how our flooring solutions have transformed homes.</p>
-        </div>
-        <a class="link-arrow" href="/projects">View Full Gallery →</a>
-      </div>
-      <div class="grid grid-4">{projects.map((p) => <ProjectCard project={p} />)}</div>
-    </div>
-  </section>
-
-  <!-- Carpet feature -->
-  <section class="section">
-    <div class="wrap split">
-      <div class="media carpet-media reveal">
-        <Photo img={siteImages['carpet-promo']} alt="Crossley Twist carpet in a living room" />
-        <div class="carpet-grid">
-          {carpets.map((c) => (
-            <a href={`/flooring/${c.slug}`} class="carpet-tile">
-              <Photo img={c.images[0]} alt="" small />
-              <span>{c.name}</span>
-            </a>
-          ))}
-        </div>
-      </div>
-      <div>
-        <span class="eyebrow">Multiple colour options available for our Blairgowrie, Crossley Twist, Hemisphere and Windslow carpet ranges</span>
-        <h2>Carpet solutions now available at Southern Timber Floors</h2>
-        <p class="lead">Southern timber floors is pleased to offer the best of Australian made Carpets to provide our builders and clients a beautiful selection to bring warmth and softness into the home.</p>
+  <!-- Carpet -->
+  <section class="mcol">
+    <div class="mcol__media" data-reveal><Photo img={siteImages['carpet-promo']} alt="Crossley Twist carpet in a living room" /></div>
+    <div class="mcol__body">
+      <h2 class="mcol__h" data-reveal>Carpet solutions <span>now available at Southern Timber Floors</span></h2>
+      <p class="mcol__kicker" data-reveal>Multiple colour options available for our Blairgowrie, Crossley Twist, Hemisphere and Windslow carpet ranges</p>
+      <div data-reveal>
+        <p>Southern timber floors is pleased to offer the best of Australian made Carpets to provide our builders and clients a beautiful selection to bring warmth and softness into the home.</p>
         <p>Our focus has been to find the best quality and durability to offer a selection of on-trend colours and styles.</p>
-        <ul class="checklist">
-          {carpets.map((c) => <li><strong>{c.name}</strong>: {c.specs.map(([, v]) => v).join(' · ')}</li>)}
-        </ul>
-        <a class="btn" href="/timber/carpet">View Carpet Products</a>
+        <a class="arrow-btn arrow-btn--dark" href="/timber/carpet">
+          <span class="arrow-btn__label">View Carpet Products</span>
+          <span class="arrow-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg></span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Value props -->
-  <section class="section section--ink">
-    <div class="wrap">
-      <div class="values">
-        {promos.map((p) => (
-          <div class="reveal">
-            <h3>{p.title}</h3>
-            <p>{p.body}</p>
-            <a class="link-arrow" href={p.link.href}>{p.link.label} →</a>
-          </div>
-        ))}
-      </div>
+  <section class="block">
+    <div class="wrap values">
+      {promos.map((p, i) => (
+        <article class="value" data-reveal>
+          <img src={`/images/icons/promo-${i + 1}.svg`} alt="" width="88" height="88" loading="lazy" />
+          <h3>{p.title}</h3>
+          <p>{p.body}</p>
+          <a class="link-arrow" href={p.link.href}>{p.link.label} →</a>
+        </article>
+      ))}
     </div>
   </section>
 
   <!-- Choosing a floor (original copy) -->
-  <section class="section">
-    <div class="wrap split">
-      <div>
-        <span class="eyebrow">Solid, Hybrid, Engineered &amp; Parquetry Timber</span>
-        <h2>{choosingCopy.heading}</h2>
-        {choosingCopy.body.map((p) => <p class="lead">{p}</p>)}
-        <a class="btn" href="/timber">View Our Range</a>
+  <section class="mcol mcol--reverse">
+    <div class="mcol__media" data-reveal><Photo img={siteImages['showroom-frame']} alt="Southern Timber Floors showroom displays" /></div>
+    <div class="mcol__body">
+      <h2 class="mcol__h mcol__h--plain" data-reveal>{choosingCopy.heading}</h2>
+      <p class="mcol__kicker" data-reveal>Solid, Hybrid, Engineered &amp; Parquetry Timber</p>
+      <div data-reveal>
+        {choosingCopy.body.map((p) => <p>{p}</p>)}
+        <a class="arrow-btn arrow-btn--dark" href="/timber">
+          <span class="arrow-btn__label">View Our Range</span>
+          <span class="arrow-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg></span>
+        </a>
       </div>
-      <div class="media" style="aspect-ratio:4/3"><Photo img={siteImages['showroom-frame']} alt="Southern Timber Floors showroom displays" /></div>
     </div>
   </section>
 
-  <CtaBand title="Enquire now" body={ctaLine} />
+  <!-- Enquiry CTA -->
+  <section class="cta-green">
+    <div class="wrap cta-green__in">
+      <div class="cta-green__body" data-reveal>
+        <p class="cta-green__h">Let us bring your architectural vision to life. <span>Get in touch with our dedicated team to request samples, spec sheets and presentations.</span></p>
+        <a class="arrow-btn arrow-btn--dark" href="/about-us/frequently-asked-questions/contact">
+          <span class="arrow-btn__label">Enquire now</span>
+          <span class="arrow-btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
 </Base>
 
+<script>
+  // Horizontal carousels: arrow buttons, drag-free native scrolling with snap, and a progress bar.
+  document.querySelectorAll<HTMLElement>('[data-rail]').forEach((rail) => {
+    const track = rail.querySelector<HTMLElement>('[data-rail-track]')!;
+    const bar = rail.querySelector<HTMLElement>('[data-rail-progress]');
+    const prev = rail.querySelector<HTMLButtonElement>('[data-rail-prev]');
+    const next = rail.querySelector<HTMLButtonElement>('[data-rail-next]');
+    const step = () => {
+      const card = track.firstElementChild as HTMLElement | null;
+      return card ? (card.offsetWidth + 12) * Math.max(1, Math.floor(track.clientWidth / (card.offsetWidth + 12))) : track.clientWidth;
+    };
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      const ratio = max > 0 ? track.scrollLeft / max : 1;
+      if (bar) {
+        bar.style.width = `${Math.max(8, (track.clientWidth / track.scrollWidth) * 100)}%`;
+        bar.style.transform = `translateX(${ratio * ((100 / parseFloat(bar.style.width)) * 100 - 100)}%)`;
+      }
+      if (prev) prev.disabled = track.scrollLeft <= 2;
+      if (next) next.disabled = track.scrollLeft >= max - 2;
+    };
+    prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+</script>
+
 <style>
-  .hero { position: relative; color: var(--cream); isolation: isolate; overflow: hidden; min-height: min(86vh, 760px); display: flex; align-items: end; }
+  /* ---------- Hero: inset, rounded, full height ---------- */
+  .hero {
+    position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: end;
+    margin: 0 clamp(8px, 1.2vw, 16px); border-radius: 0 0 clamp(14px, 2vw, 30px) clamp(14px, 2vw, 30px);
+    min-height: clamp(560px, 100svh, 900px); background: #000; color: #fff;
+  }
+  /* Phones: leave room for the fixed Call / Samples / Enquire bar. */
+  @media (max-width: 899px) { .hero { min-height: max(520px, calc(100svh - 84px)); } }
   .hero__bg { position: absolute; inset: 0; z-index: -1; }
-  .hero__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(25 25 25 / 0.1), rgb(25 25 25 / 0.75) 80%), linear-gradient(90deg, rgb(25 25 25 / 0.55), transparent 65%); }
-  .hero__in { padding-top: clamp(80px, 14vw, 160px); padding-bottom: clamp(40px, 7vw, 80px); }
-  .hero h1 { color: #fff; max-width: 16ch; }
-  .hero .eyebrow { color: var(--brand); }
-  .hero .lead { color: #ebe9e5; }
-  .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 40px; }
-  .hero__facts { list-style: none; padding: 24px 0 0; margin: 0; display: flex; flex-wrap: wrap; gap: 20px 48px; border-top: 1px solid rgb(255 255 255 / 0.18); max-width: 640px; }
-  .hero__facts li { display: grid; }
-  .hero__facts strong { font: 400 1.9rem/1 var(--serif); color: #fff; }
-  .hero__facts span { font-size: 0.82rem; color: #d4d2ce; margin-top: 4px; }
+  .hero__bg :global(img) { opacity: 0.62; animation: hero-img 2.2s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes hero-img { from { opacity: 0; transform: scale(1.08); } }
+  .hero__in { width: 100%; padding: calc(var(--header-h) + 40px) clamp(20px, 3vw, 44px) clamp(28px, 4vw, 52px); }
+  .hero__h1 { color: #fff; font-size: clamp(2.6rem, 6.4vw, 6rem); line-height: 1; letter-spacing: -0.035em; max-width: none; margin: 0 0 clamp(24px, 3.5vw, 48px); }
+  .line { display: block; overflow: clip; padding-bottom: 0.08em; }
+  .line > span { display: inline-block; animation: line-up 1s cubic-bezier(.2,.7,.2,1) both; }
+  .line:nth-child(1) > span { animation-delay: .55s; }
+  .line:nth-child(2) > span { animation-delay: .7s; }
+  .hero__btn { animation: fade-up .9s cubic-bezier(.2,.7,.2,1) 1s both; }
+  @keyframes line-up { from { opacity: 0; transform: translateY(100%); } }
+  @keyframes fade-up { from { opacity: 0; transform: translateY(24px); } }
+  @media (prefers-reduced-motion: reduce) { .hero__bg :global(img), .line > span, .hero__btn { animation: none; } }
 
-  .cats { display: grid; gap: 16px; grid-template-columns: 1fr; }
-  @media (min-width: 640px) { .cats { grid-template-columns: 1fr 1fr; } .cat--big { grid-column: 1 / -1; } }
-  @media (min-width: 1000px) { .cats { grid-template-columns: 1.3fr 1fr 1fr; grid-template-rows: auto auto; } .cat--big { grid-column: 1; grid-row: 1 / 3; } }
-  .cat { position: relative; display: flex; flex-direction: column; justify-content: end; min-height: 260px; border-radius: var(--radius); overflow: hidden; text-decoration: none; color: #fff; isolation: isolate; }
-  .cat--big { min-height: 380px; }
-  .cat__media { position: absolute; inset: 0; z-index: -1; }
-  .cat__media :global(img) { transition: transform .8s ease; }
-  .cat:hover .cat__media :global(img) { transform: scale(1.05); }
-  .cat::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, transparent 20%, rgb(25 25 25 / 0.85)); }
-  .cat__body { padding: 22px; }
-  .cat h3 { margin: 0 0 6px; color: #fff; }
-  .cat p { font-size: 0.92rem; color: #eeece8; margin: 0 0 10px; max-width: 44ch; }
-  .cat__count { font-size: 0.85rem; font-weight: 600; color: var(--brand); }
+  /* ---------- Pill + round-arrow button (previous site's style) ---------- */
+  .arrow-btn { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; --bg: var(--brand); --fg: var(--brand-ink); }
+  .arrow-btn--dark { --bg: var(--ink); --fg: var(--brand); }
+  .arrow-btn__label { display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: var(--bg); color: var(--fg); font: 600 0.82rem/1 var(--sans); letter-spacing: 0.06em; text-transform: uppercase; transition: background .25s, color .25s; }
+  .arrow-btn__icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--bg); color: var(--fg); overflow: hidden; transition: background .25s, color .25s; }
+  .arrow-btn__icon svg { width: 20px; height: 20px; transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+  .arrow-btn:hover .arrow-btn__icon svg { transform: translateX(4px); }
+  .arrow-btn:hover .arrow-btn__label, .arrow-btn:hover .arrow-btn__icon { background: var(--fg); color: var(--bg); }
+  .arrow-btn--dark:hover .arrow-btn__label, .arrow-btn--dark:hover .arrow-btn__icon { background: var(--ink-2); color: var(--brand); }
 
-  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
-  .steps li { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
-  .steps span { font: 400 2rem var(--serif); color: var(--timber); }
-  .steps h3 { margin: 10px 0 8px; }
-  .steps p { color: var(--ink-2); font-size: 0.95rem; margin: 0; }
+  /* ---------- Blocks ---------- */
+  .block { padding: clamp(72px, 10vw, 140px) 0; }
+  .block__h { font-size: clamp(2rem, 3.6vw, 3.2rem); max-width: 20ch; }
+  .pills { list-style: none; padding: 0; margin: clamp(24px, 3vw, 40px) 0 clamp(32px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 10px; }
+  .pills .btn { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.78rem; }
 
-  .carpet-media { background: none; display: grid; gap: 12px; border-radius: 0; overflow: visible; }
-  .carpet-media > :global(img) { aspect-ratio: 4 / 3; border-radius: var(--radius); }
-  .carpet-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-  .carpet-tile { position: relative; aspect-ratio: 1; border-radius: var(--radius-sm); overflow: hidden; text-decoration: none; }
-  .carpet-tile span { position: absolute; left: 6px; right: 6px; bottom: 6px; background: rgb(250 250 250 / 0.94); padding: 3px 6px; border-radius: 999px; font-size: 0.72rem; font-weight: 600; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* ---------- Carousels ---------- */
+  .rail__track {
+    display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain;
+    padding: 0 max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter))); scroll-padding-inline: max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter)));
+    scrollbar-width: none;
+  }
+  .rail__track::-webkit-scrollbar { display: none; }
+  .rail__track:focus-visible { outline-offset: -2px; }
+  .rail__ui { display: flex; align-items: center; gap: 24px; margin-top: 28px; }
+  .rail__bar { flex: 1; height: 2px; background: var(--line); overflow: hidden; }
+  .rail__bar span { display: block; height: 100%; background: var(--ink); transition: transform .15s linear; }
+  .rail__nav { display: flex; gap: 8px; }
+  .rail__btn { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; transition: background .2s, color .2s, opacity .2s; }
+  .rail__btn svg { width: 20px; height: 20px; }
+  .rail__btn:hover:not(:disabled) { background: var(--ink); color: var(--brand); }
+  .rail__btn:disabled { opacity: 0.3; cursor: default; }
 
-  .statement__h { font-size: clamp(1.5rem, 2.8vw, 2.3rem); max-width: 30ch; line-height: 1.25; }
-  .values { display: grid; gap: 36px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
-  .values h3 { color: #fff; }
-  .values p { color: #c9c7c3; font-size: 0.95rem; }
-  .values .link-arrow { color: var(--brand); }
+  /* Product card: swatch floating over a room photo, the room is revealed on hover */
+  .pcard { flex: 0 0 min(78vw, 340px); scroll-snap-align: start; text-decoration: none; color: inherit; }
+  @media (min-width: 900px) { .pcard { flex-basis: calc((min(100vw, var(--wrap)) - 2 * var(--gutter) - 24px) / 3); } }
+  .pcard__media { position: relative; aspect-ratio: 1; border-radius: var(--radius-sm); overflow: hidden; background: var(--sand); }
+  .pcard__media--plain { background: #ebe7e0; }
+  .pcard__bg { position: absolute; inset: 0; }
+  .pcard__bg :global(img) { transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+  .pcard__swatch { position: absolute; inset: 20%; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 40px -18px rgb(0 0 0 / 0.55); transition: transform .8s cubic-bezier(.2,.7,.2,1), opacity .6s ease; }
+  .pcard:hover .pcard__bg :global(img) { transform: scale(1.06); }
+  .pcard:hover .pcard__media:not(.pcard__media--plain) .pcard__swatch { transform: translateY(12%) scale(0.86); opacity: 0; }
+  .pcard:hover .pcard__media--plain .pcard__swatch { transform: scale(1.06); }
+  .pcard__meta { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; padding-top: 14px; }
+  .pcard__name { font: 400 1.15rem/1.2 var(--serif); letter-spacing: -0.01em; }
+  .pcard__cat { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+
+  /* ---------- Statement + Get inspired ---------- */
+  .block--gradient { background: linear-gradient(180deg, var(--cream) 0%, var(--paper) 45%, var(--cream) 100%); }
+  .statement { text-align: center; padding-bottom: clamp(72px, 10vw, 140px); }
+  .statement__h { font-size: clamp(1.6rem, 3vw, 2.6rem); line-height: 1.2; max-width: 34ch; margin: 0 auto; }
+  .inspired__head { display: flex; align-items: end; justify-content: space-between; gap: 24px; flex-wrap: wrap; position: relative; z-index: 2; margin-bottom: calc(clamp(3.6rem, 13vw, 12rem) * -0.32); }
+  .display { font-size: clamp(3.6rem, 13vw, 12rem); line-height: 0.9; letter-spacing: -0.05em; margin: 0; color: var(--ink); }
+  .inspired__head .arrow-btn { margin-bottom: calc(clamp(3.6rem, 13vw, 12rem) * 0.42); }
+  @media (max-width: 899px) { .inspired__head .arrow-btn { display: none; } }
+  .prcard { position: relative; flex: 0 0 min(85vw, 520px); aspect-ratio: 5 / 4; scroll-snap-align: start; border-radius: var(--radius-sm); overflow: hidden; color: #fff; text-decoration: none; isolation: isolate; }
+  .prcard :global(img) { position: absolute; inset: 0; z-index: -1; transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+  .prcard::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, transparent 55%, rgb(0 0 0 / 0.55)); }
+  .prcard:hover :global(img) { transform: scale(1.05); }
+  .prcard__name { position: absolute; left: 0; right: 0; bottom: 22px; text-align: center; font: 500 1.05rem var(--sans); }
+  .rail--projects .rail__track { padding-bottom: 4px; }
+
+  /* ---------- Media columns (edge-to-edge photo + text panel) ---------- */
+  .mcol { display: grid; grid-template-columns: 1fr; background: var(--sand); }
+  @media (min-width: 900px) { .mcol { grid-template-columns: 1fr 1fr; } .mcol--reverse .mcol__media { order: 2; } }
+  .mcol__media { min-height: 360px; position: relative; }
+  .mcol__media :global(img) { position: absolute; inset: 0; }
+  .mcol__body { padding: clamp(48px, 7vw, 120px) clamp(20px, 5vw, 96px); align-self: center; max-width: 720px; }
+  .mcol__h { font-size: clamp(2rem, 3.4vw, 3rem); margin-bottom: 0.6em; }
+  .mcol__h span { display: block; color: var(--muted); }
+  .mcol__kicker { font: 400 1.15rem/1.45 var(--serif); color: var(--ink); max-width: 40ch; }
+  .mcol__body p:not(.mcol__kicker) { color: var(--ink-2); max-width: 56ch; }
+  .mcol__body .arrow-btn { margin-top: 12px; }
+
+  /* ---------- Value props ---------- */
+  .values { display: grid; gap: clamp(48px, 5vw, 32px); grid-template-columns: 1fr; text-align: center; }
+  @media (min-width: 700px) { .values { grid-template-columns: 1fr 1fr; text-align: left; } }
+  @media (min-width: 1100px) { .values { grid-template-columns: repeat(4, 1fr); } }
+  .value img { width: 88px; height: 88px; margin-bottom: 20px; }
+  .value h3 { font-size: 1.35rem; max-width: 16ch; }
+  @media (max-width: 699px) { .value h3 { margin-inline: auto; } }
+  .value p { color: var(--ink-2); font-size: 0.95rem; }
+
+  /* ---------- Green enquiry CTA ---------- */
+  .cta-green { background: var(--brand); color: var(--brand-ink); padding: clamp(96px, 11vw, 150px) 0; }
+  .cta-green__in { display: flex; justify-content: flex-end; }
+  .cta-green__body { width: 100%; max-width: 620px; }
+  .cta-green__h { font: 400 clamp(1.5rem, 2.6vw, 2.2rem)/1.2 var(--serif); letter-spacing: -0.02em; margin-bottom: 32px; }
+  .cta-green__h span { color: #5e6150; }
 </style>
