@@ -1,562 +1,572 @@
 {
- "/": {
-  "title": "Southern Timber Floors | Mornington & Melbourne Timber Floor Specialists",
-  "description": "Southern Timber Floors located on the beautiful Mornington Peninsula specialises in the supply, installation and finishing of Solid and Engineered Timber flooring. Since our inception in 2005, we have built a reputation as one of the true market leaders in all aspects of timber flooring.",
-  "h1": "Discover the Enduring Beauty of Timber Floors"
- },
- "/about-us": {
-  "title": "About us | Southern Timber Floors",
-  "description": null,
-  "h1": "About Southern Timber Floors"
- },
- "/about-us/catalogues-guides": {
-  "title": "Catalogues & Guides | Southern Timber Floors",
-  "description": null,
-  "h1": "Catalogues & Guides"
- },
- "/about-us/frequently-asked-questions": {
-  "title": "Frequently Asked Questions | Southern Timber Floors",
-  "description": null,
-  "h1": "Frequently Asked Questions"
- },
- "/about-us/frequently-asked-questions/contact": {
-  "title": "Contact Us | Southern Timber Floors",
-  "description": null,
-  "h1": "Contact Us"
- },
- "/about-us/frequently-asked-questions/contact/thanks": {
-  "title": "Thanks | Southern Timber Floors",
-  "description": null,
-  "h1": "Thanks"
- },
- "/about-us/mornington-showroom": {
-  "title": "Mornington Showroom | Southern Timber Floors",
-  "description": null,
-  "h1": "Our Showroom"
- },
- "/about-us/sustainability": {
-  "title": "Sustainability | Southern Timber Floors",
-  "description": null,
-  "h1": "Sustainability"
- },
- "/flooring/american-oak": {
-  "title": "American Oak | Southern Timber Floors",
-  "description": null,
-  "h1": "American Oak"
- },
- "/flooring/american-oak-rustic": {
-  "title": "American Oak Rustic | Southern Timber Floors",
-  "description": null,
-  "h1": "American Oak Rustic"
- },
- "/flooring/antique": {
-  "title": "Heritage | Southern Timber Floors",
-  "description": null,
-  "h1": "Heritage"
- },
- "/flooring/arthurs-st-engineered-timber": {
-  "title": "Arthurs Seat | Southern Timber Floors",
-  "description": null,
-  "h1": "Arthurs Seat"
- },
- "/flooring/avola-natural": {
-  "title": "Oceanic | Southern Timber Floors",
-  "description": null,
-  "h1": "Oceanic"
- },
- "/flooring/back-beach": {
-  "title": "Back Beach | Southern Timber Floors",
-  "description": null,
-  "h1": "Back Beach"
- },
- "/flooring/barnside": {
-  "title": "Cottage | Southern Timber Floors",
-  "description": null,
-  "h1": "Cottage"
- },
- "/flooring/beach-16": {
-  "title": "Beach 16 | Southern Timber Floors",
-  "description": null,
-  "h1": "Beach 16"
- },
- "/flooring/beach-house": {
-  "title": "Beach House | Southern Timber Floors",
-  "description": null,
-  "h1": "Beach House"
- },
- "/flooring/beachwood": {
-  "title": "Beachwood | Southern Timber Floors",
-  "description": null,
-  "h1": "Beachwood"
- },
- "/flooring/birdrock": {
-  "title": "Birdrock | Southern Timber Floors",
-  "description": null,
-  "h1": "Birdrock"
- },
- "/flooring/blackbutt-engineered-parquetry-herringbone": {
-  "title": "Blackbutt | Southern Timber Floors",
-  "description": null,
-  "h1": "Blackbutt"
- },
- "/flooring/blairgowrie-carpet": {
-  "title": "Blairgowrie Carpet | Southern Timber Floors",
-  "description": null,
-  "h1": "Blairgowrie"
- },
- "/flooring/briars": {
-  "title": "Briars | Southern Timber Floors",
-  "description": null,
-  "h1": "Briars"
- },
- "/flooring/brightmore": {
-  "title": "Brightmore | Southern Timber Floors",
-  "description": null,
-  "h1": "Brightmore"
- },
- "/flooring/cinderhill": {
-  "title": "Cinderhill | Southern Timber Floors",
-  "description": null,
-  "h1": "Cinderhill"
- },
- "/flooring/crossley-twist-carpet": {
-  "title": "Crossley Twist Carpet | Southern Timber Floors",
-  "description": null,
-  "h1": "Crossley Twist"
- },
- "/flooring/deep-brown": {
-  "title": "Deep Brown | Southern Timber Floors",
-  "description": null,
-  "h1": "Deep Brown"
- },
- "/flooring/doeskin": {
-  "title": "Doeskin | Southern Timber Floors",
-  "description": null,
-  "h1": "Doeskin"
- },
- "/flooring/engineered-australian-species---blackbutt": {
-  "title": "Blackbutt | Southern Timber Floors",
-  "description": null,
-  "h1": "Blackbutt"
- },
- "/flooring/engineered-australian-species---firestreak": {
-  "title": "Firestreak | Southern Timber Floors",
-  "description": null,
-  "h1": "Firestreak"
- },
- "/flooring/engineered-australian-species---rustic-blackbutt": {
-  "title": "Rustic Blackbutt | Southern Timber Floors",
-  "description": null,
-  "h1": "Rustic Blackbutt"
- },
- "/flooring/engineered-australian-species---spotted-gum": {
-  "title": "Spotted Gum | Southern Timber Floors",
-  "description": null,
-  "h1": "Spotted Gum"
- },
- "/flooring/engineered-australian-species---tasmanian-oak": {
-  "title": "Tasmanian Oak | Southern Timber Floors",
-  "description": null,
-  "h1": "Tasmanian Oak"
- },
- "/flooring/engineered-australian-species---victorian-ash": {
-  "title": "Victorian Ash | Southern Timber Floors",
-  "description": null,
-  "h1": "Victorian Ash"
- },
- "/flooring/engineered-european-oak-parquetry-chevron-colour---dark-brown": {
-  "title": "Shoreline | Southern Timber Floors",
-  "description": null,
-  "h1": "Shoreline"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone---beach-stone": {
-  "title": "Beach House | Southern Timber Floors",
-  "description": null,
-  "h1": "Beach House"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone---half-moon-bay": {
-  "title": "Half Moon Bay | Southern Timber Floors",
-  "description": null,
-  "h1": "Half Moon Bay"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone---jetty": {
-  "title": "Jetty | Southern Timber Floors",
-  "description": null,
-  "h1": "Jetty"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone---main-st": {
-  "title": "Main St | Southern Timber Floors",
-  "description": null,
-  "h1": "Main St"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone---martha": {
-  "title": "Martha | Southern Timber Floors",
-  "description": null,
-  "h1": "Martha"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone---moondah": {
-  "title": "Moonda | Southern Timber Floors",
-  "description": null,
-  "h1": "Moonda"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone-colour---castle-grey": {
-  "title": "Cove | Southern Timber Floors",
-  "description": null,
-  "h1": "Cove"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone-colour---cognac": {
-  "title": "Cognac | Southern Timber Floors",
-  "description": null,
-  "h1": "Cognac"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone-colour---gunnamatta": {
-  "title": "Gunnamatta | Southern Timber Floors",
-  "description": null,
-  "h1": "Gunnamatta"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone-colour---pier-st": {
-  "title": "Pier St | Southern Timber Floors",
-  "description": null,
-  "h1": "Pier St"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone-colour---red-hill": {
-  "title": "Red Hill | Southern Timber Floors",
-  "description": null,
-  "h1": "Red Hill"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone-colour--arthurs-st": {
-  "title": "Arthurs Seat | Southern Timber Floors",
-  "description": null,
-  "h1": "Arthurs Seat"
- },
- "/flooring/engineered-european-oak-parquetry-herringbone-colour--st-andrew": {
-  "title": "St Andrews | Southern Timber Floors",
-  "description": null,
-  "h1": "St Andrews"
- },
- "/flooring/flint-grey": {
-  "title": "Flint Grey | Southern Timber Floors",
-  "description": null,
-  "h1": "Flint Grey"
- },
- "/flooring/fort": {
-  "title": "Fort | Southern Timber Floors",
-  "description": null,
-  "h1": "Fort"
- },
- "/flooring/grey-iron-bark": {
-  "title": "Grey Iron Bark | Southern Timber Floors",
-  "description": null,
-  "h1": "Grey Iron Bark"
- },
- "/flooring/grey-stone": {
-  "title": "Grey Stone | Southern Timber Floors",
-  "description": null,
-  "h1": "Grey Stone"
- },
- "/flooring/gunnamatta": {
-  "title": "Gunnamatta | Southern Timber Floors",
-  "description": null,
-  "h1": "Gunnamatta"
- },
- "/flooring/gympie-messmate": {
-  "title": "Gympie Messmate | Southern Timber Floors",
-  "description": null,
-  "h1": "Gympie Messmate"
- },
- "/flooring/hemisphere-carpet": {
-  "title": "Hemisphere Carpet | Southern Timber Floors",
-  "description": null,
-  "h1": "Hemisphere"
- },
- "/flooring/jarrah": {
-  "title": "Jarrah | Southern Timber Floors",
-  "description": null,
-  "h1": "Jarrah"
- },
- "/flooring/jetty": {
-  "title": "Jetty | Southern Timber Floors",
-  "description": null,
-  "h1": "Jetty"
- },
- "/flooring/lightfall": {
-  "title": "Lightfall | Southern Timber Floors",
-  "description": null,
-  "h1": "Lightfall"
- },
- "/flooring/linen": {
-  "title": "Ashen | Southern Timber Floors",
-  "description": null,
-  "h1": "Ashen"
- },
- "/flooring/magnolia": {
-  "title": "Magnolia | Southern Timber Floors",
-  "description": null,
-  "h1": "Magnolia"
- },
- "/flooring/main-st": {
-  "title": "Main St | Southern Timber Floors",
-  "description": null,
-  "h1": "Main St"
- },
- "/flooring/maize": {
-  "title": "Sunfield | Southern Timber Floors",
-  "description": null,
-  "h1": "Sunfield"
- },
- "/flooring/martha": {
-  "title": "Martha | Southern Timber Floors",
-  "description": null,
-  "h1": "Martha"
- },
- "/flooring/mistgrove": {
-  "title": "Mistgrove | Southern Timber Floors",
-  "description": null,
-  "h1": "Mistgrove"
- },
- "/flooring/moondah": {
-  "title": "Moonda | Southern Timber Floors",
-  "description": null,
-  "h1": "Moonda"
- },
- "/flooring/natural-blackbutt": {
-  "title": "Natural Blackbutt | Southern Timber Floors",
-  "description": null,
-  "h1": "Natural Blackbutt"
- },
- "/flooring/natural-spotted-gum": {
-  "title": "Natural Spotted Gum | Southern Timber Floors",
-  "description": null,
-  "h1": "Natural Spotted Gum"
- },
- "/flooring/nsw-blackbutt": {
-  "title": "NSW Blackbutt | Southern Timber Floors",
-  "description": null,
-  "h1": "NSW Blackbutt"
- },
- "/flooring/oak-natural": {
-  "title": "Pure Oak | Southern Timber Floors",
-  "description": null,
-  "h1": "Pure Oak"
- },
- "/flooring/pewter": {
-  "title": "Quantum | Southern Timber Floors",
-  "description": null,
-  "h1": "Quantum"
- },
- "/flooring/pier-st-engineered-timber": {
-  "title": "Pier St | Southern Timber Floors",
-  "description": null,
-  "h1": "Pier St"
- },
- "/flooring/pillars": {
-  "title": "Pillars | Southern Timber Floors",
-  "description": null,
-  "h1": "Pillars"
- },
- "/flooring/porcelain": {
-  "title": "Alabaster | Southern Timber Floors",
-  "description": null,
-  "h1": "Alabaster"
- },
- "/flooring/red-hill-engineered-timber": {
-  "title": "Red Hill | Southern Timber Floors",
-  "description": null,
-  "h1": "Red Hill"
- },
- "/flooring/red-stone": {
-  "title": "Ember | Southern Timber Floors",
-  "description": null,
-  "h1": "Ember"
- },
- "/flooring/sauvignon": {
-  "title": "Horizon | Southern Timber Floors",
-  "description": null,
-  "h1": "Horizon"
- },
- "/flooring/seabright": {
-  "title": "Seabright | Southern Timber Floors",
-  "description": null,
-  "h1": "Seabright"
- },
- "/flooring/silvery-grey": {
-  "title": "Silver Grey | Southern Timber Floors",
-  "description": null,
-  "h1": "Silver Grey"
- },
- "/flooring/smoked-spotted-gum": {
-  "title": "Smoked Spotted Gum | Southern Timber Floors",
-  "description": null,
-  "h1": "Smoked Spotted Gum"
- },
- "/flooring/southern-blackbutt": {
-  "title": "Southern Blackbutt | Southern Timber Floors",
-  "description": null,
-  "h1": "Southern Blackbutt"
- },
- "/flooring/spotted-gum-3": {
-  "title": "Spotted Gum | Southern Timber Floors",
-  "description": null,
-  "h1": "Spotted Gum"
- },
- "/flooring/spotted-gum-engineered-parquetry-herringbone": {
-  "title": "Spotted Gum | Southern Timber Floors",
-  "description": null,
-  "h1": "Spotted Gum"
- },
- "/flooring/st-andrew-engineered-timber": {
-  "title": "St Andrews | Southern Timber Floors",
-  "description": null,
-  "h1": "St Andrews"
- },
- "/flooring/starfield": {
-  "title": "Starfield | Southern Timber Floors",
-  "description": null,
-  "h1": "Starfield"
- },
- "/flooring/tasmanian-driftwwod": {
-  "title": "Tasmanian Driftwood | Southern Timber Floors",
-  "description": null,
-  "h1": "Tasmanian Driftwood"
- },
- "/flooring/tasmanian-oak": {
-  "title": "Tasmanian Oak | Southern Timber Floors",
-  "description": null,
-  "h1": "Tasmanian Oak"
- },
- "/flooring/the-eagle": {
-  "title": "The Eagle | Southern Timber Floors",
-  "description": null,
-  "h1": "The Eagle"
- },
- "/flooring/tideway": {
-  "title": "Tideway | Southern Timber Floors",
-  "description": null,
-  "h1": "Tideway"
- },
- "/flooring/vintage": {
-  "title": "Vantage | Southern Timber Floors",
-  "description": null,
-  "h1": "Vantage"
- },
- "/flooring/washed-coral": {
-  "title": "Firestorm | Southern Timber Floors",
-  "description": null,
-  "h1": "Firestorm"
- },
- "/flooring/wheat": {
-  "title": "Wheat | Southern Timber Floors",
-  "description": null,
-  "h1": "Wheat"
- },
- "/flooring/white-haven": {
-  "title": "White Haven | Southern Timber Floors",
-  "description": null,
-  "h1": "White Haven"
- },
- "/flooring/windslow-carpet": {
-  "title": "Winslow Carpet | Southern Timber Floors",
-  "description": null,
-  "h1": "Windslow"
- },
- "/flooring/wormy-chestnut-qld": {
-  "title": "Wormy Chestnut QLD | Southern Timber Floors",
-  "description": null,
-  "h1": "Wormy Chestnut QLD"
- },
- "/our-services": {
-  "title": "Our Services | Southern Timber Floors",
-  "description": null,
-  "h1": "Our Services"
- },
- "/our-services/builders-developers": {
-  "title": "Builders & Developers | Southern Timber Floors",
-  "description": null,
-  "h1": "Builders & Developers"
- },
- "/our-services/consultations": {
-  "title": "Consultations | Southern Timber Floors",
-  "description": null,
-  "h1": "Book a free one hour Interior Design consultation"
- },
- "/our-services/decorators": {
-  "title": "Decorators | Southern Timber Floors",
-  "description": null,
-  "h1": "Decorators"
- },
- "/our-services/home-renovations": {
-  "title": "Home Renovations | Southern Timber Floors",
-  "description": null,
-  "h1": "Home Renovations"
- },
- "/our-services/installation": {
-  "title": "Installation | Southern Timber Floors",
-  "description": null,
-  "h1": "Installation"
- },
- "/our-services/owner-builders": {
-  "title": "Owner Builders | Southern Timber Floors",
-  "description": null,
-  "h1": "Owner Builders"
- },
- "/our-services/sanding-polishing": {
-  "title": "Sanding & Polishing | Southern Timber Floors",
-  "description": null,
-  "h1": "Sanding & Polishing"
- },
- "/projects": {
-  "title": "Projects | Southern Timber Floors",
-  "description": null,
-  "h1": "Projects"
- },
- "/projects/rye-residence": {
-  "title": "Gilpip Residence | Southern Timber Floors",
-  "description": null,
-  "h1": "Project Gilpip Residence"
- },
- "/projects/south-yarra-apparentment": {
-  "title": "Mornington Peninsula | Southern Timber Floors",
-  "description": null,
-  "h1": "Project Mornington Peninsula"
- },
- "/projects/yacht-court-house": {
-  "title": "Country Home | Southern Timber Floors",
-  "description": null,
-  "h1": "Project Country Home"
- },
- "/projects/yarralumla-house": {
-  "title": "Latitude 37 | Southern Timber Floors",
-  "description": null,
-  "h1": "Project Latitude 37"
- },
- "/timber": {
-  "title": "Flooring | Southern Timber Floors",
-  "description": null,
-  "h1": "Flooring solutions for every project"
- },
- "/timber/carpet": {
-  "title": "Carpet | Southern Timber Floors",
-  "description": null,
-  "h1": "Flooring solutions for every project"
- },
- "/timber/engineered-timber": {
-  "title": "Engineered Timber | Southern Timber Floors",
-  "description": null,
-  "h1": "Flooring solutions for every project"
- },
- "/timber/hybrid-timber": {
-  "title": "Hybrid timber | Southern Timber Floors",
-  "description": null,
-  "h1": "Flooring solutions for every project"
- },
- "/timber/parquetry-timber": {
-  "title": "Parquetry Timber | Southern Timber Floors",
-  "description": null,
-  "h1": "Flooring solutions for every project"
- },
- "/timber/solid-timber": {
-  "title": "Solid Timber | Southern Timber Floors",
-  "description": null,
-  "h1": "Flooring solutions for every project"
- }
+  "/": {
+    "title": "Southern Timber Floors | Mornington & Melbourne Timber Floor Specialists",
+    "description": "Southern Timber Floors located on the beautiful Mornington Peninsula specialises in the supply, installation and finishing of Solid and Engineered Timber flooring. Since our inception in 2005, we have built a reputation as one of the true market leaders in all aspects of timber flooring.",
+    "h1": "Discover the Enduring Beauty of Timber Floors"
+  },
+  "/about-us": {
+    "title": "About us | Southern Timber Floors",
+    "description": null,
+    "h1": "About Southern Timber Floors"
+  },
+  "/about-us/catalogues-guides": {
+    "title": "Catalogues & Guides | Southern Timber Floors",
+    "description": null,
+    "h1": "Catalogues & Guides"
+  },
+  "/about-us/frequently-asked-questions": {
+    "title": "Frequently Asked Questions | Southern Timber Floors",
+    "description": null,
+    "h1": "Frequently Asked Questions"
+  },
+  "/about-us/frequently-asked-questions/contact": {
+    "title": "Contact Us | Southern Timber Floors",
+    "description": null,
+    "h1": "Contact Us"
+  },
+  "/about-us/frequently-asked-questions/contact/thanks": {
+    "title": "Thanks | Southern Timber Floors",
+    "description": null,
+    "h1": "Thanks"
+  },
+  "/about-us/mornington-showroom": {
+    "title": "Mornington Showroom | Southern Timber Floors",
+    "description": null,
+    "h1": "Our Showroom"
+  },
+  "/about-us/sustainability": {
+    "title": "Sustainability | Southern Timber Floors",
+    "description": null,
+    "h1": "Sustainability"
+  },
+  "/flooring/american-oak": {
+    "title": "American Oak | Southern Timber Floors",
+    "description": null,
+    "h1": "American Oak"
+  },
+  "/flooring/american-oak-rustic": {
+    "title": "American Oak Rustic | Southern Timber Floors",
+    "description": null,
+    "h1": "American Oak Rustic"
+  },
+  "/flooring/antique": {
+    "title": "Heritage | Southern Timber Floors",
+    "description": null,
+    "h1": "Heritage"
+  },
+  "/flooring/arthurs-st-engineered-timber": {
+    "title": "Arthurs Seat | Southern Timber Floors",
+    "description": null,
+    "h1": "Arthurs Seat"
+  },
+  "/flooring/avola-natural": {
+    "title": "Oceanic | Southern Timber Floors",
+    "description": null,
+    "h1": "Oceanic"
+  },
+  "/flooring/back-beach": {
+    "title": "Back Beach | Southern Timber Floors",
+    "description": null,
+    "h1": "Back Beach"
+  },
+  "/flooring/barnside": {
+    "title": "Cottage | Southern Timber Floors",
+    "description": null,
+    "h1": "Cottage"
+  },
+  "/flooring/beach-16": {
+    "title": "Beach 16 | Southern Timber Floors",
+    "description": null,
+    "h1": "Beach 16"
+  },
+  "/flooring/beach-house": {
+    "title": "Beach House | Southern Timber Floors",
+    "description": null,
+    "h1": "Beach House"
+  },
+  "/flooring/beachwood": {
+    "title": "Beachwood | Southern Timber Floors",
+    "description": null,
+    "h1": "Beachwood"
+  },
+  "/flooring/birdrock": {
+    "title": "Birdrock | Southern Timber Floors",
+    "description": null,
+    "h1": "Birdrock"
+  },
+  "/flooring/blackbutt-engineered-parquetry-herringbone": {
+    "title": "Blackbutt | Southern Timber Floors",
+    "description": null,
+    "h1": "Blackbutt"
+  },
+  "/flooring/blairgowrie-carpet": {
+    "title": "Blairgowrie Carpet | Southern Timber Floors",
+    "description": null,
+    "h1": "Blairgowrie"
+  },
+  "/flooring/briars": {
+    "title": "Briars | Southern Timber Floors",
+    "description": null,
+    "h1": "Briars"
+  },
+  "/flooring/brightmore": {
+    "title": "Brightmore | Southern Timber Floors",
+    "description": null,
+    "h1": "Brightmore"
+  },
+  "/flooring/cinderhill": {
+    "title": "Cinderhill | Southern Timber Floors",
+    "description": null,
+    "h1": "Cinderhill"
+  },
+  "/flooring/crossley-twist-carpet": {
+    "title": "Crossley Twist Carpet | Southern Timber Floors",
+    "description": null,
+    "h1": "Crossley Twist"
+  },
+  "/flooring/deep-brown": {
+    "title": "Deep Brown | Southern Timber Floors",
+    "description": null,
+    "h1": "Deep Brown"
+  },
+  "/flooring/doeskin": {
+    "title": "Doeskin | Southern Timber Floors",
+    "description": null,
+    "h1": "Doeskin"
+  },
+  "/flooring/engineered-australian-species---blackbutt": {
+    "title": "Blackbutt - Matt | Southern Timber Floors",
+    "description": null,
+    "h1": "Blackbutt - Matt"
+  },
+  "/flooring/engineered-australian-species---rustic-blackbutt": {
+    "title": "Firestreak | Southern Timber Floors",
+    "description": null,
+    "h1": "Firestreak"
+  },
+  "/flooring/engineered-australian-species---spotted-gum": {
+    "title": "Spotted Gum - Smooth | Southern Timber Floors",
+    "description": null,
+    "h1": "Spotted Gum - Smooth"
+  },
+  "/flooring/engineered-australian-species---tasmanian-oak": {
+    "title": "Tasmanian Oak | Southern Timber Floors",
+    "description": null,
+    "h1": "Tasmanian Oak"
+  },
+  "/flooring/engineered-australian-species---victorian-ash": {
+    "title": "Victorian Ash | Southern Timber Floors",
+    "description": null,
+    "h1": "Victorian Ash"
+  },
+  "/flooring/engineered-european-oak-parquetry-chevron-colour---dark-brown": {
+    "title": "Shoreline | Southern Timber Floors",
+    "description": null,
+    "h1": "Shoreline"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone---beach-stone": {
+    "title": "Beach House | Southern Timber Floors",
+    "description": null,
+    "h1": "Beach House"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone---half-moon-bay": {
+    "title": "Half Moon Bay | Southern Timber Floors",
+    "description": null,
+    "h1": "Half Moon Bay"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone---jetty": {
+    "title": "Jetty | Southern Timber Floors",
+    "description": null,
+    "h1": "Jetty"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone---main-st": {
+    "title": "Main St | Southern Timber Floors",
+    "description": null,
+    "h1": "Main St"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone---martha": {
+    "title": "Martha | Southern Timber Floors",
+    "description": null,
+    "h1": "Martha"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone---moondah": {
+    "title": "Moonda | Southern Timber Floors",
+    "description": null,
+    "h1": "Moonda"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone-colour---castle-grey": {
+    "title": "Cove | Southern Timber Floors",
+    "description": null,
+    "h1": "Cove"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone-colour---cognac": {
+    "title": "Cognac | Southern Timber Floors",
+    "description": null,
+    "h1": "Cognac"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone-colour---gunnamatta": {
+    "title": "Gunnamatta | Southern Timber Floors",
+    "description": null,
+    "h1": "Gunnamatta"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone-colour---pier-st": {
+    "title": "Pier St | Southern Timber Floors",
+    "description": null,
+    "h1": "Pier St"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone-colour---red-hill": {
+    "title": "Red Hill | Southern Timber Floors",
+    "description": null,
+    "h1": "Red Hill"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone-colour--arthurs-st": {
+    "title": "Arthurs Seat | Southern Timber Floors",
+    "description": null,
+    "h1": "Arthurs Seat"
+  },
+  "/flooring/engineered-european-oak-parquetry-herringbone-colour--st-andrew": {
+    "title": "St Andrews | Southern Timber Floors",
+    "description": null,
+    "h1": "St Andrews"
+  },
+  "/flooring/flint-grey": {
+    "title": "Flint Grey | Southern Timber Floors",
+    "description": null,
+    "h1": "Flint Grey"
+  },
+  "/flooring/fort": {
+    "title": "Fort | Southern Timber Floors",
+    "description": null,
+    "h1": "Fort"
+  },
+  "/flooring/grey-iron-bark": {
+    "title": "Grey Iron Bark | Southern Timber Floors",
+    "description": null,
+    "h1": "Grey Iron Bark"
+  },
+  "/flooring/grey-stone": {
+    "title": "Grey Stone | Southern Timber Floors",
+    "description": null,
+    "h1": "Grey Stone"
+  },
+  "/flooring/gunnamatta": {
+    "title": "Gunnamatta | Southern Timber Floors",
+    "description": null,
+    "h1": "Gunnamatta"
+  },
+  "/flooring/gympie-messmate": {
+    "title": "Gympie Messmate | Southern Timber Floors",
+    "description": null,
+    "h1": "Gympie Messmate"
+  },
+  "/flooring/hemisphere-carpet": {
+    "title": "Hemisphere Carpet | Southern Timber Floors",
+    "description": null,
+    "h1": "Hemisphere"
+  },
+  "/flooring/jarrah": {
+    "title": "Jarrah | Southern Timber Floors",
+    "description": null,
+    "h1": "Jarrah"
+  },
+  "/flooring/jetty": {
+    "title": "Jetty | Southern Timber Floors",
+    "description": null,
+    "h1": "Jetty"
+  },
+  "/flooring/lightfall": {
+    "title": "Lightfall | Southern Timber Floors",
+    "description": null,
+    "h1": "Lightfall"
+  },
+  "/flooring/linen": {
+    "title": "Ashen | Southern Timber Floors",
+    "description": null,
+    "h1": "Ashen"
+  },
+  "/flooring/magnolia": {
+    "title": "Magnolia | Southern Timber Floors",
+    "description": null,
+    "h1": "Magnolia"
+  },
+  "/flooring/main-st": {
+    "title": "Main St | Southern Timber Floors",
+    "description": null,
+    "h1": "Main St"
+  },
+  "/flooring/maize": {
+    "title": "Sunfield | Southern Timber Floors",
+    "description": null,
+    "h1": "Sunfield"
+  },
+  "/flooring/martha": {
+    "title": "Martha | Southern Timber Floors",
+    "description": null,
+    "h1": "Martha"
+  },
+  "/flooring/mistgrove": {
+    "title": "Mistgrove | Southern Timber Floors",
+    "description": null,
+    "h1": "Mistgrove"
+  },
+  "/flooring/moondah": {
+    "title": "Moonda | Southern Timber Floors",
+    "description": null,
+    "h1": "Moonda"
+  },
+  "/flooring/natural-blackbutt": {
+    "title": "Natural Blackbutt | Southern Timber Floors",
+    "description": null,
+    "h1": "Natural Blackbutt"
+  },
+  "/flooring/natural-spotted-gum": {
+    "title": "Natural Spotted Gum | Southern Timber Floors",
+    "description": null,
+    "h1": "Natural Spotted Gum"
+  },
+  "/flooring/nsw-blackbutt": {
+    "title": "NSW Blackbutt | Southern Timber Floors",
+    "description": null,
+    "h1": "NSW Blackbutt"
+  },
+  "/flooring/oak-natural": {
+    "title": "Pure Oak | Southern Timber Floors",
+    "description": null,
+    "h1": "Pure Oak"
+  },
+  "/flooring/pewter": {
+    "title": "Quantum | Southern Timber Floors",
+    "description": null,
+    "h1": "Quantum"
+  },
+  "/flooring/pier-st-engineered-timber": {
+    "title": "Pier St | Southern Timber Floors",
+    "description": null,
+    "h1": "Pier St"
+  },
+  "/flooring/pillars": {
+    "title": "Pillars | Southern Timber Floors",
+    "description": null,
+    "h1": "Pillars"
+  },
+  "/flooring/porcelain": {
+    "title": "Alabaster | Southern Timber Floors",
+    "description": null,
+    "h1": "Alabaster"
+  },
+  "/flooring/red-hill-engineered-timber": {
+    "title": "Red Hill | Southern Timber Floors",
+    "description": null,
+    "h1": "Red Hill"
+  },
+  "/flooring/red-stone": {
+    "title": "Ember | Southern Timber Floors",
+    "description": null,
+    "h1": "Ember"
+  },
+  "/flooring/sauvignon": {
+    "title": "Horizon | Southern Timber Floors",
+    "description": null,
+    "h1": "Horizon"
+  },
+  "/flooring/seabright": {
+    "title": "Seabright | Southern Timber Floors",
+    "description": null,
+    "h1": "Seabright"
+  },
+  "/flooring/silvery-grey": {
+    "title": "Silver Grey | Southern Timber Floors",
+    "description": null,
+    "h1": "Silver Grey"
+  },
+  "/flooring/smoked-spotted-gum": {
+    "title": "Smoked Spotted Gum | Southern Timber Floors",
+    "description": null,
+    "h1": "Smoked Spotted Gum"
+  },
+  "/flooring/spotted-gum-3": {
+    "title": "Spotted Gum | Southern Timber Floors",
+    "description": null,
+    "h1": "Spotted Gum"
+  },
+  "/flooring/spotted-gum-engineered-parquetry-herringbone": {
+    "title": "Spotted Gum | Southern Timber Floors",
+    "description": null,
+    "h1": "Spotted Gum"
+  },
+  "/flooring/st-andrew-engineered-timber": {
+    "title": "St Andrews | Southern Timber Floors",
+    "description": null,
+    "h1": "St Andrews"
+  },
+  "/flooring/starfield": {
+    "title": "Starfield | Southern Timber Floors",
+    "description": null,
+    "h1": "Starfield"
+  },
+  "/flooring/tasmanian-driftwwod": {
+    "title": "Tasmanian Driftwood | Southern Timber Floors",
+    "description": null,
+    "h1": "Tasmanian Driftwood"
+  },
+  "/flooring/tasmanian-oak": {
+    "title": "Tasmanian Oak | Southern Timber Floors",
+    "description": null,
+    "h1": "Tasmanian Oak"
+  },
+  "/flooring/the-eagle": {
+    "title": "The Eagle | Southern Timber Floors",
+    "description": null,
+    "h1": "The Eagle"
+  },
+  "/flooring/tideway": {
+    "title": "Tideway | Southern Timber Floors",
+    "description": null,
+    "h1": "Tideway"
+  },
+  "/flooring/vintage": {
+    "title": "Vantage | Southern Timber Floors",
+    "description": null,
+    "h1": "Vantage"
+  },
+  "/flooring/washed-coral": {
+    "title": "Firestorm | Southern Timber Floors",
+    "description": null,
+    "h1": "Firestorm"
+  },
+  "/flooring/wheat": {
+    "title": "Wheat | Southern Timber Floors",
+    "description": null,
+    "h1": "Wheat"
+  },
+  "/flooring/white-haven": {
+    "title": "White Haven | Southern Timber Floors",
+    "description": null,
+    "h1": "White Haven"
+  },
+  "/flooring/windslow-carpet": {
+    "title": "Winslow Carpet | Southern Timber Floors",
+    "description": null,
+    "h1": "Windslow"
+  },
+  "/flooring/wormy-chestnut-qld": {
+    "title": "Wormy Chestnut QLD | Southern Timber Floors",
+    "description": null,
+    "h1": "Wormy Chestnut QLD"
+  },
+  "/our-services": {
+    "title": "Our Services | Southern Timber Floors",
+    "description": null,
+    "h1": "Our Services"
+  },
+  "/our-services/builders-developers": {
+    "title": "Builders & Developers | Southern Timber Floors",
+    "description": null,
+    "h1": "Builders & Developers"
+  },
+  "/our-services/consultations": {
+    "title": "Consultations | Southern Timber Floors",
+    "description": null,
+    "h1": "Book a free one hour Interior Design consultation"
+  },
+  "/our-services/decorators": {
+    "title": "Designers & Architects | Southern Timber Floors",
+    "description": null,
+    "h1": "Designers & Architects"
+  },
+  "/our-services/home-renovations": {
+    "title": "Home Renovations | Southern Timber Floors",
+    "description": null,
+    "h1": "Home Renovations"
+  },
+  "/our-services/installation": {
+    "title": "Installation | Southern Timber Floors",
+    "description": null,
+    "h1": "Installation"
+  },
+  "/our-services/owner-builders": {
+    "title": "Owner Builders | Southern Timber Floors",
+    "description": null,
+    "h1": "Owner Builders"
+  },
+  "/our-services/sanding-polishing": {
+    "title": "Sanding & Polishing | Southern Timber Floors",
+    "description": null,
+    "h1": "Sanding & Polishing"
+  },
+  "/projects": {
+    "title": "Projects | Southern Timber Floors",
+    "description": null,
+    "h1": "Projects"
+  },
+  "/projects/rye-residence": {
+    "title": "Gilpip Residence | Southern Timber Floors",
+    "description": null,
+    "h1": "Project Gilpip Residence"
+  },
+  "/projects/south-yarra-apparentment": {
+    "title": "Mornington Peninsula | Southern Timber Floors",
+    "description": null,
+    "h1": "Project Mornington Peninsula"
+  },
+  "/projects/yacht-court-house": {
+    "title": "Country Home | Southern Timber Floors",
+    "description": null,
+    "h1": "Project Country Home"
+  },
+  "/projects/yarralumla-house": {
+    "title": "Latitude 37 | Southern Timber Floors",
+    "description": null,
+    "h1": "Project Latitude 37"
+  },
+  "/timber": {
+    "title": "Flooring | Southern Timber Floors",
+    "description": null,
+    "h1": "Flooring solutions for every project"
+  },
+  "/timber/carpet": {
+    "title": "Carpet | Southern Timber Floors",
+    "description": null,
+    "h1": "Flooring solutions for every project"
+  },
+  "/timber/engineered-timber": {
+    "title": "Engineered Timber | Southern Timber Floors",
+    "description": null,
+    "h1": "Flooring solutions for every project"
+  },
+  "/timber/hybrid-timber": {
+    "title": "Hybrid timber | Southern Timber Floors",
+    "description": null,
+    "h1": "Flooring solutions for every project"
+  },
+  "/timber/parquetry-timber": {
+    "title": "Parquetry Timber | Southern Timber Floors",
+    "description": null,
+    "h1": "Flooring solutions for every project"
+  },
+  "/timber/solid-timber": {
+    "title": "Solid Timber | Southern Timber Floors",
+    "description": null,
+    "h1": "Flooring solutions for every project"
+  },
+  "/flooring/blackbutt-smooth": {
+    "title": "Blackbutt - Smooth | Southern Timber Floors",
+    "description": null,
+    "h1": "Blackbutt - Smooth"
+  },
+  "/flooring/marley-road": {
+    "title": "Marley Road | Southern Timber Floors",
+    "description": null,
+    "h1": "Marley Road"
+  },
+  "/flooring/pip-bay": {
+    "title": "Pip Bay | Southern Timber Floors",
+    "description": null,
+    "h1": "Pip Bay"
+  },
+  "/flooring/spotted-gum-matt": {
+    "title": "Spotted Gum - Matt | Southern Timber Floors",
+    "description": null,
+    "h1": "Spotted Gum - Matt"
+  }
 }

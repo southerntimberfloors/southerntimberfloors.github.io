@@ -51,6 +51,8 @@ const toneWords: Record<Tone, string> = {
 function describe(p: Omit<Product, 'description' | 'highlights' | 'images'>): { description: string; highlights: string[] } {
   const tone = toneWords[p.tone];
   const spec = Object.fromEntries(p.specs);
+  // The old site sometimes lists the species as "Engineered Oak"; avoid "engineered Engineered Oak".
+  const species = (p.species ?? 'timber').replace(/^Engineered\s+/i, '');
   const highlights: string[] = [];
   let description = '';
 
@@ -60,12 +62,12 @@ function describe(p: Omit<Product, 'description' | 'highlights' | 'images'>): { 
       highlights.push('Can be re-sanded many times', 'Coated on site to your chosen sheen', 'Natural, sustainably sourced hardwood');
       break;
     case 'engineered':
-      description = `${p.name} is a ${tone} engineered ${p.species ?? 'timber'} floor. ${speciesNotes[p.species ?? ''] ?? ''} A genuine hardwood surface on a stable multi-layer core means wide boards that stay flat, and they arrive pre-finished and ready to live on.`;
+      description = `${p.name} is a ${tone} engineered ${species.toLowerCase() === 'oak' ? 'oak' : species} floor. ${speciesNotes[p.species ?? ''] ?? ''} A genuine hardwood surface on a stable multi-layer core means wide boards that stay flat, and they arrive pre-finished and ready to live on.`;
       highlights.push('Genuine timber surface', 'Cross-laminated core for stability', 'Pre-finished');
       if (spec['Also available'] || p.herringbone) highlights.push('Also available in herringbone');
       break;
     case 'parquetry':
-      description = `${p.name} is a ${tone} ${p.pattern} parquetry in engineered ${p.species ?? 'timber'}. ${speciesNotes[p.species ?? ''] ?? ''} The short blocks create a rhythmic, tailored pattern that brings character to living areas and entries.`;
+      description = `${p.name} is a ${tone} ${p.pattern} parquetry in engineered ${species}. ${speciesNotes[p.species ?? ''] ?? ''} The short blocks create a rhythmic, tailored pattern that brings character to living areas and entries.`;
       highlights.push(`Classic ${p.pattern} layout`, 'Engineered for stability');
       if (spec['Matching planks']) highlights.push(`Matching ${spec['Matching planks']} planks for adjoining rooms`);
       break;

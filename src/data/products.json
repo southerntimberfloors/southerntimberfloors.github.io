@@ -38,7 +38,7 @@
     "Rustic"
    ]
   ],
-  "originalDescription": "American Oak has proven itself to be very popular in Australian homes with it's sought after prominent circular grain patterns. Generally, colours range from golden browns, honeys to pale browns. It is grown predominantly on the East Coast of the United States and creates a stunning feature floor in any home. American Oak is avalable in Premium and Rustic grades"
+  "originalDescription": "American Oak has become a sought-after choice in Australian homes, loved for its distinctive open grain patterns, natural warmth and timeless appeal. Its beautiful colour palette ranges from soft honey and golden browns to lighter, understated earthy tones, creating depth and character in any space.\n\nGrown predominantly across the eastern United States, American Oak makes a striking feature floor, bringing effortless sophistication to both contemporary and classic interiors. Available in Prime and Rustic grades to suit a variety of design preferences."
  },
  {
   "slug": "american-oak",
@@ -79,7 +79,7 @@
     "Prime / Rustic"
    ]
   ],
-  "originalDescription": "American Oak has proven itself to be very popular in Australian homes with its sought after prominent circular grain patterns. Generally colours range from soft straw, light browns and honey shades. It is grown prodominantly on the East coast of the United States and creates a stunning feature floor in any home. American oak is available in Premium and Rustic grades."
+  "originalDescription": "American Oak has become a sought-after choice in Australian homes, loved for its distinctive open grain patterns, natural warmth and timeless appeal. Its beautiful colour palette ranges from soft honey and golden browns to lighter, understated earthy tones, creating depth and character in any space.\n\nGrown predominantly across the eastern United States, American Oak makes a striking feature floor, bringing effortless sophistication to both contemporary and classic interiors. Available in Prime and Rustic grades to suit a variety of design preferences."
  },
  {
   "slug": "antique",
@@ -122,7 +122,7 @@
    ],
    [
     "Width × length",
-    "190mm × 1900mm / 600mm × 1200mm"
+    "190mm × 1900mm / 120mm × 600mm"
    ],
    [
     "Finish",
@@ -136,15 +136,14 @@
     "Pattern",
     "Strip / Herringbone"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "avola-natural",
   "name": "Oceanic",
   "category": "engineered",
   "species": "European Oak",
-  "color": "#a47f52",
+  "color": "#aa8351",
   "tone": "natural",
   "pattern": "strip",
   "herringbone": false,
@@ -154,17 +153,36 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "back-beach",
   "name": "Back Beach",
   "category": "engineered",
-  "species": "European Oak",
+  "species": "Engineered Oak",
   "color": "#9e7c51",
   "tone": "natural",
   "pattern": "strip",
@@ -172,14 +190,33 @@
   "specs": [
    [
     "Species",
-    "European Oak"
+    "Engineered Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "barnside",
@@ -222,7 +259,7 @@
    ],
    [
     "Width × length",
-    "190mm × 1900mm"
+    "190mm × 1900mm / 120mm × 600mm"
    ],
    [
     "Finish",
@@ -240,8 +277,7 @@
     "Grade",
     "Natural Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for commercial and residential spaces."
+  ]
  },
  {
   "slug": "beach-house",
@@ -256,6 +292,26 @@
    [
     "Species",
     "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Standard"
    ]
   ]
  },
@@ -279,7 +335,7 @@
    ],
    [
     "Width × length",
-    "190 × 1900mm"
+    "190mm × 1900mm"
    ],
    [
     "Finish",
@@ -314,11 +370,30 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "blackbutt-engineered-parquetry-herringbone",
@@ -371,7 +446,7 @@
   "name": "Briars",
   "category": "engineered",
   "species": "European Oak",
-  "color": "#6c5034",
+  "color": "#6e5837",
   "tone": "natural",
   "pattern": "strip",
   "herringbone": false,
@@ -381,18 +456,37 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "brightmore",
   "name": "Brightmore",
   "category": "engineered",
   "species": "European Oak",
-  "color": "#c59e71",
+  "color": "#c1976a",
   "tone": "natural",
   "pattern": "strip",
   "herringbone": false,
@@ -536,95 +630,130 @@
  },
  {
   "slug": "engineered-australian-species---blackbutt",
-  "name": "Blackbutt",
+  "name": "Blackbutt - Matt",
   "category": "engineered",
   "species": "Blackbutt",
-  "color": "#886040",
-  "tone": "rich",
+  "color": "#dcb388",
+  "tone": "light",
   "pattern": "strip",
   "herringbone": false,
   "specs": [
    [
     "Species",
-    "Blackbutt"
+    "Australian Blackbutt"
    ],
    [
-    "Dimensions",
-    "180mm × 14.5mm"
-   ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
- },
- {
-  "slug": "engineered-australian-species---firestreak",
-  "name": "Firestreak",
-  "category": "engineered",
-  "species": "Australian hardwood",
-  "color": "#7d5538",
-  "tone": "rich",
-  "pattern": "strip",
-  "herringbone": false,
-  "specs": [
-   [
-    "Species",
-    "Australian hardwood"
+    "Thickness × wear layer",
+    "14.5mm × 3mm"
    ],
    [
-    "Dimensions",
-    "180mm × 14.5/3mm"
+    "Width × length",
+    "180mm × 1820mm"
+   ],
+   [
+    "Finish",
+    "Matt Brushed"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Grade",
+    "Standard & Better"
    ]
   ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  "originalDescription": "Celebrating the natural beauty of Australian timber, our engineered timber floors pair authentic Australian hardwood species with refined engineered construction. Designed for lasting beauty, enhanced stability and everyday performance, each floor brings warmth, character and understated sophistication to residential and commercial spaces alike."
  },
  {
   "slug": "engineered-australian-species---rustic-blackbutt",
-  "name": "Rustic Blackbutt",
+  "name": "Firestreak",
   "category": "engineered",
   "species": "Blackbutt",
-  "color": "#754e30",
-  "tone": "rich",
+  "color": "#b68654",
+  "tone": "natural",
   "pattern": "strip",
   "herringbone": false,
   "specs": [
    [
     "Species",
-    "Blackbutt"
+    "Australian Blackbutt"
    ],
    [
-    "Dimensions",
-    "135mm × 14/2mm / 180mm × 14/3mm"
+    "Thickness × wear layer",
+    "14.5mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "180mm × 1820mm"
+   ],
+   [
+    "Finish",
+    "Matt Brushed"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Rustic"
    ]
   ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  "originalDescription": "Celebrating the natural beauty of Australian timber, our engineered timber floors pair authentic Australian hardwood species with refined engineered construction. Designed for lasting beauty, enhanced stability and everyday performance, each floor brings warmth, character and understated sophistication to residential and commercial spaces alike."
  },
  {
   "slug": "engineered-australian-species---spotted-gum",
-  "name": "Spotted Gum",
+  "name": "Spotted Gum - Smooth",
   "category": "engineered",
   "species": "Spotted Gum",
-  "color": "#5c3a29",
-  "tone": "dark",
+  "color": "#a17652",
+  "tone": "natural",
   "pattern": "strip",
   "herringbone": false,
   "specs": [
    [
     "Species",
-    "Spotted Gum"
+    "Australian Spotted Gum"
    ],
    [
-    "Dimensions",
-    "180mm × 14/5mm"
+    "Thickness × wear layer",
+    "14.5mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "180mm × 1820mm"
+   ],
+   [
+    "Finish",
+    "Smooth Low Gloss"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Standard & Better"
    ]
   ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  "originalDescription": "Celebrating the natural beauty of Australian timber, our engineered timber floors pair authentic Australian hardwood species with refined engineered construction. Designed for lasting beauty, enhanced stability and everyday performance, each floor brings warmth, character and understated sophistication to residential and commercial spaces alike."
  },
  {
   "slug": "engineered-australian-species---tasmanian-oak",
   "name": "Tasmanian Oak",
   "category": "engineered",
   "species": "Tasmanian Oak",
-  "color": "#896141",
-  "tone": "rich",
+  "color": "#e6bc94",
+  "tone": "light",
   "pattern": "strip",
   "herringbone": false,
   "specs": [
@@ -633,19 +762,35 @@
     "Tasmanian Oak"
    ],
    [
-    "Dimensions",
-    "180mm × 14.5/3mm"
+    "Thickness × wear layer",
+    "14.5mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "180mm × 1820mm"
+   ],
+   [
+    "Finish",
+    "Smooth Low Gloss"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Standard & Better"
    ]
   ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  "originalDescription": "Celebrating the natural beauty of Australian timber, our engineered timber floors pair authentic Australian hardwood species with refined engineered construction. Designed for lasting beauty, enhanced stability and everyday performance, each floor brings warmth, character and understated sophistication to residential and commercial spaces alike."
  },
  {
   "slug": "engineered-australian-species---victorian-ash",
   "name": "Victorian Ash",
   "category": "engineered",
   "species": "Victorian Ash",
-  "color": "#a3785a",
-  "tone": "natural",
+  "color": "#ca9f78",
+  "tone": "light",
   "pattern": "strip",
   "herringbone": false,
   "specs": [
@@ -654,11 +799,31 @@
     "Victorian Ash"
    ],
    [
-    "Dimensions",
-    "180mm × 14.5/3mm"
+    "Thickness × wear layer",
+    "14.5mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "180mm × 1820mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Standard & Better"
    ]
   ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Our timeless Australian Species range is tried and true bringing a beautiful patina to any space. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  "originalDescription": "Celebrating the natural beauty of Australian timber, our engineered timber floors pair authentic Australian hardwood species with refined engineered construction. Designed for lasting beauty, enhanced stability and everyday performance, each floor brings warmth, character and understated sophistication to residential and commercial spaces alike."
  },
  {
   "slug": "engineered-european-oak-parquetry-chevron-colour---dark-brown",
@@ -1011,28 +1176,47 @@
   "slug": "fort",
   "name": "Fort",
   "category": "engineered",
-  "species": "European Oak",
+  "species": "Engineered Oak",
   "color": "#997b5a",
   "tone": "natural",
   "pattern": "strip",
-  "herringbone": false,
+  "herringbone": true,
   "specs": [
    [
     "Species",
-    "European Oak"
+    "Engineered Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "grey-iron-bark",
   "name": "Grey Iron Bark",
   "category": "solid",
-  "species": "Grey Ironbark",
+  "species": "Grey Iron Bark",
   "color": "#693127",
   "tone": "dark",
   "pattern": "strip",
@@ -1040,14 +1224,34 @@
   "specs": [
    [
     "Species",
-    "Grey Ironbark"
+    "Grey Iron Bark"
    ],
    [
     "Width",
     "85mm / 130mm / 180mm"
+   ],
+   [
+    "Thickness",
+    "14mm / 19mm"
+   ],
+   [
+    "Length",
+    "Varied"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Select / Standard"
    ]
   ],
-  "originalDescription": "Grey Ironbark offers a large variety of colour from dark chocolate to nutty honey with heart wood in a dark reddish brown. Grey Iron Bark is a truly stunning timber floor, and is recognised as one of the hardest timber flooring worldwide, which makes it perfect for high traffic commercial and domestic situations. Grey Ironbark is a large size tree that grows along the coast of New South Wales and Southern Queensland."
+  "originalDescription": "Renowned for its exceptional strength and natural beauty, Grey Ironbark showcases a rich palette of deep chocolate, warm reddish-brown and soft honey tones. Its distinctive grain and natural colour variations create a beautifully individual timber floor, full of warmth and character.\n\nOne of Australia's hardest hardwoods, Grey Ironbark offers outstanding durability, making it an exceptional choice for both residential and high-traffic commercial timber flooring. Native to the coastal regions of New South Wales and southern Queensland, it brings enduring Australian character to any interior."
  },
  {
   "slug": "grey-stone",
@@ -1090,7 +1294,7 @@
    ],
    [
     "Width × length",
-    "190mm × 1900mm"
+    "190mm × 1900mm / 120mm × 600mm"
    ],
    [
     "Finish",
@@ -1146,9 +1350,10 @@
    ],
    [
     "Grade",
-    "Standard or better"
+    "Select / Standard"
    ]
-  ]
+  ],
+  "originalDescription": "Gympie Messmate is a beautiful Australian hardwood, admired for its warm golden tones, soft honey hues and distinctive natural grain. Featuring gentle tonal variation and subtle gum veins, it brings an organic sense of warmth and character to any interior. Its versatile appearance makes it equally suited to contemporary and classic spaces, while its natural strength and durability make it a practical choice for everyday living."
  },
  {
   "slug": "hemisphere-carpet",
@@ -1200,22 +1405,37 @@
   "slug": "jetty",
   "name": "Jetty",
   "category": "engineered",
-  "species": "European Oak",
+  "species": "Engineered Oak",
   "color": "#90714c",
   "tone": "natural",
   "pattern": "strip",
-  "herringbone": false,
+  "herringbone": true,
   "specs": [
    [
     "Species",
-    "European Oak"
+    "Engineered Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 150mm × 900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "lightfall",
@@ -1237,7 +1457,7 @@
    ],
    [
     "Width × length",
-    "190mm × 1900mm / 850mm × 150mm"
+    "190mm × 1900mm / 150mm × 850mm"
    ],
    [
     "Finish",
@@ -1337,8 +1557,7 @@
     "Grade",
     "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "maize",
@@ -1373,25 +1592,44 @@
   "color": "#ad916b",
   "tone": "natural",
   "pattern": "strip",
-  "herringbone": false,
+  "herringbone": true,
   "specs": [
    [
     "Species",
     "European Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 150mm × 900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "mistgrove",
   "name": "Mistgrove",
   "category": "engineered",
   "species": "European Oak",
-  "color": "#c2a785",
+  "color": "#c8ad8a",
   "tone": "light",
   "pattern": "strip",
   "herringbone": true,
@@ -1431,21 +1669,40 @@
   "name": "Moonda",
   "category": "engineered",
   "species": "European Oak",
-  "color": "#896f5c",
-  "tone": "natural",
+  "color": "#b5a490",
+  "tone": "light",
   "pattern": "strip",
-  "herringbone": false,
+  "herringbone": true,
   "specs": [
    [
     "Species",
     "European Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 150mm × 900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "natural-blackbutt",
@@ -1506,6 +1763,26 @@
    [
     "Width",
     "85mm / 130mm / 180mm"
+   ],
+   [
+    "Thickness",
+    "14mm / 19mm"
+   ],
+   [
+    "Length",
+    "Varied"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Parquetry"
+   ],
+   [
+    "Grade",
+    "Select / Standard"
    ]
   ],
   "originalDescription": "Native to South Eastern Australia, the Blackbutt tree is renowned for its straight and uniform trunk. Blackbutt has a distinctive pale brown to blonde color with the timber is prized for its natural durability and resistance to termites, making it a popular choice for flooring in both residential and commercial settings. Blackbutt flooring is celebrated for its versatile aesthetic appeal, seamlessly complementing various interior styles."
@@ -1556,7 +1833,7 @@
   "slug": "pier-st-engineered-timber",
   "name": "Pier St",
   "category": "engineered",
-  "species": "European Oak",
+  "species": "Engineered Oak",
   "color": "#a58b75",
   "tone": "natural",
   "pattern": "strip",
@@ -1564,18 +1841,33 @@
   "specs": [
    [
     "Species",
-    "European Oak"
+    "Engineered Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Also available",
-    "Herringbone"
+    "Width × length",
+    "190mm × 1900mm / 120mm × 600mm / 220mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone / Wide Plank"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "pillars",
@@ -1597,7 +1889,7 @@
    ],
    [
     "Width × length",
-    "190mm × 1900mm"
+    "190mm × 1900mm / 120mm × 600mm"
    ],
    [
     "Finish",
@@ -1646,26 +1938,41 @@
   "slug": "red-hill-engineered-timber",
   "name": "Red Hill",
   "category": "engineered",
-  "species": "European Oak",
-  "color": "#745438",
+  "species": "Engineered Oak",
+  "color": "#977446",
   "tone": "natural",
   "pattern": "strip",
   "herringbone": true,
   "specs": [
    [
     "Species",
-    "European Oak"
+    "Engineered Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Also available",
-    "Herringbone"
+    "Width × length",
+    "190mm × 1900mm / 120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "red-stone",
@@ -1693,28 +2000,47 @@
   "name": "Horizon",
   "category": "engineered",
   "species": "European Oak",
-  "color": "#8f6c49",
+  "color": "#a47f52",
   "tone": "natural",
   "pattern": "strip",
-  "herringbone": false,
+  "herringbone": true,
   "specs": [
    [
     "Species",
     "European Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 150mm × 900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "seabright",
   "name": "Seabright",
   "category": "engineered",
   "species": "European Oak",
-  "color": "#d1bca4",
+  "color": "#d0bba4",
   "tone": "light",
   "pattern": "strip",
   "herringbone": false,
@@ -1792,27 +2118,6 @@
   "originalDescription": "Southern Hybrid Flooring combines durability and beauty. Made with a Unique Stone Polyer composite that delivers Interior water resistant qualities combined with an Acoustic 6 star foam layer backing with excellent sound dampening qualitites, creating a perfect flooring for modern Interiors."
  },
  {
-  "slug": "southern-blackbutt",
-  "name": "Southern Blackbutt",
-  "category": "solid",
-  "species": "Southern Blackbutt",
-  "color": "#a06e45",
-  "tone": "natural",
-  "pattern": "strip",
-  "herringbone": false,
-  "specs": [
-   [
-    "Species",
-    "Southern Blackbutt"
-   ],
-   [
-    "Width",
-    "85mm / 130mm"
-   ]
-  ],
-  "originalDescription": "Southern Blackbutt is a sustainable and local product and is milled Victoria. Colours generally range from mellow straw through to light chocolate browns. Southern Blackbutt is a hard wearing and versatile timber floor that gives a sophisticated natural beauty to any interior. Its distinct gum veins and patterns give Southern Blackbutt appeal for many Architects and Designers."
- },
- {
   "slug": "spotted-gum-3",
   "name": "Spotted Gum",
   "category": "solid",
@@ -1848,10 +2153,10 @@
    ],
    [
     "Grade",
-    "Select or better"
+    "Select / Standard"
    ]
   ],
-  "originalDescription": "Spotted Gum is a highly desirable timber, particularly for its striking back sawn grain structure, attractive and vibrant colour palette from creams, to light and rich browns. Spotted gum is a large native hardwood that is grown along the NSW coastal strip into Queensland. The word “spotted” refers to large spot like features that form on the tree as it sheds its bark in strips. Its attraction is added to with Spotted Gums hardness rating of 11 which makes it very appealing as a hard wearing timber."
+  "originalDescription": "Spotted Gum is one of Australia's most sought-after native hardwoods, celebrated for its distinctive back-sawn grain, striking natural variation and rich palette of colours, ranging from soft creams and warm honey tones to deep, earthy browns.\n\nNative to the coastal regions of New South Wales and Queensland, Spotted Gum takes its name from the distinctive spotted markings that develop as the tree sheds its bark in strips.\n\nRenowned for its strength and durability, Spotted Gum has a Janka hardness rating of approximately 11kN, making it an excellent choice for beautiful, hard-wearing timber flooring."
  },
  {
   "slug": "spotted-gum-engineered-parquetry-herringbone",
@@ -1879,28 +2184,47 @@
   "name": "St Andrews",
   "category": "engineered",
   "species": "European Oak",
-  "color": "#97775a",
+  "color": "#b59773",
   "tone": "natural",
   "pattern": "strip",
-  "herringbone": false,
+  "herringbone": true,
   "specs": [
    [
     "Species",
     "European Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "starfield",
   "name": "Starfield",
   "category": "engineered",
   "species": "European Oak",
-  "color": "#c8ad8a",
+  "color": "#ceb392",
   "tone": "light",
   "pattern": "strip",
   "herringbone": true,
@@ -1939,7 +2263,7 @@
   "slug": "tasmanian-driftwwod",
   "name": "Tasmanian Driftwood",
   "category": "solid",
-  "species": "Mixed Tasmanian species",
+  "species": "Tasmanian Driftwood",
   "color": "#b47f35",
   "tone": "natural",
   "pattern": "strip",
@@ -1947,14 +2271,34 @@
   "specs": [
    [
     "Species",
-    "Mixed Tasmanian species"
+    "Australian Tasmanian Driftwood"
    ],
    [
     "Width",
-    "85mm / 130mm"
+    "85mm / 108mm / 133mm / 180mm"
+   ],
+   [
+    "Thickness",
+    "12mm / 19mm"
+   ],
+   [
+    "Length",
+    "Varied"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Parquetry"
+   ],
+   [
+    "Grade",
+    "Classic"
    ]
   ],
-  "originalDescription": "We are excited to introduce this beautiful new solid timber flooring from Tasmania. Tasmanian Driftwood is created from a mix of species and exclusive to Southern Timber Floors. It’s easy to fall in love with its subtle colourways and lightly featured nature. Perfect for contemporary and country style homes alike. You will be surprised by how reasonably priced Tasmanian Driftwood is to have installed in your home."
+  "originalDescription": "Tasmanian Driftwood is a beautiful solid timber flooring option, crafted from a blend of Tasmanian timber species. Inspired by the natural beauty of weathered driftwood, its soft, muted tones, gentle colour variation and subtle grain detailing create a relaxed yet refined aesthetic.\n\nWith its lightly featured appearance and organic character, Tasmanian Driftwood brings warmth and understated elegance to both contemporary and country-inspired interiors."
  },
  {
   "slug": "tasmanian-oak",
@@ -1995,14 +2339,14 @@
     "Prime"
    ]
   ],
-  "originalDescription": "Tasmanian Oak has stood the test of time with its classic style. Valued for its light warm colour, straight grain and versatility within the modern home. Our new popular extra wide 185 wide boards look stunning with a water based coating."
+  "originalDescription": "A timeless Australian favourite, Tasmanian Oak has stood the test of time for its natural warmth, understated elegance and versatility. Valued for its beautiful light tones, subtle pink and honey hues, and characterful straight grain, it brings a sense of warmth and sophistication to both contemporary and classic interiors.\n\nOur popular extra-wide 185mm boards create a beautiful sense of space, with a water-based finish enhancing the natural colour and grain of the timber."
  },
  {
   "slug": "the-eagle",
   "name": "The Eagle",
   "category": "engineered",
   "species": "European Oak",
-  "color": "#a49181",
+  "color": "#917a66",
   "tone": "natural",
   "pattern": "strip",
   "herringbone": true,
@@ -2012,15 +2356,30 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "190mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Also available",
-    "Herringbone"
+    "Width × length",
+    "190mm × 1900mm / 120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "tideway",
@@ -2058,7 +2417,7 @@
    ],
    [
     "Grade",
-    "Natural Character"
+    "Character"
    ]
   ]
  },
@@ -2165,7 +2524,7 @@
    ],
    [
     "Grade",
-    "Natural Character"
+    "Character"
    ]
   ]
  },
@@ -2230,8 +2589,171 @@
    ],
    [
     "Grade",
-    "Standard or better"
+    "Select / Standard"
+   ]
+  ],
+  "originalDescription": "Distinctive and full of natural character, Wormy Chestnut is celebrated for its beautiful variation, warm earthy tones and unique markings. Dark gum veins, natural insect trails and organic grain patterns give every board its own individuality. Rich in texture and rustic charm, Wormy Chestnut brings warmth, depth and an unmistakable Australian character to both contemporary and traditional interiors."
+ },
+ {
+  "slug": "blackbutt-smooth",
+  "name": "Blackbutt - Smooth",
+  "category": "engineered",
+  "species": "Blackbutt",
+  "color": "#d5ba93",
+  "tone": "light",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Australian Blackbutt"
+   ],
+   [
+    "Thickness × wear layer",
+    "14.5mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "180mm × 1820mm"
+   ],
+   [
+    "Finish",
+    "Smooth Low Gloss"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Standard or Better"
+   ]
+  ],
+  "originalDescription": "Celebrating the natural beauty of Australian timber, our engineered timber floors pair authentic Australian hardwood species with refined engineered construction. Designed for lasting beauty, enhanced stability and everyday performance, each floor brings warmth, character and understated sophistication to residential and commercial spaces alike."
+ },
+ {
+  "slug": "marley-road",
+  "name": "Marley Road",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#b1966e",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "14mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
   ]
+ },
+ {
+  "slug": "pip-bay",
+  "name": "Pip Bay",
+  "category": "engineered",
+  "species": "Engineered Oak",
+  "color": "#a7916b",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Engineered Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
+ },
+ {
+  "slug": "spotted-gum-matt",
+  "name": "Spotted Gum - Matt",
+  "category": "engineered",
+  "species": "Spotted Gum",
+  "color": "#be9168",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": false,
+  "specs": [
+   [
+    "Species",
+    "Australian Spotted Gum"
+   ],
+   [
+    "Thickness × wear layer",
+    "14.5mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "180mm × 1820mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip"
+   ],
+   [
+    "Grade",
+    "Standard & Better"
+   ]
+  ],
+  "originalDescription": "Celebrating the natural beauty of Australian timber, our engineered timber floors pair authentic Australian hardwood species with refined engineered construction. Designed for lasting beauty, enhanced stability and everyday performance, each floor brings warmth, character and understated sophistication to residential and commercial spaces alike."
  }
 ]

@@ -53,6 +53,11 @@
     "name": "Arthurs-Seat-PP-CG"
    },
    {
+    "src": "/images/products/arthurs-st-engineered-timber-d3de5e.webp",
+    "thumb": "/images/products/arthurs-st-engineered-timber-d3de5e-sm.webp",
+    "name": "Arthurs-Seat-3"
+   },
+   {
     "src": "/images/products/arthurs-seat-engineered-3.webp",
     "thumb": "/images/products/arthurs-seat-engineered-3-sm.webp",
     "name": "88-Eng-Parq-Arthurs-Seat-min"
@@ -60,9 +65,29 @@
   ],
   "avola-natural": [
    {
-    "src": "/images/products/oceanic-engineered-1.webp",
-    "thumb": "/images/products/oceanic-engineered-1-sm.webp",
-    "name": "131-Engineeredd-Oak-Avola-Natural-min"
+    "src": "/images/products/avola-natural-ecbcd4.webp",
+    "thumb": "/images/products/avola-natural-ecbcd4-sm.webp",
+    "name": "Oceanic-Tile"
+   },
+   {
+    "src": "/images/products/avola-natural-31a0a5.webp",
+    "thumb": "/images/products/avola-natural-31a0a5-sm.webp",
+    "name": "Avola-Natural"
+   },
+   {
+    "src": "/images/products/avola-natural-41cd6e.webp",
+    "thumb": "/images/products/avola-natural-41cd6e-sm.webp",
+    "name": "Oceanic-2-P-AN"
+   },
+   {
+    "src": "/images/products/avola-natural-9e0c2e.webp",
+    "thumb": "/images/products/avola-natural-9e0c2e-sm.webp",
+    "name": "Oceanic-12-P-AN"
+   },
+   {
+    "src": "/images/products/avola-natural-f6ffb2.webp",
+    "thumb": "/images/products/avola-natural-f6ffb2-sm.webp",
+    "name": "Oceanic-11-P-AN"
    }
   ],
   "back-beach": [
@@ -70,6 +95,16 @@
     "src": "/images/products/back-beach-engineered-1.webp",
     "thumb": "/images/products/back-beach-engineered-1-sm.webp",
     "name": "130-Engineered-Oak-Back-Beach-min"
+   },
+   {
+    "src": "/images/products/back-beach-697c7f.webp",
+    "thumb": "/images/products/back-beach-697c7f-sm.webp",
+    "name": "Back-Beach-PP-T"
+   },
+   {
+    "src": "/images/products/back-beach-da5d30.webp",
+    "thumb": "/images/products/back-beach-da5d30-sm.webp",
+    "name": "Back-Beach-1"
    }
   ],
   "barnside": [
@@ -89,6 +124,16 @@
     "src": "/images/products/beach-16-engineered-2.webp",
     "thumb": "/images/products/beach-16-engineered-2-sm.webp",
     "name": "Beach-16-Background"
+   },
+   {
+    "src": "/images/products/beach-16-342d21.webp",
+    "thumb": "/images/products/beach-16-342d21-sm.webp",
+    "name": "Beach-16-P-ST"
+   },
+   {
+    "src": "/images/products/beach-16-8d49c0.webp",
+    "thumb": "/images/products/beach-16-8d49c0-sm.webp",
+    "name": "Beach-16-Herringbone"
    }
   ],
   "beach-house": [
@@ -113,6 +158,11 @@
     "src": "/images/products/beachwood-engineered-2.webp",
     "thumb": "/images/products/beachwood-engineered-2-sm.webp",
     "name": "Beachwood-Background"
+   },
+   {
+    "src": "/images/products/beachwood-a72c9e.webp",
+    "thumb": "/images/products/beachwood-a72c9e-sm.webp",
+    "name": "Beachwood-Background-2_2026-11-12-021939_bswp"
    }
   ],
   "birdrock": [
@@ -120,6 +170,11 @@
     "src": "/images/products/birdrock-engineered-1.webp",
     "thumb": "/images/products/birdrock-engineered-1-sm.webp",
     "name": "109-Hybrid-Birdrock-min"
+   },
+   {
+    "src": "/images/products/birdrock-d092cd.webp",
+    "thumb": "/images/products/birdrock-d092cd-sm.webp",
+    "name": "Birdrock-1"
    }
   ],
   "blackbutt-engineered-parquetry-herringbone": [
@@ -173,16 +228,21 @@
   ],
   "briars": [
    {
-    "src": "/images/products/briars-engineered-1.webp",
-    "thumb": "/images/products/briars-engineered-1-sm.webp",
-    "name": "115-Briars-min"
+    "src": "/images/products/briars-de5d2b.webp",
+    "thumb": "/images/products/briars-de5d2b-sm.webp",
+    "name": "Briars-Tile"
+   },
+   {
+    "src": "/images/products/briars-47cd0f.webp",
+    "thumb": "/images/products/briars-47cd0f-sm.webp",
+    "name": "Briars-1"
    }
   ],
   "brightmore": [
    {
-    "src": "/images/products/brightmore-engineered-1.webp",
-    "thumb": "/images/products/brightmore-engineered-1-sm.webp",
-    "name": "Brightmore"
+    "src": "/images/products/brightmore-90e458.webp",
+    "thumb": "/images/products/brightmore-90e458-sm.webp",
+    "name": "Brightmore_2026-11-12-030852_uyef"
    }
   ],
   "cinderhill": [
@@ -285,44 +345,37 @@
   ],
   "engineered-australian-species---blackbutt": [
    {
-    "src": "/images/products/blackbutt-engineered-1.webp",
-    "thumb": "/images/products/blackbutt-engineered-1-sm.webp",
-    "name": "108-Hybrid-Blackbutt-min"
-   }
-  ],
-  "engineered-australian-species---firestreak": [
-   {
-    "src": "/images/products/firestreak-engineered-1.webp",
-    "thumb": "/images/products/firestreak-engineered-1-sm.webp",
-    "name": "104-Eng-Timber-Firestreak-min"
+    "src": "/images/products/engineered-australian-species---blackbutt-9fdf4e.webp",
+    "thumb": "/images/products/engineered-australian-species---blackbutt-9fdf4e-sm.webp",
+    "name": "Blackbutt-Matt-Tile"
    }
   ],
   "engineered-australian-species---rustic-blackbutt": [
    {
-    "src": "/images/products/rustic-blackbutt-engineered-1.webp",
-    "thumb": "/images/products/rustic-blackbutt-engineered-1-sm.webp",
-    "name": "106-Eng-Timber-Rusted-Blackbutt-min"
+    "src": "/images/products/engineered-australian-species---rustic-blackbutt-57d40d.webp",
+    "thumb": "/images/products/engineered-australian-species---rustic-blackbutt-57d40d-sm.webp",
+    "name": "Rustic-Blackbutt-Matt"
    }
   ],
   "engineered-australian-species---spotted-gum": [
    {
-    "src": "/images/products/spotted-gum-engineered-1.webp",
-    "thumb": "/images/products/spotted-gum-engineered-1-sm.webp",
-    "name": "107-Hybrid-Spotted-Gum-min"
+    "src": "/images/products/engineered-australian-species---spotted-gum-abc1ed.webp",
+    "thumb": "/images/products/engineered-australian-species---spotted-gum-abc1ed-sm.webp",
+    "name": "Spotted-Gum-Smooth-Tile"
    }
   ],
   "engineered-australian-species---tasmanian-oak": [
    {
-    "src": "/images/products/tasmanian-oak-engineered-1.webp",
-    "thumb": "/images/products/tasmanian-oak-engineered-1-sm.webp",
-    "name": "105-Eng-Timber-Tasmanian-Oak-min"
+    "src": "/images/products/engineered-australian-species---tasmanian-oak-8b296c.webp",
+    "thumb": "/images/products/engineered-australian-species---tasmanian-oak-8b296c-sm.webp",
+    "name": "Tasmanian-Oak"
    }
   ],
   "engineered-australian-species---victorian-ash": [
    {
-    "src": "/images/products/victorian-ash-engineered-1.webp",
-    "thumb": "/images/products/victorian-ash-engineered-1-sm.webp",
-    "name": "103-Eng-Timber-Victorian-Ash-min"
+    "src": "/images/products/engineered-australian-species---victorian-ash-a666cd.webp",
+    "thumb": "/images/products/engineered-australian-species---victorian-ash-a666cd-sm.webp",
+    "name": "Vic-Ash-2"
    }
   ],
   "engineered-european-oak-parquetry-chevron-colour---dark-brown": [
@@ -435,6 +488,31 @@
     "src": "/images/products/fort-engineered-1.webp",
     "thumb": "/images/products/fort-engineered-1-sm.webp",
     "name": "129-Engineered-Oak-Fort-min"
+   },
+   {
+    "src": "/images/products/fort-6512e9.webp",
+    "thumb": "/images/products/fort-6512e9-sm.webp",
+    "name": "Fort-2"
+   },
+   {
+    "src": "/images/products/fort-e57965.webp",
+    "thumb": "/images/products/fort-e57965-sm.webp",
+    "name": "Fort"
+   },
+   {
+    "src": "/images/products/fort-6bc37e.webp",
+    "thumb": "/images/products/fort-6bc37e-sm.webp",
+    "name": "Fort-HB-PP-R"
+   },
+   {
+    "src": "/images/products/fort-760d69.webp",
+    "thumb": "/images/products/fort-760d69-sm.webp",
+    "name": "Fort-HB-1-PP-R"
+   },
+   {
+    "src": "/images/products/fort-e7c132.webp",
+    "thumb": "/images/products/fort-e7c132-sm.webp",
+    "name": "Fort-Herringbone"
    }
   ],
   "grey-iron-bark": [
@@ -452,11 +530,6 @@
     "src": "/images/products/grey-iron-bark-3.webp",
     "thumb": "/images/products/grey-iron-bark-3-sm.webp",
     "name": "BelmoreGIB83x14mm7"
-   },
-   {
-    "src": "/images/products/grey-iron-bark-4.webp",
-    "thumb": "/images/products/grey-iron-bark-4-sm.webp",
-    "name": "e22b1485edd1ff9ee18f88a78cb3a31c"
    }
   ],
   "grey-stone": [
@@ -544,6 +617,16 @@
     "src": "/images/products/jetty-engineered-1.webp",
     "thumb": "/images/products/jetty-engineered-1-sm.webp",
     "name": "116-Jetty-min"
+   },
+   {
+    "src": "/images/products/jetty-95b0fb.webp",
+    "thumb": "/images/products/jetty-95b0fb-sm.webp",
+    "name": "Jetty-1"
+   },
+   {
+    "src": "/images/products/jetty-760afb.webp",
+    "thumb": "/images/products/jetty-760afb-sm.webp",
+    "name": "Light-Tan-Herringbone"
    }
   ],
   "lightfall": [
@@ -601,13 +684,28 @@
     "src": "/images/products/martha-engineered-1.webp",
     "thumb": "/images/products/martha-engineered-1-sm.webp",
     "name": "111-Martha-min"
+   },
+   {
+    "src": "/images/products/martha-7dbabb.webp",
+    "thumb": "/images/products/martha-7dbabb-sm.webp",
+    "name": "Martha-HB-TW-CS"
+   },
+   {
+    "src": "/images/products/martha-38cece.webp",
+    "thumb": "/images/products/martha-38cece-sm.webp",
+    "name": "Martha-2"
+   },
+   {
+    "src": "/images/products/martha-efdfd7.webp",
+    "thumb": "/images/products/martha-efdfd7-sm.webp",
+    "name": "Martha-HB-Tile"
    }
   ],
   "mistgrove": [
    {
-    "src": "/images/products/mistgrove-engineered-1.webp",
-    "thumb": "/images/products/mistgrove-engineered-1-sm.webp",
-    "name": "Mistgrove"
+    "src": "/images/products/mistgrove-5317f7.webp",
+    "thumb": "/images/products/mistgrove-5317f7-sm.webp",
+    "name": "Mistgrove_2026-11-12-031056_ppvw"
    },
    {
     "src": "/images/products/mistgrove-engineered-2.webp",
@@ -617,9 +715,29 @@
   ],
   "moondah": [
    {
-    "src": "/images/products/moondah-engineered-1.webp",
-    "thumb": "/images/products/moondah-engineered-1-sm.webp",
-    "name": "112-Moondah-min"
+    "src": "/images/products/moondah-3345e9.webp",
+    "thumb": "/images/products/moondah-3345e9-sm.webp",
+    "name": "Moonda-Tile-2_2026-11-12-013522_folr"
+   },
+   {
+    "src": "/images/products/moondah-b1ca51.webp",
+    "thumb": "/images/products/moondah-b1ca51-sm.webp",
+    "name": "Moonda"
+   },
+   {
+    "src": "/images/products/moondah-71a373.webp",
+    "thumb": "/images/products/moondah-71a373-sm.webp",
+    "name": "Moonda-TW-SG"
+   },
+   {
+    "src": "/images/products/moondah-2df4e9.webp",
+    "thumb": "/images/products/moondah-2df4e9-sm.webp",
+    "name": "Moonda-HB"
+   },
+   {
+    "src": "/images/products/moondah-685846.webp",
+    "thumb": "/images/products/moondah-685846-sm.webp",
+    "name": "Moonda-HB-Tile"
    }
   ],
   "natural-blackbutt": [
@@ -643,9 +761,14 @@
     "name": "195_NSWBlackbutt"
    },
    {
-    "src": "/images/products/nsw-blackbutt-2.webp",
-    "thumb": "/images/products/nsw-blackbutt-2-sm.webp",
-    "name": "Sth-Blackbutt-2-Latitude-37"
+    "src": "/images/products/nsw-blackbutt-fd1252.webp",
+    "thumb": "/images/products/nsw-blackbutt-fd1252-sm.webp",
+    "name": "Southern-Blackbutt-Synteko-classic-finish-Display-Home"
+   },
+   {
+    "src": "/images/products/nsw-blackbutt-f1b373.webp",
+    "thumb": "/images/products/nsw-blackbutt-f1b373-sm.webp",
+    "name": "01_Glen-Shian_Living-1200px"
    }
   ],
   "oak-natural": [
@@ -667,6 +790,36 @@
     "src": "/images/products/pier-st-engineered-1.webp",
     "thumb": "/images/products/pier-st-engineered-1-sm.webp",
     "name": "123-Engineered-Oak-Pier-St-min"
+   },
+   {
+    "src": "/images/products/pier-st-engineered-timber-c2adf0.webp",
+    "thumb": "/images/products/pier-st-engineered-timber-c2adf0-sm.webp",
+    "name": "Pier-St-1"
+   },
+   {
+    "src": "/images/products/pier-st-engineered-timber-c2e0eb.webp",
+    "thumb": "/images/products/pier-st-engineered-timber-c2e0eb-sm.webp",
+    "name": "Pier-St-2"
+   },
+   {
+    "src": "/images/products/pier-st-engineered-timber-55967a.webp",
+    "thumb": "/images/products/pier-st-engineered-timber-55967a-sm.webp",
+    "name": "Pier-St-3"
+   },
+   {
+    "src": "/images/products/pier-st-engineered-timber-e47619.webp",
+    "thumb": "/images/products/pier-st-engineered-timber-e47619-sm.webp",
+    "name": "Pier-St-4"
+   },
+   {
+    "src": "/images/products/pier-st-engineered-timber-c93354.webp",
+    "thumb": "/images/products/pier-st-engineered-timber-c93354-sm.webp",
+    "name": "Pier-St-HB-1"
+   },
+   {
+    "src": "/images/products/pier-st-engineered-timber-08ca16.webp",
+    "thumb": "/images/products/pier-st-engineered-timber-08ca16-sm.webp",
+    "name": "Pier-St-Herringbone-Tile"
    }
   ],
   "pillars": [
@@ -674,6 +827,16 @@
     "src": "/images/products/pillars-engineered-1.webp",
     "thumb": "/images/products/pillars-engineered-1-sm.webp",
     "name": "Pillars"
+   },
+   {
+    "src": "/images/products/pillars-a27b8a.webp",
+    "thumb": "/images/products/pillars-a27b8a-sm.webp",
+    "name": "PillarsVintage-HB-Gallery-2"
+   },
+   {
+    "src": "/images/products/pillars-f283d8.webp",
+    "thumb": "/images/products/pillars-f283d8-sm.webp",
+    "name": "PillarsVintage-Herringbone_2026-11-10-025634_whgw"
    }
   ],
   "porcelain": [
@@ -685,9 +848,34 @@
   ],
   "red-hill-engineered-timber": [
    {
-    "src": "/images/products/red-hill-engineered-1.webp",
-    "thumb": "/images/products/red-hill-engineered-1-sm.webp",
-    "name": "128-Engineered-Oak-Red-Hill-min"
+    "src": "/images/products/red-hill-engineered-timber-68031d.webp",
+    "thumb": "/images/products/red-hill-engineered-timber-68031d-sm.webp",
+    "name": "Red-Hill-Tile"
+   },
+   {
+    "src": "/images/products/red-hill-engineered-timber-bd9a2d.webp",
+    "thumb": "/images/products/red-hill-engineered-timber-bd9a2d-sm.webp",
+    "name": "Red-Hill-1-P-L_2026-11-10-235804_jfys"
+   },
+   {
+    "src": "/images/products/red-hill-engineered-timber-6924ee.webp",
+    "thumb": "/images/products/red-hill-engineered-timber-6924ee-sm.webp",
+    "name": "Red-Hill-2-P-L_2026-11-10-235807_joza"
+   },
+   {
+    "src": "/images/products/red-hill-engineered-timber-894c42.webp",
+    "thumb": "/images/products/red-hill-engineered-timber-894c42-sm.webp",
+    "name": "Red-Hill-P-Latte"
+   },
+   {
+    "src": "/images/products/red-hill-engineered-timber-8359ee.webp",
+    "thumb": "/images/products/red-hill-engineered-timber-8359ee-sm.webp",
+    "name": "Red-Hill"
+   },
+   {
+    "src": "/images/products/red-hill-engineered-timber-e1859e.webp",
+    "thumb": "/images/products/red-hill-engineered-timber-e1859e-sm.webp",
+    "name": "Red-Hill-HB-Tile"
    }
   ],
   "red-stone": [
@@ -699,16 +887,46 @@
   ],
   "sauvignon": [
    {
-    "src": "/images/products/horizon-engineered-1.webp",
-    "thumb": "/images/products/horizon-engineered-1-sm.webp",
-    "name": "126-Sauvignon-min"
+    "src": "/images/products/sauvignon-5d61a6.webp",
+    "thumb": "/images/products/sauvignon-5d61a6-sm.webp",
+    "name": "Horizon-Tile"
+   },
+   {
+    "src": "/images/products/sauvignon-eda243.webp",
+    "thumb": "/images/products/sauvignon-eda243-sm.webp",
+    "name": "Horizon"
+   },
+   {
+    "src": "/images/products/sauvignon-e89788.webp",
+    "thumb": "/images/products/sauvignon-e89788-sm.webp",
+    "name": "Horizon-HB-4"
+   },
+   {
+    "src": "/images/products/sauvignon-02183d.webp",
+    "thumb": "/images/products/sauvignon-02183d-sm.webp",
+    "name": "Horizon-HB-3"
+   },
+   {
+    "src": "/images/products/sauvignon-d7ee69.webp",
+    "thumb": "/images/products/sauvignon-d7ee69-sm.webp",
+    "name": "Horizon-HB-2"
+   },
+   {
+    "src": "/images/products/sauvignon-88b8f8.webp",
+    "thumb": "/images/products/sauvignon-88b8f8-sm.webp",
+    "name": "Horizon-HB-1"
+   },
+   {
+    "src": "/images/products/sauvignon-fa0446.webp",
+    "thumb": "/images/products/sauvignon-fa0446-sm.webp",
+    "name": "Horizon-HB-Tile"
    }
   ],
   "seabright": [
    {
-    "src": "/images/products/seabright-engineered-1.webp",
-    "thumb": "/images/products/seabright-engineered-1-sm.webp",
-    "name": "Seabright"
+    "src": "/images/products/seabright-e1c02f.webp",
+    "thumb": "/images/products/seabright-e1c02f-sm.webp",
+    "name": "Seabright_2026-11-12-030409_cocz"
    }
   ],
   "silvery-grey": [
@@ -723,28 +941,6 @@
     "src": "/images/products/smoked-spotted-gum-hybrid-1.webp",
     "thumb": "/images/products/smoked-spotted-gum-hybrid-1-sm.webp",
     "name": "64-Hybrid-Smoked-Spotted-Gum-min"
-   }
-  ],
-  "southern-blackbutt": [
-   {
-    "src": "/images/products/southern-blackbutt-1.webp",
-    "thumb": "/images/products/southern-blackbutt-1-sm.webp",
-    "name": "193_SouthernBlackbutt"
-   },
-   {
-    "src": "/images/products/southern-blackbutt-2.webp",
-    "thumb": "/images/products/southern-blackbutt-2-sm.webp",
-    "name": "southern-Blackbutt-Synteko-Classic-Finish-Display-Home-2"
-   },
-   {
-    "src": "/images/products/southern-blackbutt-3.webp",
-    "thumb": "/images/products/southern-blackbutt-3-sm.webp",
-    "name": "Sth-Blackbutt-130-mm"
-   },
-   {
-    "src": "/images/products/southern-blackbutt-4.webp",
-    "thumb": "/images/products/southern-blackbutt-4-sm.webp",
-    "name": "Sth-Blackbutt-Gregory-Builders"
    }
   ],
   "spotted-gum-3": [
@@ -788,16 +984,41 @@
   ],
   "st-andrew-engineered-timber": [
    {
-    "src": "/images/products/st-andrews-engineered-1.webp",
-    "thumb": "/images/products/st-andrews-engineered-1-sm.webp",
-    "name": "127-Engineered-Oak-St-Andrew-min"
+    "src": "/images/products/st-andrew-engineered-timber-6d99a8.webp",
+    "thumb": "/images/products/st-andrew-engineered-timber-6d99a8-sm.webp",
+    "name": "Pure-Natural_2026-11-10-030857_tdte"
+   },
+   {
+    "src": "/images/products/st-andrew-engineered-timber-1ed10f.webp",
+    "thumb": "/images/products/st-andrew-engineered-timber-1ed10f-sm.webp",
+    "name": "St-Andrews-1-PP-PN_2026-11-10-030655_gwuj"
+   },
+   {
+    "src": "/images/products/st-andrew-engineered-timber-e8b753.webp",
+    "thumb": "/images/products/st-andrew-engineered-timber-e8b753-sm.webp",
+    "name": "St-Andrews-Stairs"
+   },
+   {
+    "src": "/images/products/st-andrew-engineered-timber-6efd6a.webp",
+    "thumb": "/images/products/st-andrew-engineered-timber-6efd6a-sm.webp",
+    "name": "St-Andrews-SB-2"
+   },
+   {
+    "src": "/images/products/st-andrew-engineered-timber-cc4a4c.webp",
+    "thumb": "/images/products/st-andrew-engineered-timber-cc4a4c-sm.webp",
+    "name": "St-Andrews-HB"
+   },
+   {
+    "src": "/images/products/st-andrew-engineered-timber-2a633d.webp",
+    "thumb": "/images/products/st-andrew-engineered-timber-2a633d-sm.webp",
+    "name": "St-Andrews-Herringbone"
    }
   ],
   "starfield": [
    {
-    "src": "/images/products/starfield-engineered-1.webp",
-    "thumb": "/images/products/starfield-engineered-1-sm.webp",
-    "name": "Starfield"
+    "src": "/images/products/starfield-5e3834.webp",
+    "thumb": "/images/products/starfield-5e3834-sm.webp",
+    "name": "Starfield-Tile"
    },
    {
     "src": "/images/products/starfield-engineered-2.webp",
@@ -815,6 +1036,16 @@
     "src": "/images/products/tasmanian-driftwood-2.webp",
     "thumb": "/images/products/tasmanian-driftwood-2-sm.webp",
     "name": "Tasmanian-Driftwood-1"
+   },
+   {
+    "src": "/images/products/tasmanian-driftwwod-912c8a.webp",
+    "thumb": "/images/products/tasmanian-driftwwod-912c8a-sm.webp",
+    "name": "Tasmanian-Driftwood-8"
+   },
+   {
+    "src": "/images/products/tasmanian-driftwwod-1d16a9.webp",
+    "thumb": "/images/products/tasmanian-driftwwod-1d16a9-sm.webp",
+    "name": "Cover-page-Tasmanian-Driftwood-Smart-Homes"
    }
   ],
   "tasmanian-oak": [
@@ -841,9 +1072,29 @@
   ],
   "the-eagle": [
    {
-    "src": "/images/products/the-eagle-engineered-1.webp",
-    "thumb": "/images/products/the-eagle-engineered-1-sm.webp",
-    "name": "124-Engineered-Oak-The-Eagle-min"
+    "src": "/images/products/the-eagle-386099.webp",
+    "thumb": "/images/products/the-eagle-386099-sm.webp",
+    "name": "The-Eagle-Tile-2"
+   },
+   {
+    "src": "/images/products/the-eagle-7c8e97.webp",
+    "thumb": "/images/products/the-eagle-7c8e97-sm.webp",
+    "name": "The-Eagle-1-P-V"
+   },
+   {
+    "src": "/images/products/the-eagle-f993ff.webp",
+    "thumb": "/images/products/the-eagle-f993ff-sm.webp",
+    "name": "The-Eagle-4-P-V"
+   },
+   {
+    "src": "/images/products/the-eagle-fb74eb.webp",
+    "thumb": "/images/products/the-eagle-fb74eb-sm.webp",
+    "name": "The-Eagle-2-P-V"
+   },
+   {
+    "src": "/images/products/the-eagle-08facb.webp",
+    "thumb": "/images/products/the-eagle-08facb-sm.webp",
+    "name": "The-Eagle-3-P-V"
    }
   ],
   "tideway": [
@@ -884,6 +1135,16 @@
     "src": "/images/products/white-haven-engineered-2.webp",
     "thumb": "/images/products/white-haven-engineered-2-sm.webp",
     "name": "White-Haven-Background-2"
+   },
+   {
+    "src": "/images/products/white-haven-c44795.webp",
+    "thumb": "/images/products/white-haven-c44795-sm.webp",
+    "name": "White-Haven-Background"
+   },
+   {
+    "src": "/images/products/white-haven-7f5211.webp",
+    "thumb": "/images/products/white-haven-7f5211-sm.webp",
+    "name": "White-Haven-3"
    }
   ],
   "windslow-carpet": [
@@ -933,6 +1194,39 @@
     "src": "/images/products/wormy-chestnut-qld-2.webp",
     "thumb": "/images/products/wormy-chestnut-qld-2-sm.webp",
     "name": "Wormy-Chestnut-3"
+   }
+  ],
+  "blackbutt-smooth": [
+   {
+    "src": "/images/products/blackbutt-smooth-9a7626.webp",
+    "thumb": "/images/products/blackbutt-smooth-9a7626-sm.webp",
+    "name": "Blackbutt-Smooth-Tile"
+   }
+  ],
+  "marley-road": [
+   {
+    "src": "/images/products/marley-road-21de89.webp",
+    "thumb": "/images/products/marley-road-21de89-sm.webp",
+    "name": "Marley-Road-Tile"
+   },
+   {
+    "src": "/images/products/marley-road-e22fc5.webp",
+    "thumb": "/images/products/marley-road-e22fc5-sm.webp",
+    "name": "Marley-Road"
+   }
+  ],
+  "pip-bay": [
+   {
+    "src": "/images/products/pip-bay-008fcc.webp",
+    "thumb": "/images/products/pip-bay-008fcc-sm.webp",
+    "name": "Pip-Bay-Tile"
+   }
+  ],
+  "spotted-gum-matt": [
+   {
+    "src": "/images/products/spotted-gum-matt-859ea0.webp",
+    "thumb": "/images/products/spotted-gum-matt-859ea0-sm.webp",
+    "name": "Spotted-Gum-Matt-Tile"
    }
   ]
  },

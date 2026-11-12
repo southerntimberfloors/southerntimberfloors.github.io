@@ -32,6 +32,7 @@ The logo (`src/components/Logo.astro`), favicon and all photography come from th
 1. **Enquiry form:** add a Web3Forms access key (`formAccessKey`) or a Formspree URL (`formEndpoint`) in `src/data/site.ts`. Until then the form opens the visitor's email app, and the build prints a warning.
 2. **Box coverage:** `boxCoverage()` in `products.ts` uses typical pack sizes. Update it with real figures.
 3. **Copy check:** product descriptions are generated from species and tone. Review them, and the services, FAQ and sustainability text, for accuracy.
+4. **Pull the latest edits from the old site:** while the agency's site is still live, product edits made there can be copied across with `python3 scripts/sync-from-live.py` (add `--dry-run` to only see what changed). It syncs product names, descriptions, specs, photos, added/removed products, and the titles and H1s that are kept identical for SEO. Needs Pillow (`pip3 install pillow`). Run it one last time just before switching the domain.
 
 ## Improvements over the original
 

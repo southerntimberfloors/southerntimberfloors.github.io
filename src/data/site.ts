@@ -282,8 +282,8 @@ export const services: Service[] = [
   },
   {
     slug: 'decorators',
-    name: 'Decorators',
-    h1: 'Decorators',
+    name: 'Designers & Architects',
+    h1: 'Designers & Architects',
     h2: 'Beautiful flooring solutions for modern Australian homes',
     short: 'Showroom, samples and sample boards for design professionals.',
     summary: [

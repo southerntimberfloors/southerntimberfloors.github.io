@@ -25,7 +25,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: p.name,
-  description: p.description,
+  description: p.description.replace(/\s+/g, ' '),
   category: cat.name,
   brand: { '@type': 'Brand', name: business.name },
   material: p.species ?? undefined,
@@ -35,7 +35,7 @@ const schema = {
 ---
 <Base
   title={`${p.name} — ${cat.name}`}
-  description={p.description.slice(0, 155)}
+  description={p.description.replace(/\s+/g, ' ').slice(0, 155)}
   ogImage={p.images[0]?.src}
   crumbs={[{ label: 'Products', href: '/timber' }, { label: cat.name, href: cat.path }, { label: p.name }]}
   schema={schema}
@@ -68,7 +68,7 @@ const schema = {
         <a class="pd__cat" href={cat.path}>{cat.name}</a>
         <h1>{p.name}</h1>
         <p class="pd__tone"><span class="dot" style={`background:${p.color}`}></span>{tones[p.tone].label}{p.species && p.category !== 'hybrid' ? ` · ${p.species}` : ''}</p>
-        <p class="lead">{p.description}</p>
+        {p.description.split(/\n\n+/).map((para, i) => <p class={i === 0 ? 'lead' : ''}>{para}</p>)}
         <ul class="checklist">{p.highlights.map((h) => <li>{h}</li>)}</ul>
 
         <div class="pd__actions">
