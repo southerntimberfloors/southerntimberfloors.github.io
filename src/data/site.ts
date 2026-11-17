@@ -83,9 +83,10 @@ export const categories: Record<
     key: 'parquetry',
     name: 'Parquetry Timber',
     path: '/timber/parquetry-timber',
-    short: 'Herringbone and chevron blocks, with matching planks for seamless transitions.',
+    short: 'Herringbone parquetry in European Oak and Australian species, many also available as matching strip boards.',
     intro: [
-      'Parquetry has a timeless quality and has adapted to fit in beautifully with our modern lifestyles and brings a sense of grandeur and style to any interior.',
+      'Parquetry timber flooring brings timeless appeal and architectural interest to an interior. With its distinctive geometric patterns and beautiful craftsmanship, herringbone parquetry introduces depth, texture and a sense of understated elegance to any space.',
+      'Whether complementing classic architectural details or adding character to contemporary interiors, parquetry flooring creates a striking foundation that feels both considered and enduring. A timeless choice for those looking to bring something truly special to their home.',
     ],
     bestFor: ['Statement living and entry spaces', 'Period and contemporary homes alike', 'Pairing with matching straight planks'],
     considerations: ['More labour-intensive to install than planks', 'Allow extra material for pattern cuts'],
@@ -320,57 +321,91 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: 'rye-residence',
-    name: 'Gilpip Residence',
-    location: 'Mount Martha',
-    summary: 'Tasmanian Oak floors in a generous wide 185mm board with a satin matt water-based finish.',
+    slug: 'mt-martha',
+    name: 'Mt Martha',
+    location: 'Mt Martha',
+    summary: 'A modern Hamptons-style retreat featuring our engineered oak flooring in Red Hill.',
     story: [
-      'This superb home features Tasmanian Oak floors in a generous Wide 185mm board with a Water based 2 Pac Coating in a Satin Matt which highlights the timbers soft and natural tones. We love the warm modern look created with the versatility of Solid timber.',
+      "A beautiful expression of modern Hamptons style, this Mount Martha retreat brings together relaxed coastal living and timeless natural materials. Featuring our engineered oak flooring in Red Hill, the warm, soft tones of the timber create a beautiful foundation for the home's light palette and refined finishes. Natural grain variation and understated colour bring depth and texture to the interiors, balancing classic Hamptons influences with a relaxed, contemporary feel.",
+      'The result is a welcoming coastal retreat where natural timber flooring adds warmth, character and an enduring sense of understated elegance.',
     ],
-    productSlugs: ['tasmanian-oak'],
-    featured:
-      'Tasmanian Oak has stood the test of time with its classic style. Valued for its light warm colour, straight grain and versatility within the modern home. Our new popular extra wide 185 wide boards look stunning with a water based coating.',
-    details: [
-      ['Product', 'Solid Tasmanian Oak'],
-      ['Board width', '185mm'],
-      ['Finish', 'Water based 2 Pac, Satin Matt'],
-    ],
-  },
-  {
-    slug: 'yacht-court-house',
-    name: 'Country Home',
-    location: 'Gippsland',
-    summary: 'A Tasmanian Driftwood feature floor in a modern country home.',
-    story: [
-      'This stunning Tasmanian Driftwood feature floor suits this modern Country home to perfection. Combined with soft whites and natural stone, and lots of light, this home instantly putting friends and family at ease with its soft lived in feel. This flooring complements the natural elements of this home with its stone and soft linens.',
-    ],
-    productSlugs: ['tasmanian-driftwwod'],
-    featured:
-      'We are excited to introduce this beautiful new solid timber flooring from Tasmania. Tasmanian Driftwood is created from a mix of species and exclusive to Southern Timber Floors. It’s easy to fall in love with its subtle colourways and lightly featured nature. Perfect for contemporary and country style homes alike. You will be surprised by how reasonably priced Tasmanian Driftwood is to have installed in your home.',
-    details: [['Product', 'Solid Tasmanian Driftwood']],
-  },
-  {
-    slug: 'yarralumla-house',
-    name: 'Latitude 37',
-    location: 'Mornington',
-    summary: 'A project with the decorators at Latitude 37.',
-    story: [],
-    productSlugs: [],
-    details: [],
+    productSlugs: ['red-hill-engineered-timber'],
+    details: [['Product', 'Red Hill engineered European Oak']],
   },
   {
     slug: 'south-yarra-apparentment',
-    name: 'Mornington Peninsula',
+    name: 'Latitude 37 - Mornington Peninsula',
     location: 'Mornington Peninsula',
-    summary: 'White Haven engineered European Oak, a perfect complement to beachside living.',
+    summary: 'White Haven engineered oak flooring, a natural choice for relaxed coastal living.',
     story: [
-      'This beautiful Engineered oak floor in "White Haven" is a perfect complement to Beachside living with its subtle white wash over a modern timber coloured European Oak. A winning combination the decorators at Latitude 37 have created for this comfortable home near the bay.',
+      'This beautiful home near the bay features our White Haven engineered oak flooring, a natural choice for relaxed coastal living. The subtle whitewashed finish softens the contemporary tones of European Oak, creating a light, understated palette that feels both fresh and timeless.',
+      'A thoughtful selection by the decorators at Latitude 37, this pairing brings warmth, texture and effortless sophistication to a home designed for comfortable bayside living.',
     ],
     productSlugs: ['white-haven'],
     details: [
       ['Product', 'White Haven engineered European Oak'],
       ['Decorators', 'Latitude 37'],
     ],
+  },
+  {
+    slug: 'kialla-homes',
+    name: 'Kialla Homes',
+    location: 'Kialla',
+    summary: 'A country home by Kialla Builders featuring rustic American Oak timber flooring.',
+    story: [
+      "A beautiful country home brought to life by Kialla Builders, featuring rustic American Oak timber flooring. The natural character, unique grain patterns and warm tones of the oak create a relaxed, timeless feel, perfectly complementing the home's country style. A stunning result that brings warmth and natural beauty to every space.",
+    ],
+    productSlugs: ['american-oak-rustic'],
+    featured:
+      'American Oak has become a sought-after choice in Australian homes, loved for its distinctive open grain patterns, natural warmth and timeless appeal. Its beautiful colour palette ranges from soft honey and golden browns to lighter, understated earthy tones, creating depth and character in any space. Grown predominantly across the eastern United States, American Oak makes a striking feature floor, bringing effortless sophistication to both contemporary and classic interiors. Available in Prime and Rustic grades to suit a variety of design preferences.',
+    details: [
+      ['Product', 'Solid American Oak, Rustic grade'],
+      ['Builder', 'Kialla Builders'],
+    ],
+  },
+  {
+    slug: 'rye-residence',
+    name: 'Gilpip Residence',
+    location: 'Mount Martha',
+    summary: 'Tasmanian Oak solid timber flooring in an impressive 185mm wide board with a satin matt finish.',
+    story: [
+      "This striking architectural residence features Tasmanian Oak solid timber flooring in an impressive 185mm wide board, finished with a water-based 2-pack satin matt coating. The finish beautifully enhances the timber's soft, natural tones, allowing the subtle grain and character of the oak to take centre stage.",
+      'We love the balance of warmth and contemporary simplicity in this home. The generous board width and natural variation of Tasmanian Oak bring depth, texture and understated elegance to the architecture, creating a timeless interior that celebrates the beauty of natural timber flooring.',
+    ],
+    productSlugs: ['tasmanian-oak'],
+    featured:
+      'A timeless Australian favourite, Tasmanian Oak has stood the test of time for its natural warmth, understated elegance and versatility. Valued for its beautiful light tones, subtle pink and honey hues, and characterful straight grain, it brings a sense of warmth and sophistication to both contemporary and classic interiors. Our popular extra-wide 185mm boards create a beautiful sense of space, with a water-based finish enhancing the natural colour and grain of the timber.',
+    details: [
+      ['Product', 'Solid Tasmanian Oak'],
+      ['Board width', '185mm'],
+      ['Finish', 'Water-based 2-pack, satin matt'],
+    ],
+  },
+  {
+    slug: 'yacht-court-house',
+    name: 'Farmhouse',
+    location: 'Gippsland',
+    summary: 'Tasmanian Driftwood timber flooring in a modern farmhouse.',
+    story: [
+      'A beautiful expression of modern farmhouse style, this home features our Tasmanian Driftwood timber flooring, bringing warmth, texture and natural character to every space. Paired with soft whites, natural stone and relaxed linen textures, the flooring creates a beautifully balanced palette that feels both considered and effortlessly inviting.',
+      "We love how the subtle tones and natural character of the timber complement the home's organic finishes, creating a relaxed, lived-in feel that makes this farmhouse a welcoming place to gather, unwind and enjoy.",
+    ],
+    productSlugs: ['tasmanian-driftwwod'],
+    featured:
+      'Tasmanian Driftwood is a beautiful solid timber flooring option, crafted from a blend of Tasmanian timber species. Inspired by the natural beauty of weathered driftwood, its soft, muted tones, gentle colour variation and subtle grain detailing create a relaxed yet refined aesthetic. With its lightly featured appearance and organic character, Tasmanian Driftwood brings warmth and understated elegance to both contemporary and country-inspired interiors.',
+    details: [['Product', 'Solid Tasmanian Driftwood']],
+  },
+  {
+    slug: 'yarralumla-house',
+    name: 'Latitude 37',
+    location: 'Mornington',
+    summary: 'A four-bedroom residence balancing timeless elegance with relaxed contemporary living.',
+    story: [
+      'This beautiful four-bedroom residence strikes a balance between timeless elegance and relaxed contemporary living. A refined colour palette, soaring ceilings and carefully considered timber accents create a sense of warmth and understated sophistication. Wall panelling and painted reclaimed brickwork add depth and texture, beautifully complemented by the natural character of the timber flooring.',
+      'The result is a welcoming home where classic architectural details and natural materials come together to create an enduring sense of style.',
+    ],
+    productSlugs: [],
+    details: [['Decorators', 'Latitude 37']],
   },
 ];
 

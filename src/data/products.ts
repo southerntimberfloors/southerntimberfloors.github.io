@@ -67,9 +67,11 @@ function describe(p: Omit<Product, 'description' | 'highlights' | 'images'>): { 
       if (spec['Also available'] || p.herringbone) highlights.push('Also available in herringbone');
       break;
     case 'parquetry':
-      description = `${p.name} is a ${tone} ${p.pattern} parquetry in engineered ${species}. ${speciesNotes[p.species ?? ''] ?? ''} The short blocks create a rhythmic, tailored pattern that brings character to living areas and entries.`;
+      // Names on the old site now read "Jetty - Herringbone"; drop the suffix so the sentence doesn't repeat it.
+      description = `${p.name.replace(/\s+-\s+(herringbone|chevron)$/i, '')} is a ${tone} ${p.pattern} parquetry in engineered ${species}. ${speciesNotes[p.species ?? ''] ?? ''} The short blocks create a rhythmic, tailored pattern that brings character to living areas and entries.`;
       highlights.push(`Classic ${p.pattern} layout`, 'Engineered for stability');
       if (spec['Matching planks']) highlights.push(`Matching ${spec['Matching planks']} planks for adjoining rooms`);
+      else if (/strip/i.test(spec['Pattern'] ?? '')) highlights.push('Also available as strip boards');
       break;
     case 'hybrid':
       description = `${p.name} is a ${tone} hybrid plank with a realistic timber visual over a durable, water-resistant core. It suits busy family life and is installed as a floating floor.`;

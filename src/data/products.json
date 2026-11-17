@@ -397,7 +397,7 @@
  },
  {
   "slug": "blackbutt-engineered-parquetry-herringbone",
-  "name": "Blackbutt",
+  "name": "Blackbutt - Herringbone",
   "category": "parquetry",
   "species": "Blackbutt",
   "color": "#8f6544",
@@ -407,18 +407,33 @@
   "specs": [
    [
     "Species",
-    "Blackbutt"
+    "Australian Species"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm"
+    "Thickness × wear layer",
+    "14mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Standard & better"
    ]
-  ],
-  "originalDescription": "Engineered timber parquetry in a Herringbone pattern comines the best from old and new. Australian Species backed with up to seven layers of cross laminated ply to create stable large board option. Perfectly suitable for modern living with no sanding required. Suitable for Commerical and Residential Spaces."
+  ]
  },
  {
   "slug": "blairgowrie-carpet",
-  "name": "Blairgowrie",
+  "name": "Blairgowrie Range",
   "category": "carpet",
   "species": null,
   "color": "#a38972",
@@ -439,7 +454,7 @@
     "Residential Heavy Duty"
    ]
   ],
-  "originalDescription": "Stylish, natural and sophisticated best describe this 100% New Zealand Wool Carpet. Crafted with a defined chunky textured loop pile, Blairgowrie will bring a feel of Costal Elegance into your home.\n\n\n\nAvailable in:\n\nBack Beach, Boulder, Fogarty, Moonah, Offshore, Rockpool, Shipwreck"
+  "originalDescription": "Available in:\n\nBack Beach, Boulder, Fogarty, Moonah, Offshore, Rockpool, Shipwreck"
  },
  {
   "slug": "briars",
@@ -563,7 +578,7 @@
  },
  {
   "slug": "crossley-twist-carpet",
-  "name": "Crossley Twist",
+  "name": "Crossley Twist Range",
   "category": "carpet",
   "species": null,
   "color": "#b3aa9f",
@@ -584,7 +599,7 @@
     "Residential Extra Heavy Duty"
    ]
   ],
-  "originalDescription": "Crossley Twist is a luxurious plush carpet that has been a favourite in Australian homes for over a decade.Designed to stand the test of time with its on-trend colours, it remains the perfect option for Residential and commercial Installation.\n\n\n\nAvailable in:\n\nAntique, Birdi, Casper, Cedar plank, Evening haze, Grey, Mole Grey, Nordica, Shadow, Surf mist, Vellum, White Duck, Winding path, Zinia"
+  "originalDescription": "Available in:\n\nAntique, Birdi, Casper, Cedar plank, Evening haze, Grey, Mole Grey, Nordica, Shadow, Surf mist, Vellum, White Duck, Winding path, Zinia"
  },
  {
   "slug": "deep-brown",
@@ -827,12 +842,12 @@
  },
  {
   "slug": "engineered-european-oak-parquetry-chevron-colour---dark-brown",
-  "name": "Shoreline",
+  "name": "Shoreline - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#49372a",
   "tone": "dark",
-  "pattern": "chevron",
+  "pattern": "herringbone",
   "herringbone": true,
   "specs": [
    [
@@ -840,15 +855,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry Chevron combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone---beach-stone",
-  "name": "Beach House",
+  "name": "Beach House - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#a88c73",
@@ -861,19 +895,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600 × 120 × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Matching planks",
-    "190mm × 15/4mm"
+    "Width × length",
+    "150mm × 900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry Herringbone flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone---half-moon-bay",
-  "name": "Half Moon Bay",
+  "name": "Half Moon Bay - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#423224",
@@ -886,19 +935,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600 × 120 × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Matching planks",
-    "190mm × 15/4mm"
+    "Width × length",
+    "150mm × 900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry Herringbone combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone---jetty",
-  "name": "Jetty",
+  "name": "Jetty - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#86653f",
@@ -911,19 +975,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600 × 120 × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Matching planks",
-    "190mm × 15/4mm"
+    "Width × length",
+    "150mm × 900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Standard & Better"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Herringbone combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone---main-st",
-  "name": "Main St",
+  "name": "Main St - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#a4835b",
@@ -936,19 +1015,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600 × 120 × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Matching planks",
-    "190mm × 15/4mm"
+    "Width × length",
+    "150mm × 900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry Herringbone combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone---martha",
-  "name": "Martha",
+  "name": "Martha - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#a1835b",
@@ -961,19 +1055,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600 × 120 × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Matching planks",
-    "190mm × 15/4mm"
+    "Width × length",
+    "150mm × 900mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry Herringbone combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone---moondah",
-  "name": "Moonda",
+  "name": "Moonda - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#846b54",
@@ -986,40 +1095,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600 × 120 × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Matching planks",
-    "190mm × 15/4mm"
-   ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
- },
- {
-  "slug": "engineered-european-oak-parquetry-herringbone-colour---castle-grey",
-  "name": "Cove",
-  "category": "parquetry",
-  "species": "European Oak",
-  "color": "#5c4f4a",
-  "tone": "grey",
-  "pattern": "herringbone",
-  "herringbone": true,
-  "specs": [
-   [
-    "Species",
-    "European Oak"
+    "Width × length",
+    "150mm × 900mm"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm × 15/4mm"
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone-colour---cognac",
-  "name": "Cognac",
+  "name": "Driftwood - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#714f2e",
@@ -1032,15 +1135,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone-colour---gunnamatta",
-  "name": "Gunnamatta",
+  "name": "Gunnamatta - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#ab998a",
@@ -1053,15 +1175,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone-colour---pier-st",
-  "name": "Pier St",
+  "name": "Pier St - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#a28a76",
@@ -1074,15 +1215,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered Timber European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone-colour---red-hill",
-  "name": "Red Hill",
+  "name": "Red Hill - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#805b3d",
@@ -1095,19 +1255,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Matching planks",
-    "190mm × 15/4mm"
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone-colour--arthurs-st",
-  "name": "Arthurs Seat",
+  "name": "Arthurs Seat - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#a08264",
@@ -1120,19 +1295,34 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Matching planks",
-    "190mm × 15/4mm"
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "engineered-european-oak-parquetry-herringbone-colour--st-andrew",
-  "name": "St Andrews",
+  "name": "St Andrews - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#a38872",
@@ -1145,11 +1335,30 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry Timber flooring combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "flint-grey",
@@ -1357,7 +1566,7 @@
  },
  {
   "slug": "hemisphere-carpet",
-  "name": "Hemisphere",
+  "name": "Hemisphere Range",
   "category": "carpet",
   "species": null,
   "color": "#ae9982",
@@ -1378,7 +1587,7 @@
     "Residential Heavy Duty"
    ]
   ],
-  "originalDescription": "Hemisphere is a dense Polyester Twist Pile Carpet with beautiful softness underfoot. Hemisphere has the look and the comfort and has been designed for those looking for a better-quality carpet with a budget in mind.\n\n\n\nAvailable in:\n\nElk, Espresso, Jetstream, Maverick, Pitch, Seal, Sienna, Squirrel"
+  "originalDescription": "Available in:\n\nElk, Espresso, Jetstream, Maverick, Pitch, Seal, Sienna, Squirrel"
  },
  {
   "slug": "jarrah",
@@ -2160,7 +2369,7 @@
  },
  {
   "slug": "spotted-gum-engineered-parquetry-herringbone",
-  "name": "Spotted Gum",
+  "name": "Spotted Gum - Herringbone",
   "category": "parquetry",
   "species": "Spotted Gum",
   "color": "#5f3b28",
@@ -2170,14 +2379,33 @@
   "specs": [
    [
     "Species",
-    "Spotted Gum"
+    "Australian Species"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Standard & better"
    ]
-  ],
-  "originalDescription": "Engineered Timber Parquetry in a Herringbone pattern combines the best from old and new. Solid Auistralian Species backed with up to seven layers of cross laminated ply to create a stable large board option. Perfectly suitable for modern living with no sanding required. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "st-andrew-engineered-timber",
@@ -2423,7 +2651,7 @@
  },
  {
   "slug": "vintage",
-  "name": "Vantage",
+  "name": "Vantage - Herringbone",
   "category": "parquetry",
   "species": "European Oak",
   "color": "#5c4937",
@@ -2436,15 +2664,30 @@
     "European Oak"
    ],
    [
-    "Dimensions",
-    "600mm × 120mm × 15/4mm"
+    "Thickness × wear layer",
+    "15mm × 4mm"
    ],
    [
-    "Matching planks",
-    "190mm × 15/4mm"
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
    ]
-  ],
-  "originalDescription": "Engineered European Oak Parquetry combines the best from old and new. Solid timber finished in a stunning selection of stains and finishes to suit your design aesthetic. The timber is backed with up to seven layers of cross laminated ply to create a stable wide board option. Perfectly suitable for modern living with no sanding required and ease of installation. Suitable for Commercial and Residential spaces."
+  ]
  },
  {
   "slug": "washed-coral",
@@ -2530,7 +2773,7 @@
  },
  {
   "slug": "windslow-carpet",
-  "name": "Windslow",
+  "name": "Windslow Range",
   "category": "carpet",
   "species": null,
   "color": "#64513c",
@@ -2551,7 +2794,7 @@
     "Residential Heavy Duty"
    ]
   ],
-  "originalDescription": "This 100% New Zealand Natural Wool Carpet as made in Australia and is made with a level loop pile and is very affordable. This classic style carpet is warm and comfortable and is designed in a Boutique range of colours.\n\n\n\nAvailable in:\n\nBack Beach, Boulder, Moonah, Offshore, Rockpool, Shipwreck"
+  "originalDescription": "Available in:\n\nBack Beach, Boulder, Moonah, Offshore, Rockpool, Shipwreck"
  },
  {
   "slug": "wormy-chestnut-qld",
@@ -2755,5 +2998,365 @@
    ]
   ],
   "originalDescription": "Celebrating the natural beauty of Australian timber, our engineered timber floors pair authentic Australian hardwood species with refined engineered construction. Designed for lasting beauty, enhanced stability and everyday performance, each floor brings warmth, character and understated sophistication to residential and commercial spaces alike."
+ },
+ {
+  "slug": "ash-herringbone",
+  "name": "Ash - Herringbone",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#514838",
+  "tone": "dark",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
+ },
+ {
+  "slug": "beach-16-herringbone",
+  "name": "Beach 16 - Herringbone",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#a69a90",
+  "tone": "grey",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
+ },
+ {
+  "slug": "dovee",
+  "name": "Dovee - Herringbone",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#c6b399",
+  "tone": "light",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "14mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "148mm × 888mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
+ },
+ {
+  "slug": "gaia-herringbone",
+  "name": "Gaia - Herringbone",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#ba9c76",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "14mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "148mm × 888mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
+ },
+ {
+  "slug": "magnolia-2",
+  "name": "Magnolia - Herringbone",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#bd9c6e",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "14mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "148mm × 888mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
+ },
+ {
+  "slug": "mistgrove-herringbone",
+  "name": "Mistgrove - Herringbone",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#b09870",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "150mm × 850mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone / Also available in Strip"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
+ },
+ {
+  "slug": "onyxx-grey-herringbone",
+  "name": "Onyxx Grey - Herringbone",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#6b5a4b",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "14mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "148mm × 888mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
+ },
+ {
+  "slug": "paris-grey-herringbone",
+  "name": "Paris Grey - Herringbone",
+  "category": "parquetry",
+  "species": "European Oak",
+  "color": "#685036",
+  "tone": "natural",
+  "pattern": "herringbone",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "14mm × 3mm"
+   ],
+   [
+    "Width × length",
+    "148mm × 888mm"
+   ],
+   [
+    "Finish",
+    "Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
+ },
+ {
+  "slug": "shoreline",
+  "name": "Shoreline",
+  "category": "engineered",
+  "species": "European Oak",
+  "color": "#635040",
+  "tone": "natural",
+  "pattern": "strip",
+  "herringbone": true,
+  "specs": [
+   [
+    "Species",
+    "European Oak"
+   ],
+   [
+    "Thickness × wear layer",
+    "15mm × 4mm"
+   ],
+   [
+    "Width × length",
+    "190mm × 1900mm / 120mm × 600mm"
+   ],
+   [
+    "Finish",
+    "Light Brushed Matt"
+   ],
+   [
+    "Profile",
+    "Tongue and groove"
+   ],
+   [
+    "Pattern",
+    "Strip / Herringbone"
+   ],
+   [
+    "Grade",
+    "Character"
+   ]
+  ]
  }
 ]

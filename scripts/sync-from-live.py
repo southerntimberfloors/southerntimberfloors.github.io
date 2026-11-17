@@ -7,7 +7,7 @@ into this repo, so edits made there before launch aren't lost.
   python3 scripts/sync-from-live.py --dry-run  # only report what would change
 
 What it syncs, per product page (/flooring/<slug>):
-  • name, description paragraphs, spec table (solid + engineered; other ranges are reported for manual review
+  • name, description paragraphs, spec table (solid, engineered + parquetry; other ranges are reported for manual review
     because their tables on the old site are inconsistently formatted)
   • photo gallery (new photos downloaded and converted to .webp at 1366px + 440px)
   • products added to / removed from the range
@@ -26,7 +26,7 @@ UA = {'User-Agent': 'Mozilla/5.0 (Southern Timber Floors site migration sync)'}
 CATEGORY = {'Solid Timber': 'solid', 'Engineered Timber': 'engineered', 'Parquetry Timber': 'parquetry', 'Hybrid timber': 'hybrid', 'Carpet': 'carpet'}
 PLACEHOLDER = 'PlaceholderFrameLight'  # the old site's filler image, not a real photo
 LABELS = {
-    'thickness x wear layer': 'Thickness × wear layer', 'width x length': 'Width × length', 'thickeness': 'Thickness',
+    'thickness x wear layer': 'Thickness × wear layer', 'thickness v wear layer': 'Thickness × wear layer', 'width x length': 'Width × length', 'thickeness': 'Thickness',
     'lengths': 'Length', 'finish': 'Finish', 'grading': 'Grade', 'grade': 'Grade', 'species': 'Species', 'width': 'Width',
     'thickness': 'Thickness', 'length': 'Length', 'profile': 'Profile', 'pattern': 'Pattern',
 }
@@ -72,8 +72,31 @@ def tidy_specs(rows):
         if label == 'Width':  # widths are alternatives, e.g. "85mm x 130mm x 180mm" means 85 / 130 / 180
             v = re.sub(r'\s*[xX×]\s*', ' / ', v)
         v = times(v).replace('Tongue & Groove', 'Tongue and groove').replace('Tongue and Groove', 'Tongue and groove')
+        if label == 'Width × length':
+            v = re.sub(r'\s*/\s*Also available in Strip', '', v, flags=re.I)  # already said under Pattern
+            v = re.sub(r'(\d)(?=\s*(?:/|$))', r'\1mm', v)  # "120mm × 600" → "120mm × 600mm"
+            if not re.search(r'\d', v):  # the old site sometimes puts another row's text here
+                continue
         out.append([label, v])
     return out
+
+
+# Known slips in the old site's spec tables: (slug, label) → value. Each is backed by the matching plank's page.
+SPEC_FIXES = {
+    # Moonda herringbone's width cell holds "Finish / Brushed Matt"; the Moonda plank page lists the herringbone as 150mm × 900mm.
+    ('engineered-european-oak-parquetry-herringbone---moondah', 'Width × length'): '150mm × 900mm',
+    ('engineered-european-oak-parquetry-herringbone---moondah', 'Finish'): 'Brushed Matt',
+}
+
+
+def apply_fixes(slug, specs):
+    have = {k for k, _ in specs}
+    specs = [[k, SPEC_FIXES.get((slug, k), v)] for k, v in specs]
+    for (s, k), v in SPEC_FIXES.items():
+        if s == slug and k not in have:
+            at = next((i for i, (lk, _) in enumerate(specs) if lk == 'Profile'), len(specs))
+            specs.insert(at, [k, v])
+    return specs
 
 
 def norm(s):
@@ -155,8 +178,8 @@ def main():
                 p['originalDescription'] = desc
             else:
                 p.pop('originalDescription', None)
-        live_specs = tidy_specs(live['rows'])
-        if cat in ('solid', 'engineered') or slug not in ours:
+        live_specs = apply_fixes(slug, tidy_specs(live['rows']))
+        if cat in ('solid', 'engineered', 'parquetry') or slug not in ours:
             if p.get('specs') != live_specs:
                 if slug in ours and values(p['specs']) != values(live_specs):
                     changes.append('specs')
@@ -164,7 +187,12 @@ def main():
             spec = dict(live_specs)
             if spec.get('Species'):
                 p['species'] = re.sub(r'^Australian\s+', '', spec['Species'])
-            p['herringbone'] = 'herringbone' in spec.get('Pattern', '').lower()
+                if spec['Species'].lower() == 'australian species':  # e.g. "Spotted Gum - Herringbone"
+                    p['species'] = re.split(r'\s+-\s+', live['name'])[0]
+            pattern = spec.get('Pattern', '').lower()
+            p['herringbone'] = cat == 'parquetry' or 'herringbone' in pattern
+            if cat == 'parquetry':
+                p['pattern'] = 'chevron' if 'chevron' in pattern and 'herringbone' not in pattern else 'herringbone'
         elif values(p.get('specs', [])) != values(live_specs):
             review.append(f'{slug} ({cat}): spec table changed on the live site, check by hand → {live["rows"]}')
 
@@ -222,6 +250,10 @@ def main():
         cur, live = seo.get(path), heads.get(path)
         if live is None:
             new_seo[path] = cur; continue
+        if not live['h1'] and cur and cur.get('h1'):
+            # The old site sometimes ships an empty <h1></h1>; keep the heading we had rather than lose it.
+            print(f'  note: {path} has an empty <h1> on the live site, keeping {cur["h1"]!r}')
+            live = {**live, 'h1': cur['h1']}
         if cur != live:
             seo_changes.append(f'{path}: ' + ', '.join(k for k in ('title', 'description', 'h1') if (cur or {}).get(k) != live[k]))
         new_seo[path] = live

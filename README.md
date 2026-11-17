@@ -15,7 +15,7 @@ npm run check     # type-check
 | Path | Purpose |
 | --- | --- |
 | `src/data/site.ts` | Business details, hours, categories, services, projects, FAQs, nav, form endpoint |
-| `src/data/products.json` | All 85 products: name, category, specs, colour, tone, original description |
+| `src/data/products.json` | All 95 products: name, category, specs, colour, tone, original description |
 | `src/data/legacy-seo.json` | Exact titles, descriptions and H1s from the previous site, keyed by URL |
 | `src/data/images.json` | Photo manifest: product galleries, carpet colourways, project galleries, page photos |
 | `public/images/` | All photography (WebP, large 1366px and small 440px versions) |

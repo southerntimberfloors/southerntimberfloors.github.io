@@ -95,14 +95,14 @@
     "h1": "Birdrock"
   },
   "/flooring/blackbutt-engineered-parquetry-herringbone": {
-    "title": "Blackbutt | Southern Timber Floors",
+    "title": "Blackbutt - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Blackbutt"
+    "h1": "Blackbutt - Herringbone"
   },
   "/flooring/blairgowrie-carpet": {
     "title": "Blairgowrie Carpet | Southern Timber Floors",
     "description": null,
-    "h1": "Blairgowrie"
+    "h1": "Blairgowrie Range"
   },
   "/flooring/briars": {
     "title": "Briars | Southern Timber Floors",
@@ -122,7 +122,7 @@
   "/flooring/crossley-twist-carpet": {
     "title": "Crossley Twist Carpet | Southern Timber Floors",
     "description": null,
-    "h1": "Crossley Twist"
+    "h1": "Crossley Twist Range"
   },
   "/flooring/deep-brown": {
     "title": "Deep Brown | Southern Timber Floors",
@@ -160,74 +160,69 @@
     "h1": "Victorian Ash"
   },
   "/flooring/engineered-european-oak-parquetry-chevron-colour---dark-brown": {
-    "title": "Shoreline | Southern Timber Floors",
+    "title": "Shoreline - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Shoreline"
+    "h1": "Shoreline - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone---beach-stone": {
-    "title": "Beach House | Southern Timber Floors",
+    "title": "Beach House - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Beach House"
+    "h1": "Beach House - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone---half-moon-bay": {
-    "title": "Half Moon Bay | Southern Timber Floors",
+    "title": "Half Moon Bay - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Half Moon Bay"
+    "h1": "Half Moon Bay - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone---jetty": {
-    "title": "Jetty | Southern Timber Floors",
+    "title": "Jetty - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Jetty"
+    "h1": "Jetty - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone---main-st": {
-    "title": "Main St | Southern Timber Floors",
+    "title": "Main St - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Main St"
+    "h1": "Main St - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone---martha": {
-    "title": "Martha | Southern Timber Floors",
+    "title": "Martha - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Martha"
+    "h1": "Martha - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone---moondah": {
-    "title": "Moonda | Southern Timber Floors",
+    "title": "Moonda - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Moonda"
-  },
-  "/flooring/engineered-european-oak-parquetry-herringbone-colour---castle-grey": {
-    "title": "Cove | Southern Timber Floors",
-    "description": null,
-    "h1": "Cove"
+    "h1": "Moonda - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone-colour---cognac": {
-    "title": "Cognac | Southern Timber Floors",
+    "title": "Driftwood - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Cognac"
+    "h1": "Driftwood - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone-colour---gunnamatta": {
-    "title": "Gunnamatta | Southern Timber Floors",
+    "title": "Gunnamatta - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Gunnamatta"
+    "h1": "Gunnamatta - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone-colour---pier-st": {
-    "title": "Pier St | Southern Timber Floors",
+    "title": "Pier St - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Pier St"
+    "h1": "Pier St - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone-colour---red-hill": {
-    "title": "Red Hill | Southern Timber Floors",
+    "title": "Red Hill - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Red Hill"
+    "h1": "Red Hill - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone-colour--arthurs-st": {
-    "title": "Arthurs Seat | Southern Timber Floors",
+    "title": "Arthurs Seat - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Arthurs Seat"
+    "h1": "Arthurs Seat - Herringbone"
   },
   "/flooring/engineered-european-oak-parquetry-herringbone-colour--st-andrew": {
-    "title": "St Andrews | Southern Timber Floors",
+    "title": "St Andrews - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "St Andrews"
+    "h1": "St Andrews - Herringbone"
   },
   "/flooring/flint-grey": {
     "title": "Flint Grey | Southern Timber Floors",
@@ -262,7 +257,7 @@
   "/flooring/hemisphere-carpet": {
     "title": "Hemisphere Carpet | Southern Timber Floors",
     "description": null,
-    "h1": "Hemisphere"
+    "h1": "Hemisphere Range"
   },
   "/flooring/jarrah": {
     "title": "Jarrah | Southern Timber Floors",
@@ -390,9 +385,9 @@
     "h1": "Spotted Gum"
   },
   "/flooring/spotted-gum-engineered-parquetry-herringbone": {
-    "title": "Spotted Gum | Southern Timber Floors",
+    "title": "Spotted Gum - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Spotted Gum"
+    "h1": "Spotted Gum - Herringbone"
   },
   "/flooring/st-andrew-engineered-timber": {
     "title": "St Andrews | Southern Timber Floors",
@@ -425,9 +420,9 @@
     "h1": "Tideway"
   },
   "/flooring/vintage": {
-    "title": "Vantage | Southern Timber Floors",
+    "title": "Vantage - Herringbone | Southern Timber Floors",
     "description": null,
-    "h1": "Vantage"
+    "h1": "Vantage - Herringbone"
   },
   "/flooring/washed-coral": {
     "title": "Firestorm | Southern Timber Floors",
@@ -447,7 +442,7 @@
   "/flooring/windslow-carpet": {
     "title": "Winslow Carpet | Southern Timber Floors",
     "description": null,
-    "h1": "Windslow"
+    "h1": "Windslow Range"
   },
   "/flooring/wormy-chestnut-qld": {
     "title": "Wormy Chestnut QLD | Southern Timber Floors",
@@ -499,20 +494,30 @@
     "description": null,
     "h1": "Projects"
   },
+  "/projects/mt-martha": {
+    "title": "Mt Martha | Southern Timber Floors",
+    "description": null,
+    "h1": "Project Mt Martha"
+  },
+  "/projects/kialla-homes": {
+    "title": "Kialla Homes | Southern Timber Floors",
+    "description": null,
+    "h1": "Project Kialla Homes"
+  },
   "/projects/rye-residence": {
     "title": "Gilpip Residence | Southern Timber Floors",
     "description": null,
     "h1": "Project Gilpip Residence"
   },
   "/projects/south-yarra-apparentment": {
-    "title": "Mornington Peninsula | Southern Timber Floors",
+    "title": "Latitude 37 - Mornington Peninsula | Southern Timber Floors",
     "description": null,
-    "h1": "Project Mornington Peninsula"
+    "h1": "Project Latitude 37 - Mornington Peninsula"
   },
   "/projects/yacht-court-house": {
-    "title": "Country Home | Southern Timber Floors",
+    "title": "Farmhouse | Southern Timber Floors",
     "description": null,
-    "h1": "Project Country Home"
+    "h1": "Project Farmhouse"
   },
   "/projects/yarralumla-house": {
     "title": "Latitude 37 | Southern Timber Floors",
@@ -535,7 +540,7 @@
     "h1": "Flooring solutions for every project"
   },
   "/timber/hybrid-timber": {
-    "title": "Hybrid timber | Southern Timber Floors",
+    "title": "Hybrid Flooring | Southern Timber Floors",
     "description": null,
     "h1": "Flooring solutions for every project"
   },
@@ -568,5 +573,50 @@
     "title": "Spotted Gum - Matt | Southern Timber Floors",
     "description": null,
     "h1": "Spotted Gum - Matt"
+  },
+  "/flooring/ash-herringbone": {
+    "title": "Ash - Herringbone | Southern Timber Floors",
+    "description": null,
+    "h1": "Ash - Herringbone"
+  },
+  "/flooring/beach-16-herringbone": {
+    "title": "Beach 16 - Herringbone | Southern Timber Floors",
+    "description": null,
+    "h1": "Beach 16 - Herringbone"
+  },
+  "/flooring/dovee": {
+    "title": "Dovee | Southern Timber Floors",
+    "description": null,
+    "h1": "Dovee - Herringbone"
+  },
+  "/flooring/gaia-herringbone": {
+    "title": "Gaia - Herringbone | Southern Timber Floors",
+    "description": null,
+    "h1": "Gaia - Herringbone"
+  },
+  "/flooring/magnolia-2": {
+    "title": "Magnolia - Herringbone | Southern Timber Floors",
+    "description": null,
+    "h1": "Magnolia - Herringbone"
+  },
+  "/flooring/mistgrove-herringbone": {
+    "title": "Mistgrove - Herringbone | Southern Timber Floors",
+    "description": null,
+    "h1": "Mistgrove - Herringbone"
+  },
+  "/flooring/onyxx-grey-herringbone": {
+    "title": "Onyxx Grey - Herringbone | Southern Timber Floors",
+    "description": null,
+    "h1": "Onyxx Grey - Herringbone"
+  },
+  "/flooring/paris-grey-herringbone": {
+    "title": "Paris Grey - Herringbone | Southern Timber Floors",
+    "description": null,
+    "h1": "Paris Grey - Herringbone"
+  },
+  "/flooring/shoreline": {
+    "title": "Shoreline | Southern Timber Floors",
+    "description": null,
+    "h1": "Shoreline"
   }
 }
