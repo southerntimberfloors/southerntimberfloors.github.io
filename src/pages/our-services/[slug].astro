@@ -87,7 +87,7 @@ const photo = siteImages[`svc-${s.slug}`] ?? siteImages['showroom-1'];
 </Base>
 <style>
   .row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-  .sv-media { aspect-ratio: 5 / 4; }
+  .sv-media :global(img) { height: auto; }
   .sv-body p { color: var(--ink-2); }
   .sv-list-intro { font-weight: 600; color: var(--ink) !important; margin-top: 1.4em; }
   .promos { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }

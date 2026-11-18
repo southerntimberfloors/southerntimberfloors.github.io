@@ -19,7 +19,7 @@ npm run check     # type-check
 | `src/data/legacy-seo.json` | Exact titles, descriptions and H1s from the previous site, keyed by URL |
 | `src/data/images.json` | Photo manifest: product galleries, carpet colourways, project galleries, page photos |
 | `public/images/` | All photography (WebP, large 1366px and small 440px versions) |
-| `public/downloads/` | Care guides and fact sheets (.docx) |
+| `public/downloads/` | Maintenance & information guides (.docx). After replacing one, run `python3 scripts/guides-from-docx.py` so the online version (`src/data/guides.json`) matches it word for word |
 | `src/data/products.ts` | Product helpers, generated descriptions, box coverage for the calculator |
 | `src/pages/` | Routes, which mirror the original site's URL structure |
 
@@ -43,7 +43,7 @@ The logo (`src/components/Logo.astro`), favicon and all photography come from th
 - **Live showroom status:** shows whether the showroom is open now, using Melbourne time.
 - **Better enquiry form:** multi-select request types, validation, a hidden spam trap (replacing the visible "How old are you?" field), and pre-filling from product pages.
 - **Expanded FAQ:** 14 questions (up from 4), searchable and filterable by topic, with FAQ structured data.
-- **Readable guides:** care and installation guides are web pages that can be printed to PDF.
+- **Readable guides:** the maintenance and information guides can be read online, word for word the same as the downloads, and printed to PDF.
 - **SEO:** LocalBusiness, Product, Breadcrumb, Service and FAQ structured data, canonical URLs, Open Graph tags, sitemap and robots.txt.
 - **Accessibility:** skip link, keyboard-operable menus, focus-trapped drawer, ARIA states, reduced-motion support.
 - **Mobile:** sticky Call / Samples / Enquire bar.

@@ -24,6 +24,8 @@ DATA = ROOT / 'src/data'
 IMG_DIR = ROOT / 'public/images/products'
 UA = {'User-Agent': 'Mozilla/5.0 (Southern Timber Floors site migration sync)'}
 CATEGORY = {'Solid Timber': 'solid', 'Engineered Timber': 'engineered', 'Parquetry Timber': 'parquetry', 'Hybrid timber': 'hybrid', 'Carpet': 'carpet'}
+# Pages whose title/H1 we changed on purpose (at the business's request); never overwritten from the old site.
+KEEP_OUR_SEO = {'/about-us/catalogues-guides'}  # "Maintenance & Information Guides"
 PLACEHOLDER = 'PlaceholderFrameLight'  # the old site's filler image, not a real photo
 LABELS = {
     'thickness x wear layer': 'Thickness × wear layer', 'thickness v wear layer': 'Thickness × wear layer', 'width x length': 'Width × length', 'thickeness': 'Thickness',
@@ -248,6 +250,8 @@ def main():
     new_seo = {}
     for path in pages_to_check:
         cur, live = seo.get(path), heads.get(path)
+        if path in KEEP_OUR_SEO:
+            new_seo[path] = cur; continue
         if live is None:
             new_seo[path] = cur; continue
         if not live['h1'] and cur and cur.get('h1'):

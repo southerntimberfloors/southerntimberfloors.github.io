@@ -93,7 +93,7 @@ export const categories: Record<
   },
   hybrid: {
     key: 'hybrid',
-    name: 'Hybrid timber',
+    name: 'Hybrid Flooring',
     path: '/timber/hybrid-timber',
     short: 'Water-resistant rigid-core planks with a realistic timber look. Tough, quiet, family-friendly.',
     intro: [
@@ -140,8 +140,8 @@ export const promos = [
   },
   {
     title: 'Support, Resources & Downloads',
-    body: 'Access our comprehensive catalogues, guides, and PDFs for detailed product info, installation tips, and design inspiration.',
-    link: { label: 'Catalogues & Guides', href: paths.catalogues },
+    body: 'Access our maintenance and information guides for practical advice on caring for, cleaning and installing your floors.',
+    link: { label: 'Maintenance & Information Guides', href: paths.catalogues },
   },
   {
     title: 'Sustainably Sourced, Quality Timber',
@@ -409,7 +409,15 @@ export const projects: Project[] = [
   },
 ];
 
+/** Answers may use **bold** and [link text](/path). */
 export type Faq = { q: string; a: string[]; topic: 'Choosing' | 'Installation' | 'Care' | 'Ordering' };
+
+const escapeHtml = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+/** FAQ answer paragraph → HTML. */
+export const faqHtml = (p: string) =>
+  escapeHtml(p).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\[(.+?)\]\((\/[^)\s]*)\)/g, '<a href="$2">$1</a>');
+/** FAQ answer paragraph → plain text (structured data). */
+export const faqText = (p: string) => p.replace(/\*\*(.+?)\*\*/g, '$1').replace(/\[(.+?)\]\([^)]*\)/g, '$1');
 
 export const faqs: Faq[] = [
   // The four original FAQs, verbatim.
@@ -437,6 +445,7 @@ export const faqs: Faq[] = [
     a: [
       'We recommend using a pH-neutral cleaner specifically formulated for timber flooring, such as Bona or Loba, with a spray mop and removable microfibre pad.',
       'These ready-to-use cleaning solutions gently and effectively clean your floors while helping to protect their finish. A washable microfibre pad is ideal, as it can be removed and washed after each use.',
+      'For more detail, see our [Maintenance & Information Guides](/about-us/catalogues-guides).',
     ],
   },
   {
@@ -450,18 +459,25 @@ export const faqs: Faq[] = [
     ],
   },
   // Additional questions.
-  { topic: 'Choosing', q: 'What is the difference between solid, engineered and hybrid flooring?', a: ['Solid timber is one piece of hardwood throughout and can be sanded and polished again in the future. Engineered timber has a genuine timber surface bonded to a multi-layer, cross-laminated plywood core, allowing wider boards with greater stability. Hybrid flooring captures the look of timber with a stone polymer composite (SPC) or wood plastic composite (WPC) core. The comparison table on our Flooring page sets them side by side.'] },
-  { topic: 'Choosing', q: 'Which flooring is best for kitchens and busy family areas?', a: ['Hybrid flooring is a practical choice thanks to its durable, water-resistant core. Engineered and solid timber also work well in kitchens when spills are wiped up promptly. Visit our showroom and we can talk through the options for your home.'] },
+  {
+    topic: 'Choosing',
+    q: 'What is the difference between solid, engineered and hybrid flooring?',
+    a: [
+      '**Solid timber flooring** is made from a single piece of hardwood throughout. It can be sanded and polished multiple times, making it a long-lasting, timeless choice.',
+      '**Engineered timber flooring** features a genuine timber surface bonded to a multi-layer plywood core, offering greater stability and allowing for wider boards. It can also be sanded and refinished, depending on the thickness of the timber wear layer.',
+      '**Hybrid flooring** combines the look of natural timber with a durable, water-resistant SPC (stone polymer composite) or WPC (wood plastic composite) core, offering a practical, low-maintenance alternative.',
+    ],
+  },
   { topic: 'Choosing', q: 'Can I see the floors before I decide?', a: ['Yes. Our Mornington showroom has one of the largest displays of solid timber, engineered timber and hybrid flooring, plus our carpet range. You can also book a free one hour consultation.'] },
-  { topic: 'Ordering', q: 'Can I get samples?', a: ['Yes. Add products to your sample list from any product page, then send the request through our contact form, or pick samples up from the Mornington showroom.'] },
+  { topic: 'Ordering', q: 'Can I get samples?', a: ['Yes. Add products to your sample list from any product page, then send the request through our contact form, or pick up small or large samples from the Mornington showroom.'] },
   { topic: 'Ordering', q: 'Do you supply only, or do you also install?', a: ['Both. We offer supply-only through to complete supply, installation, sanding and polishing.'] },
   { topic: 'Ordering', q: 'Can you quote from plans?', a: ['Yes. We can prepare detailed quotes from your building plans and arrange site visits to assess subfloor conditions.'] },
 ];
 
 export const catalogues = [
   { title: 'Engineered Flooring Maintenance & Care', cover: 'guide-engineered', href: '/guides/engineered-care', download: '/downloads/STF-Engineered-Floors-Maintenance.docx' },
-  { title: 'Hybrid Flooring Maintenance & Care', cover: 'guide-hybrid', href: '/guides/hybrid-care', download: '/downloads/STF-Hybrid-Flooring-Fact-Sheet.docx' },
-  { title: 'General Flooring Installation & Care', cover: 'guide-general', href: '/guides/installation-care', download: '/downloads/STF-Timber-Flooring-Fact-Sheet.docx' },
+  { title: 'Hybrid Flooring Fact Sheet', cover: 'guide-hybrid', href: '/guides/hybrid-care', download: '/downloads/STF-Hybrid-Flooring-Fact-Sheet.docx' },
+  { title: 'Timber Flooring Fact Sheet', cover: 'guide-general', href: '/guides/installation-care', download: '/downloads/STF-Timber-Flooring-Fact-Sheet.docx' },
 ];
 
 export const nav = [
@@ -482,7 +498,7 @@ export const nav = [
     children: [
       { label: 'About Us', href: '/about-us', desc: 'Established in 2005 on the Mornington Peninsula.' },
       { label: 'Visit our Showroom', href: paths.showroom, desc: '30 Watt Rd, Mornington.' },
-      { label: 'Catalogues & Guides', href: paths.catalogues, desc: 'Care and installation guides.' },
+      { label: 'Maintenance & Information Guides', href: paths.catalogues, desc: 'Care, cleaning and installation guides.' },
       { label: 'Sustainability', href: paths.sustainability, desc: 'Responsible timber sourcing.' },
       { label: 'FAQ', href: paths.faq, desc: 'Answers to common questions.' },
     ],

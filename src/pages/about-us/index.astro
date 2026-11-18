@@ -23,25 +23,12 @@ import { business, projects } from '../../data/site';
       <div>
         <span class="eyebrow">our industry experience</span>
         <h2>Industry experience, knowledge and genuine service</h2>
+        <div class="media about-pic"><Photo img={siteImages['about-3']} alt="Timber staircase and floor" sizes="(min-width: 900px) 40vw, 100vw" /></div>
       </div>
       <div>
         <p class="lead">Our team brings together extensive industry experience and practical knowledge across all aspects of timber flooring. We take pride in providing knowledgeable advice and personalised service, helping our clients navigate the many choices available in flooring, colours, finishes and installation methods.</p>
         <p>With so many options to consider, we believe it's important to understand how different flooring products perform and how they suit individual environments. We take the time to guide our clients through the selection process, helping them make informed decisions that balance design preferences, practical considerations and lifestyle needs.</p>
       </div>
-    </div>
-  </section>
-  <section class="section--tight">
-    <div class="wrap about-pics">
-      <div class="media"><Photo img={siteImages['about-2']} alt="Timber floor in a home styled by Latitude 37" /></div>
-      <div class="media"><Photo img={siteImages['about-3']} alt="Timber floor in a living space" /></div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="wrap stats">
-      <div><strong>{business.founded}</strong><span>established</span></div>
-      <div><strong>5</strong><span>flooring categories</span></div>
-      <div><strong>100%</strong><span>Melbourne owned</span></div>
-      <div><strong>1 hr</strong><span>free consultations</span></div>
     </div>
   </section>
   <section class="section section--sand">
@@ -54,10 +41,5 @@ import { business, projects } from '../../data/site';
 </Base>
 <style>
   .h3 { font-size: 1.45rem; }
-  .about-pics { display: grid; gap: 12px; grid-template-columns: 1fr; }
-  .about-pics .media { aspect-ratio: 4 / 3; }
-  @media (min-width: 700px) { .about-pics { grid-template-columns: 1.4fr 1fr; } }
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; text-align: center; }
-  .stats strong { display: block; font: 300 clamp(2.6rem, 5vw, 3.6rem)/1 var(--serif); color: var(--timber); }
-  .stats span { color: var(--muted); font-size: 0.9rem; }
+  .about-pic { margin-top: 32px; aspect-ratio: 4 / 5; max-width: 420px; }
 </style>

@@ -1,75 +1,107 @@
 ---
+// Online versions of the downloadable guides. The wording comes straight from the Word documents in
+// public/downloads (via scripts/guides-from-docx.py → src/data/guides.json), so the two always match.
 import Base from '../../layouts/Base.astro';
-import { business } from '../../data/site';
+import Logo from '../../components/Logo.astro';
+import guides from '../../data/guides.json';
+import { business, paths } from '../../data/site';
 
-type Section = { h: string; items: string[] };
-type Guide = { slug: string; title: string; intro: string; sections: Section[] };
-
-const guides: Guide[] = [
-  {
-    slug: 'engineered-care',
-    title: 'Engineered Flooring: Maintenance & Care',
-    intro: 'Engineered floors have a factory-applied finish over a real timber wear layer. With the right care, that finish protects the timber for many years.',
-    sections: [
-      { h: 'Everyday cleaning', items: ['Vacuum (hard-floor head, no beater bar) or dry-mop several times a week to remove grit.', 'Damp-mop with a well-wrung microfibre mop and a pH-neutral timber floor cleaner.', 'Wipe up spills straight away. Do not let liquid sit on joins.', 'Never use steam mops, bleach, ammonia, vinegar or oil soaps.'] },
-      { h: 'Protecting your floor', items: ['Place quality mats inside and outside every external door.', 'Fit felt pads to all furniture legs and replace them as they wear.', 'Use chair mats under office chairs with castors.', 'Lift, don\'t drag, heavy furniture. Avoid stiletto heels and spiked shoes.'] },
-      { h: 'Climate & sunlight', items: ['Keep indoor humidity between roughly 40–60% where possible.', 'Use blinds or curtains to reduce strong direct sun, which changes timber colour over time.', 'Move rugs occasionally in the first year so the floor ages evenly.'] },
-      { h: 'Repairs & refinishing', items: ['Minor scuffs can often be buffed out. Ask us about touch-up kits.', 'When the finish looks dull in high-traffic areas, a professional maintenance coat can restore it.', 'Depending on wear-layer thickness, the floor can be lightly sanded and recoated.'] },
-    ],
-  },
-  {
-    slug: 'hybrid-care',
-    title: 'Hybrid Flooring: Maintenance & Care',
-    intro: 'Hybrid floors are waterproof and very hard-wearing, but a little routine care keeps the surface looking its best.',
-    sections: [
-      { h: 'Everyday cleaning', items: ['Vacuum or sweep regularly to remove grit.', 'Mop with warm water and a pH-neutral cleaner suitable for hybrid or vinyl floors.', 'Avoid wax, polish, oil soaps and abrasive cleaners. Hybrid does not need polishing.', 'Steam mops are not recommended because heat can affect the joins.'] },
-      { h: 'Protecting your floor', items: ['Use felt pads on furniture and chair mats under castors.', 'Use mats without rubber or latex backing, which can discolour the surface.', 'Keep pet nails trimmed.'] },
-      { h: 'Heat & sunlight', items: ['Prolonged, intense direct sun through glass can cause expansion. Use window coverings in very sunny rooms.', 'Do not place hot items directly on the floor.'] },
-      { h: 'Repairs', items: ['Individual planks can be replaced if damaged. Keep a few spare planks from your install.', 'Contact us for advice before attempting any repair yourself.'] },
-    ],
-  },
-  {
-    slug: 'installation-care',
-    title: 'General Flooring: Installation & Care',
-    intro: 'A floor is only as good as its preparation. This guide covers what happens before, during and after installation.',
-    sections: [
-      { h: 'Before installation', items: ['The site should be weathertight and lock-up stage, with wet trades (plastering, tiling) finished and dry.', 'Concrete slabs must be dry. We test moisture before laying.', 'Subfloors need to be flat within tolerance. Grinding or levelling may be required.', 'Timber may need time to acclimatise on site. We will advise how long for your product.'] },
-      { h: 'During installation', items: ['Keep the area clear of other trades while the floor is being laid.', 'Maintain normal living temperatures. Avoid running heating or cooling at extremes.', 'For solid timber, stay off the floor between coats as directed by your installer.'] },
-      { h: 'After installation', items: ['Wait the recommended curing time before replacing rugs (usually 1–2 weeks for site-coated floors).', 'Fit felt pads to furniture before moving it back in.', 'Introduce underfloor heating gradually, following the manufacturer\'s guidelines.'] },
-      { h: 'Ongoing care', items: ['Follow the specific care guide for your floor type.', 'Normal seasonal movement, such as small gaps in winter, is a natural characteristic of timber.', `Questions? Call us on ${business.phone}.`] },
-    ],
-  },
-];
+type Block =
+  | { type: 'h'; text: string }
+  | { type: 'p'; html: string }
+  | { type: 'note'; html: string; label?: string }
+  | { type: 'ul'; items: string[] }
+  | { type: 'sign'; fields: string[] };
+type Guide = { eyebrow: string; title: string; subtitle?: string; statement?: string[]; blocks: Block[]; download: string };
 
 export function getStaticPaths() {
-  return ['engineered-care', 'hybrid-care', 'installation-care'].map((g) => ({ params: { guide: g } }));
+  return Object.keys(guides).map((guide) => ({ params: { guide } }));
 }
-const g = guides.find((x) => x.slug === Astro.params.guide)!;
+const g = (guides as Record<string, Guide>)[Astro.params.guide!];
+const pageTitle = g.subtitle ? `${g.title}: ${g.subtitle}` : g.title.startsWith('Engineered') ? `Engineered Flooring Maintenance & Care` : g.title;
+const strip = (h: string) => h.replace(/<[^>]+>/g, '');
+const firstText = g.statement?.join(' ') ?? strip((g.blocks.find((b) => b.type === 'p') as { html: string } | undefined)?.html ?? '');
 ---
-<Base title={g.title} description={g.intro} crumbs={[{ label: 'Catalogues & Guides', href: '/about-us/catalogues-guides' }, { label: g.title }]}>
-  <article class="wrap guide">
-    <header class="page-hero">
-      <span class="eyebrow">Care guide</span>
-      <h1>{g.title}</h1>
-      <p class="lead">{g.intro}</p>
-      <button type="button" class="btn btn--ghost btn--sm no-print" onclick="window.print()">Print or save as PDF</button>
-    </header>
-    {g.sections.map((s) => (
-      <section class="guide__s">
-        <h2>{s.h}</h2>
-        <ul class="checklist">{s.items.map((i) => <li>{i}</li>)}</ul>
-      </section>
-    ))}
-    <p class="muted guide__fine">General guidance only. Always follow the manufacturer's care and warranty instructions for your specific product. {business.name} · {business.phone} · {business.email}</p>
-  </article>
+<Base title={pageTitle} description={firstText.slice(0, 155)} crumbs={[{ label: 'Maintenance & Information Guides', href: paths.catalogues }, { label: pageTitle }]}>
+  <div class="wrap guide-wrap">
+    <div class="guide-tools no-print">
+      <a class="btn btn--sm" href={g.download} download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14" /></svg>
+        Download (.docx)
+      </a>
+      <button type="button" class="btn btn--ghost btn--sm" onclick="window.print()">Print or save as PDF</button>
+    </div>
+
+    <article class="doc">
+      <header class="doc__head">
+        <div class="doc__letterhead">
+          <span class="doc__logo"><Logo /></span>
+          <p>{business.address.street} {business.address.suburb} {business.address.postcode}<br />{business.phone.replace('(03) ', '')}<br />www.southerntimberfloors.com</p>
+        </div>
+        <img class="doc__banner" src="/images/guides/banner.webp" alt="" width="898" height="332" />
+        <span class="doc__eyebrow">{g.eyebrow}</span>
+        <h1>{g.title}</h1>
+        {g.subtitle && <p class="doc__subtitle">{g.subtitle}</p>}
+        {g.statement && <div class="doc__statement">{g.statement.map((l) => <p>{l}</p>)}</div>}
+      </header>
+
+      {g.blocks.map((b) => {
+        if (b.type === 'h') return <h2>{b.text}</h2>;
+        if (b.type === 'p') return <p set:html={b.html} />;
+        if (b.type === 'ul') return <ul>{b.items.map((i) => <li set:html={i} />)}</ul>;
+        if (b.type === 'note') return (
+          <div class="doc__note">
+            {b.label && <span class="doc__note-label">{b.label}</span>}
+            <p set:html={b.html} />
+          </div>
+        );
+        return (
+          <div class="doc__sign">
+            {b.fields.map((f) => <div><span>{f}:</span></div>)}
+          </div>
+        );
+      })}
+    </article>
+  </div>
 </Base>
 <style>
-  .guide { max-width: 820px; padding-bottom: 80px; }
-  .guide__s { padding: 28px 0; border-top: 1px solid var(--line); }
-  .guide__s h2 { font-size: 1.6rem; }
-  .guide__fine { font-size: 0.82rem; border-top: 1px solid var(--line); padding-top: 20px; }
+  .guide-wrap { max-width: 900px; padding-bottom: 80px; }
+  .guide-tools { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; margin: 8px 0 16px; }
+  .guide-tools svg { width: 16px; height: 16px; }
+
+  /* Laid out like the printed document: a white page with the letterhead and banner photo. */
+  .doc { background: #fff; color: #222; border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(24px, 6vw, 64px); box-shadow: 0 30px 60px -40px rgb(0 0 0 / 0.25); font-size: 0.98rem; line-height: 1.6; }
+  .doc__letterhead { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid #e4e1db; }
+  .doc__logo { display: block; }
+  .doc__logo :global(.logo) { color: #111; }
+  .doc__letterhead p { margin: 0; text-align: right; font-size: 0.8rem; line-height: 1.5; color: #555; }
+  .doc__banner { display: block; width: 100%; height: auto; border-radius: 4px; margin-bottom: 28px; }
+  .doc__eyebrow { display: block; font: 600 0.78rem var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--timber); margin-bottom: 6px; }
+  .doc h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 0 0 6px; color: #111; }
+  .doc__subtitle { font: 500 1.15rem/1.3 var(--sans); color: #333; margin: 0 0 8px; }
+  .doc__statement { margin: 22px 0 6px; padding: 18px 22px; background: #f6f4f0; border-radius: 6px; }
+  .doc__statement p { margin: 0; font-weight: 600; color: #222; }
+  .doc h2 { font-size: 1.3rem; margin: 34px 0 10px; color: #111; }
+  .doc p { margin: 0 0 12px; }
+  .doc ul { margin: 0 0 14px; padding-left: 1.25em; }
+  .doc li { margin: 0 0 8px; padding-left: 4px; }
+  .doc li::marker { color: var(--timber); }
+  .doc :global(strong) { font-weight: 600; color: #111; }
+  .doc__note { margin: 22px 0; padding: 16px 20px; border-left: 3px solid var(--timber); background: #f6f4f0; border-radius: 0 6px 6px 0; }
+  .doc__note p { margin: 0; }
+  .doc__note-label { display: block; font: 700 0.8rem var(--sans); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+  .doc__sign { display: grid; grid-template-columns: 2fr 2fr 1fr; gap: 24px; margin-top: 36px; }
+  .doc__sign div { border-bottom: 1px solid #999; padding-bottom: 28px; font-weight: 600; font-size: 0.9rem; }
+
+  @media (max-width: 600px) {
+    .doc__letterhead { flex-direction: column; align-items: flex-start; }
+    .doc__letterhead p { text-align: left; }
+    .doc__sign { grid-template-columns: 1fr; }
+  }
   @media print {
     :global(.topbar), :global(.header), :global(.footer), :global(.mobile-bar), :global(.crumbs), .no-print { display: none !important; }
     :global(body) { background: #fff; padding: 0; }
+    .guide-wrap { max-width: none; padding: 0; }
+    .doc { border: 0; box-shadow: none; padding: 0; }
   }
 </style>

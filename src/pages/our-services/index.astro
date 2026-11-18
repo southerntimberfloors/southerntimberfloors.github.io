@@ -37,7 +37,8 @@ const label: Record<string, string> = { 'home-renovations': 'Home Renovators' };
   .svc-list { display: grid; gap: clamp(40px, 6vw, 80px); }
   .svc { display: grid; gap: 24px; align-items: center; }
   @media (min-width: 900px) { .svc { grid-template-columns: 1fr 1fr; gap: 56px; } .svc--flip .svc__img { order: 2; } }
-  .svc__img { aspect-ratio: 4 / 3; }
+  /* Show each photo in full, uncropped. */
+  .svc__img :global(img) { height: auto; }
   .svc__h { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
   .svc__body p { color: var(--ink-2); }
 </style>

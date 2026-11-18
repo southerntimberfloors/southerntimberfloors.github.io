@@ -23,7 +23,7 @@ const schema = {
 ---
 <Base
   title={`${c.name} Flooring`}
-  description={`${c.short} Browse ${list.length} ${c.name.toLowerCase()} options at Southern Timber Floors, Mornington.`}
+  description={`${c.short} Browse our ${c.name.toLowerCase()} range at Southern Timber Floors, Mornington.`}
   crumbs={[{ label: 'Products', href: '/timber' }, { label: c.name }]}
   schema={schema}
 >
@@ -33,7 +33,6 @@ const schema = {
         <h1 class="cat-h1">Flooring solutions for every project</h1>
         <h2 class="cat-h2">{c.name}</h2>
         {c.intro.map((p, i) => <p class={i === 0 ? 'lead' : ''}>{p}</p>)}
-        <p class="muted">{list.length} options in our range.</p>
       </div>
       <div class="card card--pad facts">
         <h2 class="facts__h">Best for</h2>

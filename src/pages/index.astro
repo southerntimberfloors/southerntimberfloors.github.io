@@ -47,13 +47,14 @@ const rail = categoryOrder.flatMap((k) => products.filter((p) => p.category === 
       <div class="rail__track" data-rail-track tabindex="0" aria-label="Our flooring range">
         {
           rail.map((p, i) => {
+            // Every card shows the board itself; where there's a room photo it fades in on hover (as on the product pages).
             const swatch = p.images[0];
-            const bg = p.images[1];
+            const room = p.category !== 'carpet' ? p.images[1] : undefined;
             return (
               <a href={`/flooring/${p.slug}`} class="pcard" data-reveal={i < 6 ? '' : undefined}>
-                <div class={`pcard__media ${bg ? '' : 'pcard__media--plain'}`}>
-                  {bg && <div class="pcard__bg"><Photo img={bg} alt="" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 80vw" /></div>}
-                  {swatch && <div class="pcard__swatch"><Photo img={swatch} alt="" sizes="(min-width: 1200px) 18vw, 50vw" /></div>}
+                <div class="pcard__media">
+                  {swatch && <Photo img={swatch} alt="" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 80vw" />}
+                  {room && <Photo img={room} alt="" class="pcard__room" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 80vw" />}
                 </div>
                 <span class="pcard__meta">
                   <span class="pcard__name">{p.name}</span>
@@ -257,13 +258,10 @@ const rail = categoryOrder.flatMap((k) => products.filter((p) => p.category === 
   .pcard { flex: 0 0 min(78vw, 340px); scroll-snap-align: start; text-decoration: none; color: inherit; }
   @media (min-width: 900px) { .pcard { flex-basis: calc((min(100vw, var(--wrap)) - 2 * var(--gutter) - 24px) / 3); } }
   .pcard__media { position: relative; aspect-ratio: 1; border-radius: var(--radius-sm); overflow: hidden; background: var(--sand); }
-  .pcard__media--plain { background: #ebe7e0; }
-  .pcard__bg { position: absolute; inset: 0; }
-  .pcard__bg :global(img) { transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
-  .pcard__swatch { position: absolute; inset: 20%; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 40px -18px rgb(0 0 0 / 0.55); transition: transform .8s cubic-bezier(.2,.7,.2,1), opacity .6s ease; }
-  .pcard:hover .pcard__bg :global(img) { transform: scale(1.06); }
-  .pcard:hover .pcard__media:not(.pcard__media--plain) .pcard__swatch { transform: translateY(12%) scale(0.86); opacity: 0; }
-  .pcard:hover .pcard__media--plain .pcard__swatch { transform: scale(1.06); }
+  .pcard__media :global(img) { transition: transform 1.2s cubic-bezier(.2,.7,.2,1), opacity .5s ease; }
+  .pcard__media :global(.pcard__room) { position: absolute; inset: 0; opacity: 0; }
+  .pcard:hover .pcard__media :global(img) { transform: scale(1.05); }
+  .pcard:hover .pcard__media :global(.pcard__room) { opacity: 1; }
   .pcard__meta { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; padding-top: 14px; }
   .pcard__name { font: 400 1.15rem/1.2 var(--serif); letter-spacing: -0.01em; }
   .pcard__cat { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }

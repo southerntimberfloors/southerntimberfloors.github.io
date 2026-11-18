@@ -25,7 +25,8 @@ const list = initial ? products.filter((p) => p.category === initial) : products
     }
   </div>
   <div class="cat-ui__bar cat-ui__bar--secondary">
-    <div class="cat-ui__group" role="group" aria-label="Colour tone">
+    {initial !== 'carpet' && (
+    <div class="cat-ui__group" role="group" aria-label="Colour tone" data-tone-group>
       <span class="cat-ui__label">Tone</span>
       {
         (Object.keys(tones) as (keyof typeof tones)[]).map((t) => (
@@ -35,6 +36,7 @@ const list = initial ? products.filter((p) => p.category === initial) : products
         ))
       }
     </div>
+    )}
     {
       initial !== 'carpet' && initial !== 'hybrid' && (
         <label class="cat-ui__toggle">
@@ -42,7 +44,7 @@ const list = initial ? products.filter((p) => p.category === initial) : products
         </label>
       )
     }
-    <span class="cat-ui__count" aria-live="polite"><strong data-count>{list.length}</strong> floors</span>
+    <span class="sr-only" aria-live="polite"><span data-count>{list.length}</span> results</span>
   </div>
 
   <div class="grid grid-4" data-grid>
@@ -69,7 +71,7 @@ const list = initial ? products.filter((p) => p.category === initial) : products
   .pill[aria-pressed='true'] { background: var(--ink); color: var(--brand); border-color: var(--ink); }
   .cat-ui__toggle { display: inline-flex; gap: 8px; align-items: center; font-size: 0.88rem; cursor: pointer; }
   .cat-ui__toggle input { width: 18px; height: 18px; accent-color: var(--timber); }
-  .cat-ui__count { margin-left: auto; font-size: 0.88rem; color: var(--muted); }
+  .cat-ui__group[hidden] { display: none; }
   .cat-ui__empty { text-align: center; padding: 60px 0; }
 </style>
 
@@ -82,6 +84,7 @@ const list = initial ? products.filter((p) => p.category === initial) : products
     const cards = [...root.querySelectorAll<HTMLElement>('[data-product]')];
     const count = root.querySelector('[data-count]')!;
     const empty = root.querySelector<HTMLElement>('[data-empty]')!;
+    const toneGroup = root.querySelector<HTMLElement>('[data-tone-group]');
 
     const state = { q: '', cat: '', tones: new Set<string>(), herr: false };
 
@@ -99,11 +102,13 @@ const list = initial ? products.filter((p) => p.category === initial) : products
         const show =
           (!term || c.dataset.name!.includes(term) || c.dataset.species!.includes(term) || c.dataset.category!.includes(term)) &&
           (!state.cat || c.dataset.category === state.cat) &&
-          (!state.tones.size || state.tones.has(c.dataset.tone!)) &&
+          (!state.tones.size || (c.dataset.category !== 'carpet' && state.tones.has(c.dataset.tone!))) &&
           (!state.herr || c.dataset.herringbone === '1');
         c.hidden = !show;
         if (show) n++;
       }
+      // Colour tones describe timber; they don't apply to carpet ranges.
+      if (toneGroup) toneGroup.hidden = state.cat === 'carpet';
       count.textContent = String(n);
       empty.hidden = n > 0;
       q.value = state.q;
@@ -121,14 +126,21 @@ const list = initial ? products.filter((p) => p.category === initial) : products
     }
 
     let t: number | undefined;
-    q.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => { state.q = q.value; apply(); }, 120); });
-    catBtns.forEach((b) => b.addEventListener('click', () => { state.cat = b.dataset.cat!; apply(); }));
+    // Search and filters work independently: typing searches the whole range (clearing filters),
+    // and choosing a filter clears the search.
+    const clearFilters = () => { state.cat = ''; state.tones.clear(); state.herr = false; };
+    q.addEventListener('input', () => {
+      clearTimeout(t);
+      t = window.setTimeout(() => { state.q = q.value; if (state.q.trim()) clearFilters(); apply(); }, 120);
+    });
+    catBtns.forEach((b) => b.addEventListener('click', () => { state.cat = b.dataset.cat!; state.q = ''; apply(); }));
     toneBtns.forEach((b) => b.addEventListener('click', () => {
       const v = b.dataset.tone!;
       state.tones.has(v) ? state.tones.delete(v) : state.tones.add(v);
+      state.q = '';
       apply();
     }));
-    herr?.addEventListener('change', () => { state.herr = herr.checked; apply(); });
+    herr?.addEventListener('change', () => { state.herr = herr.checked; state.q = ''; apply(); });
     root.querySelector('[data-reset]')?.addEventListener('click', () => {
       state.q = ''; state.cat = ''; state.tones.clear(); state.herr = false; apply();
     });

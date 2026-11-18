@@ -25,7 +25,7 @@ const widthSpec = p.specs.find(([k]) => k === 'Width' || k === 'Dimensions' || k
     <H class="pcard__name"><a href={productPath(p)}>{p.name}</a></H>
     <p class="pcard__meta">
       <span class="dot" style={`background:${p.color}`}></span>
-      {tones[p.tone].label}{p.species && p.category !== 'hybrid' ? ` · ${p.species}` : ''}
+      {p.category === 'carpet' ? 'Carpet range' : tones[p.tone].label}{p.species && p.category !== 'hybrid' ? ` · ${p.species}` : ''}
     </p>
     {widthSpec && <p class="pcard__spec">{widthSpec}</p>}
   </div>

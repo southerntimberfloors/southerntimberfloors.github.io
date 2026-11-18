@@ -20,6 +20,8 @@ const rawLabels = p.images.map((img, i) => (isCarpet ? colourwayName(img, p.name
 const labels = rawLabels.map((l, i) =>
   isCarpet && (/styled|2480/i.test(p.images[i].name ?? '') || rawLabels.indexOf(l) !== rawLabels.lastIndexOf(l) && rawLabels.indexOf(l) === i) ? `${l} (room)` : l,
 );
+const colourway = (l: string) => l.replace(/\s*\(room\)$/, '');
+const firstColourway = isCarpet ? colourway(labels[0] ?? p.name) : '';
 const defaultWaste = p.category === 'parquetry' || p.herringbone ? 12 : p.category === 'carpet' ? 10 : 7;
 const schema = {
   '@context': 'https://schema.org',
@@ -61,21 +63,29 @@ const schema = {
             ))}
           </div>
         )}
-        <p class="pd__note muted">{isCarpet ? `${labels.filter((l) => !l.endsWith('(room)')).length} colourways shown. Ask to see the full colour card in our showroom.` : 'Natural timber varies board to board. Order free samples or visit the showroom before you choose.'}</p>
+        <p class="pd__note muted">{isCarpet ? `${labels.filter((l) => !l.endsWith('(room)')).length} colourways shown. Choose one to add it to your samples, or ask to see the full colour card in our showroom.` : 'Natural timber varies board to board. Order free samples or visit the showroom before you choose.'}</p>
       </div>
 
       <div class="pd__info">
         <a class="pd__cat" href={cat.path}>{cat.name}</a>
         <h1>{p.name}</h1>
-        <p class="pd__tone"><span class="dot" style={`background:${p.color}`}></span>{tones[p.tone].label}{p.species && p.category !== 'hybrid' ? ` · ${p.species}` : ''}</p>
+        <p class="pd__tone"><span class="dot" style={`background:${p.color}`}></span>{p.category === 'carpet' ? 'Carpet range' : tones[p.tone].label}{p.species && p.category !== 'hybrid' ? ` · ${p.species}` : ''}</p>
         {p.description.split(/\n\n+/).map((para, i) => <p class={i === 0 ? 'lead' : ''}>{para}</p>)}
         <ul class="checklist">{p.highlights.map((h) => <li>{h}</li>)}</ul>
 
         <div class="pd__actions">
-          <button type="button" class="btn btn--timber" data-sample-toggle data-slug={p.slug} data-name={p.name} data-category={cat.name} data-color={p.color} aria-pressed="false">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
-            <span data-label>Add to samples</span>
-          </button>
+          {isCarpet ? (
+            // Carpets: the sample is the colourway currently shown in the gallery.
+            <button type="button" class="btn btn--timber" data-sample-toggle data-colourway-sample data-product={p.slug} data-range={p.name} data-slug={`${p.slug}#${encodeURIComponent(firstColourway)}`} data-name={`${p.name} – ${firstColourway}`} data-category={cat.name} data-color={p.color} data-add-label={`Add ${firstColourway} sample`} aria-pressed="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+              <span data-label>Add {firstColourway} sample</span>
+            </button>
+          ) : (
+            <button type="button" class="btn btn--timber" data-sample-toggle data-slug={p.slug} data-name={p.name} data-category={cat.name} data-color={p.color} aria-pressed="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+              <span data-label>Add to samples</span>
+            </button>
+          )}
           <a class="btn btn--ghost" href={`/about-us/frequently-asked-questions/contact?request=quote&product=${encodeURIComponent(p.name + ' (' + cat.name + ')')}`}>Get a quote</a>
           <a class="btn btn--ghost" href={`/about-us/frequently-asked-questions/contact?request=specs&product=${encodeURIComponent(p.name + ' (' + cat.name + ')')}`}>Request spec sheet</a>
         </div>
@@ -213,6 +223,15 @@ const schema = {
       slides.forEach((s, j) => (s.hidden = j !== i));
       thumbs.forEach((t, j) => t.setAttribute('aria-pressed', String(j === i)));
       if (label) label.textContent = thumbs[i]?.dataset.label ?? '';
+      // Carpets: point the sample button at the colourway being shown.
+      const btn = document.querySelector<HTMLButtonElement>('[data-colourway-sample]');
+      const name = (thumbs[i]?.dataset.label ?? '').replace(/\s*\(room\)$/, '');
+      if (btn && name) {
+        btn.dataset.slug = `${btn.dataset.product}#${encodeURIComponent(name)}`;
+        btn.dataset.name = `${btn.dataset.range} – ${name}`;
+        btn.dataset.addLabel = `Add ${name} sample`;
+        window.dispatchEvent(new Event('samples:refresh'));
+      }
     };
     thumbs.forEach((t) => t.addEventListener('click', () => show(Number(t.dataset.thumb))));
     // swipe on touch devices

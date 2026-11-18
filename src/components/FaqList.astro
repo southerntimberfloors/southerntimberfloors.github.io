@@ -1,5 +1,5 @@
 ---
-import type { Faq } from '../data/site';
+import { faqHtml, type Faq } from '../data/site';
 interface Props { items: Faq[] }
 const { items } = Astro.props;
 ---
@@ -11,7 +11,7 @@ const { items } = Astro.props;
           <span>{f.q}</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
         </summary>
-        <div class="faq__a">{f.a.map((p) => <p>{p}</p>)}</div>
+        <div class="faq__a">{f.a.map((p) => <p set:html={faqHtml(p)} />)}</div>
       </details>
     ))
   }
@@ -28,4 +28,5 @@ const { items } = Astro.props;
   .faq__a { padding: 0 40px 22px 0; color: var(--ink-2); max-width: 75ch; }
   .faq__a p { margin: 0 0 0.8em; }
   .faq__a p:last-child { margin-bottom: 0; }
+  .faq__a :global(strong) { color: var(--ink); font-weight: 600; }
 </style>

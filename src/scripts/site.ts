@@ -172,7 +172,7 @@ function renderSamples() {
     const on = list.some((x) => x.slug === b.dataset.slug);
     b.setAttribute('aria-pressed', String(on));
     const label = b.querySelector('[data-label]');
-    if (label) label.textContent = on ? 'In your samples' : 'Add to samples';
+    if (label) label.textContent = on ? 'In your samples' : (b.dataset.addLabel ?? 'Add to samples');
   });
 }
 
@@ -185,6 +185,7 @@ document.addEventListener('click', (e) => {
   else if (r === 'added') toast(`${b.dataset.name} added to your samples`, { label: 'View list', fn: openDrawer });
 });
 window.addEventListener('storage', (e) => { if (e.key === KEY) renderSamples(); });
+window.addEventListener('samples:refresh', renderSamples);
 renderSamples();
 
 /* ---------- Toast ---------- */

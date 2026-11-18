@@ -1,14 +1,14 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import FaqList from '../../../components/FaqList.astro';
-import { business, faqs } from '../../../data/site';
+import { business, faqs, faqText } from '../../../data/site';
 import Photo from '../../../components/Photo.astro';
 import { siteImages } from '../../../data/images';
 const topics = [...new Set(faqs.map((f) => f.topic))];
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a.join(' ') } })),
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a.map(faqText).join(' ') } })),
 };
 ---
 <Base title="Frequently Asked Questions" description="Answers about choosing, installing and caring for timber, hybrid and parquetry floors, plus samples, ordering and service areas." crumbs={[{ label: 'About', href: '/about-us' }, { label: 'FAQ' }]} schema={schema}>
@@ -70,6 +70,7 @@ const schema = {
     empty.hidden = n > 0;
     btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.topic === topic)));
   };
-  q.addEventListener('input', apply);
-  btns.forEach((b) => b.addEventListener('click', () => { topic = b.dataset.topic!; apply(); }));
+  // Searching looks through every question, whatever topic was picked; picking a topic clears the search.
+  q.addEventListener('input', () => { topic = ''; apply(); });
+  btns.forEach((b) => b.addEventListener('click', () => { topic = b.dataset.topic!; q.value = ''; apply(); }));
 </script>
