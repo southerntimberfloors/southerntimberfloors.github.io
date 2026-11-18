@@ -102,14 +102,6 @@ export function productPath(p: Product) {
   return `/flooring/${p.slug}`;
 }
 
-/** Coverage for the calculator, in m² per box, where known. Edit as stock details are confirmed. */
-export function boxCoverage(p: Product): number | null {
-  if (p.category === 'hybrid') return 2.08; // typical 1520 × 228 × 6 planks
-  if (p.category === 'engineered') return 2.17; // typical 190 × 1900 × 6 boards
-  if (p.category === 'parquetry') return 1.44; // typical 600 × 120 × 20 blocks
-  return null;
-}
-
 export function related(p: Product, n = 4) {
   return products
     .filter((x) => x.slug !== p.slug && x.category === p.category)

@@ -5,7 +5,7 @@ import { projectImages } from '../../data/images';
 import ProductCard from '../../components/ProductCard.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
-import { projects, type Project } from '../../data/site';
+import { projects, projectSubtitle, type Project } from '../../data/site';
 import { bySlug } from '../../data/products';
 
 export function getStaticPaths() {
@@ -13,23 +13,24 @@ export function getStaticPaths() {
 }
 const { pr } = Astro.props as { pr: Project };
 const prods = pr.productSlugs.map((s) => bySlug.get(s)).filter((x) => !!x);
-// The first image is the card cover; the gallery shows the rest (as on the original site).
+// Every photo once (the old site repeats the cover inside its gallery).
 const all = projectImages[pr.slug] ?? [];
-const photos = all.length > 1 ? all.slice(1) : all;
+const photos = all.filter((img, i) => all.findIndex((x) => x.src === img.src) === i);
+const sub = projectSubtitle(pr);
 const others = projects.filter((x) => x.slug !== pr.slug).slice(0, 3);
 ---
 <Base title={pr.name} description={pr.story[0] ?? pr.summary} crumbs={[{ label: 'Projects', href: '/projects' }, { label: pr.name }]}>
   <section class="page-hero">
     <div class="wrap">
       <h1><span class="eyebrow h1-eyebrow">Project</span> {pr.name}</h1>
-      <p class="lead">{pr.location}</p>
+      {sub && <p class="lead">{sub}</p>}
     </div>
   </section>
   <section class="wrap">
     <div class={`gal gal--${Math.min(photos.length, 5)}`}>
       {photos.map((img, i) => (
         <a class="gal__item media" href={img.src} data-lightbox={i} aria-label={`Open photo ${i + 1} of ${photos.length}`}>
-          <Photo img={img} alt={`${pr.name}, ${pr.location}: photo ${i + 1}`} eager={i === 0} sizes={i === 0 ? '(min-width: 800px) 66vw, 100vw' : '(min-width: 800px) 33vw, 100vw'} />
+          <Photo img={img} alt={`${pr.name}${pr.location ? `, ${pr.location}` : ''}: photo ${i + 1}`} eager={i === 0} sizes={i === 0 ? '(min-width: 800px) 66vw, 100vw' : '(min-width: 800px) 33vw, 100vw'} />
         </a>
       ))}
     </div>
@@ -44,12 +45,12 @@ const others = projects.filter((x) => x.slug !== pr.slug).slice(0, 3);
     <section class="section">
       <div class="wrap split" style="align-items:start">
         <div>
-          <h2>{pr.location}</h2>
+          <h2>{sub || pr.name}</h2>
           {pr.story.map((p) => <p class="lead">{p}</p>)}
         </div>
         <dl class="card card--pad pdl">
           {pr.details.map(([k, v]) => (<><dt>{k}</dt><dd>{v}</dd></>))}
-          <dt>Location</dt><dd>{pr.location}</dd>
+          {pr.location && <><dt>Location</dt><dd>{pr.location}</dd></>}
         </dl>
       </div>
     </section>

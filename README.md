@@ -20,7 +20,7 @@ npm run check     # type-check
 | `src/data/images.json` | Photo manifest: product galleries, carpet colourways, project galleries, page photos |
 | `public/images/` | All photography (WebP, large 1366px and small 440px versions) |
 | `public/downloads/` | Maintenance & information guides (.docx). After replacing one, run `python3 scripts/guides-from-docx.py` so the online version (`src/data/guides.json`) matches it word for word |
-| `src/data/products.ts` | Product helpers, generated descriptions, box coverage for the calculator |
+| `src/data/products.ts` | Product helpers and generated descriptions |
 | `src/pages/` | Routes, which mirror the original site's URL structure |
 
 ## Photos & logo
@@ -30,15 +30,14 @@ The logo (`src/components/Logo.astro`), favicon and all photography come from th
 ## Before going live
 
 1. **Enquiry form:** add a Web3Forms access key (`formAccessKey`) or a Formspree URL (`formEndpoint`) in `src/data/site.ts`. Until then the form opens the visitor's email app, and the build prints a warning.
-2. **Box coverage:** `boxCoverage()` in `products.ts` uses typical pack sizes. Update it with real figures.
-3. **Copy check:** product descriptions are generated from species and tone. Review them, and the services, FAQ and sustainability text, for accuracy.
-4. **Pull the latest edits from the old site:** while the agency's site is still live, product edits made there can be copied across with `python3 scripts/sync-from-live.py` (add `--dry-run` to only see what changed). It syncs product names, descriptions, specs, photos, added/removed products, and the titles and H1s that are kept identical for SEO. Needs Pillow (`pip3 install pillow`). Run it one last time just before switching the domain.
+2. **Copy check:** product descriptions are generated from species and tone. Review them, and the services, FAQ and sustainability text, for accuracy.
+3. **Pull the latest edits from the old site:** while the agency's site is still live, product edits made there can be copied across with `python3 scripts/sync-from-live.py` (add `--dry-run` to only see what changed). It syncs product names, descriptions, specs, photos, added/removed products, and the titles and H1s that are kept identical for SEO. Needs Pillow (`pip3 install pillow`). Run it one last time just before switching the domain.
 
 ## Improvements over the original
 
-- **Catalogue search and filters:** filter by type, colour tone and herringbone availability. Filters are kept in the URL, so filtered views can be shared.
+- **Site search and filters:** search products, services, projects, guides and FAQs from the header (or press /). The range pages filter by type, colour tone and herringbone availability.
 - **Sample list:** save up to 6 samples from any product and request them all at once. The list carries into the enquiry form.
-- **Coverage calculator:** works out area across multiple rooms, adds a waste allowance, and estimates boxes.
+- **Floor area calculator:** add rooms to work out the floor area plus 10% for cuts and waste, with a mini floor plan of the rooms in the chosen floor.
 - **Comparison table:** solid, engineered, parquetry and hybrid side by side.
 - **Live showroom status:** shows whether the showroom is open now, using Melbourne time.
 - **Better enquiry form:** multi-select request types, validation, a hidden spam trap (replacing the visible "How old are you?" field), and pre-filling from product pages.

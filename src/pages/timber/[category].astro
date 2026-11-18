@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Catalogue from '../../components/Catalogue.astro';
+import ShowroomNote from '../../components/ShowroomNote.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { categories, categoryOrder, paths, projects, type CategoryKey } from '../../data/site';
@@ -34,13 +35,7 @@ const schema = {
         <h2 class="cat-h2">{c.name}</h2>
         {c.intro.map((p, i) => <p class={i === 0 ? 'lead' : ''}>{p}</p>)}
       </div>
-      <div class="card card--pad facts">
-        <h2 class="facts__h">Best for</h2>
-        <ul class="checklist">{c.bestFor.map((b) => <li>{b}</li>)}</ul>
-        <h2 class="facts__h">Good to know</h2>
-        <ul class="facts__list">{c.considerations.map((b) => <li>{b}</li>)}</ul>
-        <a class="btn btn--timber btn--sm" href="/about-us/frequently-asked-questions/contact?request=samples">Request samples</a>
-      </div>
+      <ShowroomNote />
     </div>
   </section>
   <section class="section--tight" style="padding-top:0">
@@ -66,8 +61,6 @@ const schema = {
 <style>
   .cat-h1 { max-width: none !important; font: 600 0.8rem var(--sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--timber); margin-bottom: 14px; }
   .cat-h2 { font-size: clamp(2.3rem, 5.2vw, 4.4rem); }
-  .facts__h { font: 600 0.75rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--timber); margin-bottom: 12px; }
-  .facts__list { padding-left: 18px; margin: 0 0 20px; color: var(--ink-2); display: grid; gap: 6px; }
   .others { display: flex; flex-wrap: wrap; gap: 10px; }
   .h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
 </style>

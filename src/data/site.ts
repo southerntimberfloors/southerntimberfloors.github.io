@@ -135,7 +135,7 @@ export const promos = [
   },
   {
     title: '100% Melbourne Owned & Operated',
-    body: 'Located in south-east Melbourne, Southern Timber Floors have been building dreams across Australia for over 15 years.',
+    body: 'Located in south-east Melbourne, Southern Timber Floors have been building dreams across Australia for over 20 years.',
     link: { label: 'About us', href: '/about-us' },
   },
   {
@@ -310,7 +310,8 @@ export const services: Service[] = [
 export type Project = {
   slug: string;
   name: string;
-  location: string;
+  /** Suburb; left out where it would just repeat the project name. */
+  location?: string;
   summary: string;
   story: string[];
   productSlugs: string[];
@@ -319,38 +320,40 @@ export type Project = {
   details: [string, string][];
 };
 
+/** The line under a project's name: its suburb, or the builder where no suburb is given. */
+export const projectSubtitle = (p: Project) => p.location ?? p.details.find(([k]) => k === 'Builder')?.[1] ?? '';
+
 export const projects: Project[] = [
   {
     slug: 'mt-martha',
     name: 'Mt Martha',
     location: 'Mt Martha',
-    summary: 'A modern Hamptons-style retreat featuring our engineered oak flooring in Red Hill.',
+    summary: 'A modern Hamptons-style retreat featuring our Engineered Oak flooring in Red Hill.',
     story: [
       "A beautiful expression of modern Hamptons style, this Mount Martha retreat brings together relaxed coastal living and timeless natural materials. Featuring our engineered oak flooring in Red Hill, the warm, soft tones of the timber create a beautiful foundation for the home's light palette and refined finishes. Natural grain variation and understated colour bring depth and texture to the interiors, balancing classic Hamptons influences with a relaxed, contemporary feel.",
       'The result is a welcoming coastal retreat where natural timber flooring adds warmth, character and an enduring sense of understated elegance.',
     ],
     productSlugs: ['red-hill-engineered-timber'],
-    details: [['Product', 'Red Hill engineered European Oak']],
+    details: [['Product', 'Red Hill Engineered European Oak']],
   },
   {
     slug: 'south-yarra-apparentment',
     name: 'Latitude 37 - Mornington Peninsula',
     location: 'Mornington Peninsula',
-    summary: 'White Haven engineered oak flooring, a natural choice for relaxed coastal living.',
+    summary: 'White Haven Engineered Oak flooring, a natural choice for relaxed coastal living.',
     story: [
       'This beautiful home near the bay features our White Haven engineered oak flooring, a natural choice for relaxed coastal living. The subtle whitewashed finish softens the contemporary tones of European Oak, creating a light, understated palette that feels both fresh and timeless.',
       'A thoughtful selection by the decorators at Latitude 37, this pairing brings warmth, texture and effortless sophistication to a home designed for comfortable bayside living.',
     ],
     productSlugs: ['white-haven'],
     details: [
-      ['Product', 'White Haven engineered European Oak'],
+      ['Product', 'White Haven Engineered European Oak'],
       ['Decorators', 'Latitude 37'],
     ],
   },
   {
     slug: 'kialla-homes',
     name: 'Kialla Homes',
-    location: 'Kialla',
     summary: 'A country home by Kialla Builders featuring rustic American Oak timber flooring.',
     story: [
       "A beautiful country home brought to life by Kialla Builders, featuring rustic American Oak timber flooring. The natural character, unique grain patterns and warm tones of the oak create a relaxed, timeless feel, perfectly complementing the home's country style. A stunning result that brings warmth and natural beauty to every space.",

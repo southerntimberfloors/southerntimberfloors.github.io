@@ -1385,16 +1385,28 @@
   ],
   "yacht-court-house": [
    {
-    "src": "/images/projects/country-home-1.webp",
-    "thumb": "/images/projects/country-home-1-sm.webp"
+    "src": "/images/projects/farmhouse-1.webp",
+    "thumb": "/images/projects/farmhouse-1-sm.webp"
    },
    {
-    "src": "/images/projects/country-home-2.webp",
-    "thumb": "/images/projects/country-home-2-sm.webp"
+    "src": "/images/projects/farmhouse-2.webp",
+    "thumb": "/images/projects/farmhouse-2-sm.webp"
    },
    {
-    "src": "/images/projects/country-home-3.webp",
-    "thumb": "/images/projects/country-home-3-sm.webp"
+    "src": "/images/projects/farmhouse-3.webp",
+    "thumb": "/images/projects/farmhouse-3-sm.webp"
+   },
+   {
+    "src": "/images/projects/farmhouse-4.webp",
+    "thumb": "/images/projects/farmhouse-4-sm.webp"
+   },
+   {
+    "src": "/images/projects/farmhouse-5.webp",
+    "thumb": "/images/projects/farmhouse-5-sm.webp"
+   },
+   {
+    "src": "/images/projects/farmhouse-6.webp",
+    "thumb": "/images/projects/farmhouse-6-sm.webp"
    }
   ],
   "yarralumla-house": [

@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Catalogue from '../../components/Catalogue.astro';
 import CompareTable from '../../components/CompareTable.astro';
 import CtaBand from '../../components/CtaBand.astro';
-import { products } from '../../data/products';
+import ShowroomNote from '../../components/ShowroomNote.astro';
 import { rangeIntro } from '../../data/site';
 ---
 <Base
@@ -12,11 +12,14 @@ import { rangeIntro } from '../../data/site';
   crumbs={[{ label: 'Products' }]}
 >
   <section class="page-hero">
-    <div class="wrap">
-      <span class="eyebrow">What type are you looking for?</span>
-      <h1>Flooring solutions for every project</h1>
-      {rangeIntro.map((p, i) => <p class={i === 0 ? 'lead' : 'intro-p'}>{p}</p>)}
-      <p class="muted">Search and filter our full range. Save up to six samples as you browse, then request them in one go.</p>
+    <div class="wrap split split--wide-left" style="align-items:start">
+      <div>
+        <span class="eyebrow">What type are you looking for?</span>
+        <h1>Flooring solutions for every project</h1>
+        {rangeIntro.map((p, i) => <p class={i === 0 ? 'lead' : 'intro-p'}>{p}</p>)}
+        <p class="muted">Filter by type and colour. Save up to six samples as you browse, then request them in one go.</p>
+      </div>
+      <ShowroomNote />
     </div>
   </section>
   <section class="section--tight" style="padding-top:0">

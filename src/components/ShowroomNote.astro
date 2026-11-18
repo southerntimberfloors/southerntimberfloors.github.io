@@ -1,0 +1,21 @@
+---
+// "There's more in the showroom" note shown beside the product range.
+import { business, paths } from '../data/site';
+---
+<aside class="card card--pad snote">
+  <span class="snote__eyebrow">Visit our showroom</span>
+  <h2 class="snote__h">Many more options available in our showroom</h2>
+  <p>The floors shown here are a selection of our range. Visit our Mornington showroom to see many more species, colours and finishes, and talk them through with our team.</p>
+  <p class="snote__addr">{business.address.street}, {business.address.suburb} · <a href={business.phoneHref}>{business.phone}</a></p>
+  <div class="snote__actions">
+    <a class="btn btn--timber btn--sm" href={paths.showroom}>Visit the showroom</a>
+    <a class="btn btn--ghost btn--sm" href={`${paths.contact}?request=samples`}>Request samples</a>
+  </div>
+</aside>
+<style>
+  .snote__eyebrow { display: block; font: 600 0.75rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--timber); margin-bottom: 10px; }
+  .snote__h { font-size: 1.45rem; margin: 0 0 10px; }
+  .snote p { color: var(--ink-2); margin: 0 0 10px; }
+  .snote__addr { font-size: 0.9rem; }
+  .snote__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+</style>
