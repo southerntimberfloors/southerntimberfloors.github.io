@@ -83,7 +83,7 @@ const rail = categoryOrder.flatMap((k) => products.filter((p) => p.category === 
     </div>
 
     <div class="inspired">
-      <div class="wrap inspired__head">
+      <div class="edge inspired__head">
         <h2 class="display" data-reveal="down">Get inspired</h2>
         <a class="arrow-btn" href="/projects">
           <span class="arrow-btn__label">View Full Gallery</span>
@@ -127,7 +127,7 @@ const rail = categoryOrder.flatMap((k) => products.filter((p) => p.category === 
 
   <!-- Value props -->
   <section class="block">
-    <div class="wrap values">
+    <div class="edge values">
       {promos.map((p, i) => (
         <article class="value" data-reveal>
           <img src={`/images/icons/promo-${i + 1}.svg`} alt="" width="88" height="88" loading="lazy" />
@@ -157,7 +157,7 @@ const rail = categoryOrder.flatMap((k) => products.filter((p) => p.category === 
 
   <!-- Enquiry CTA -->
   <section class="cta-green">
-    <div class="wrap cta-green__in">
+    <div class="edge cta-green__in">
       <div class="cta-green__body" data-reveal>
         <p class="cta-green__h">Let us bring your architectural vision to life. <span>Get in touch with our dedicated team to request samples, spec sheets and presentations.</span></p>
         <a class="arrow-btn arrow-btn--dark" href="/about-us/frequently-asked-questions/contact">
@@ -233,10 +233,10 @@ const rail = categoryOrder.flatMap((k) => products.filter((p) => p.category === 
 
   /* ---------- Blocks ---------- */
   .block { padding: clamp(72px, 10vw, 140px) 0; }
-  /* Products section lines up with the hero text on the left, using the full width of the screen. */
-  .block--edge { --edge: calc(clamp(8px, 1.2vw, 16px) + clamp(20px, 3vw, 44px)); }
+  /* Homepage sections line up with the hero text on the left and use the full width of the screen. */
+  .block, .cta-green { --edge: calc(clamp(8px, 1.2vw, 16px) + clamp(20px, 3vw, 44px)); }
   .edge { padding-inline: var(--edge); }
-  .block--edge .rail__track { padding-inline: var(--edge); scroll-padding-inline: var(--edge); }
+  .block .rail__track { padding-inline: var(--edge); scroll-padding-inline: var(--edge); }
   .block__h { font-size: clamp(2rem, 3.6vw, 3.2rem); max-width: 20ch; }
   .pills { list-style: none; padding: 0; margin: clamp(24px, 3vw, 40px) 0 clamp(32px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 10px; }
   .pills .btn { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.78rem; }

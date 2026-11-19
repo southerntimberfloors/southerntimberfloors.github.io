@@ -21,7 +21,9 @@ Work through this top to bottom. Nothing here changes the live site until **Step
 
 ## Step 3: Publish to GitHub Pages (preview)
 
-The code is already on GitHub at `deanmasc/southern-timber-flooring` (public). For a **project** repo like this, GitHub Pages serves the preview at `https://deanmasc.github.io/southern-timber-flooring/`. In that sub-folder the site's styles, photos and links won't load, because they expect to live at the root of a domain. That only affects the preview: once the custom domain is set, the site is served at the root and everything works.
+**Done:** the code lives in the business's GitHub organisation at `southerntimberfloors/southerntimberfloors.github.io` (public), with the preview at <https://southerntimberfloors.github.io>. The notes below are kept for reference.
+
+The code was originally on GitHub at `deanmasc/southern-timber-flooring` (public). For a **project** repo like this, GitHub Pages serves the preview at `https://deanmasc.github.io/southern-timber-flooring/`. In that sub-folder the site's styles, photos and links won't load, because they expect to live at the root of a domain. That only affects the preview: once the custom domain is set, the site is served at the root and everything works.
 
 Pick one way to get a working preview:
 
@@ -43,7 +45,7 @@ Then:
 
 ## Step 4: Verify the domain with GitHub (prevents domain takeover)
 
-- [ ] GitHub → your organisation's (or personal account's) **Settings → Pages → Add a verified domain** → `southerntimberfloors.com`.
+- [ ] GitHub → organisation **southerntimberfloors** → **Settings → Pages → Add a domain** (<https://github.com/organizations/southerntimberfloors/settings/pages>) → `southerntimberfloors.com`.
 - [ ] Add the TXT record GitHub shows you in the DNS account (Step 1), then click **Verify**.
 
 ## Step 5: Switch DNS (go live)
@@ -58,7 +60,7 @@ Lower the TTL of the records below to 300 seconds a day before, if the DNS panel
 | A | `@` | n/a | `185.199.109.153` |
 | A | `@` | n/a | `185.199.110.153` |
 | A | `@` | n/a | `185.199.111.153` |
-| A → **CNAME** | `www` | `149.28.178.132` (A record, delete it) | `<owner>.github.io` (e.g. `southern-timber-floors.github.io` or `deanmasc.github.io`) |
+| A → **CNAME** | `www` | `149.28.178.132` (A record, delete it) | `southerntimberfloors.github.io` |
 
 Optional IPv6 (AAAA on `@`): `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`.
 
