@@ -75,7 +75,10 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path === href 
 
 <style>
 
-  .header { position: sticky; top: 0; z-index: 50; background: rgb(241 238 233 / 0.92); backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color .2s, box-shadow .2s; }
+  .header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid transparent; transition: border-color .2s, box-shadow .2s; }
+  /* The frosted background lives on a pseudo-element: backdrop-filter on the header itself would trap the
+     fixed-position mobile menu inside the header's 72px box (it becomes the menu's containing block). */
+  .header::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgb(241 238 233 / 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: background .35s ease; }
   .header.is-scrolled { border-color: var(--line); box-shadow: 0 6px 20px -16px rgb(0 0 0 / 0.4); }
   .header__in { display: flex; align-items: center; gap: 24px; height: var(--header-h); }
   .header__logo { display: inline-flex; color: var(--ink); text-decoration: none; flex: none; }
@@ -136,7 +139,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path === href 
     .nav__mobile-extra { display: grid; gap: 10px; margin-top: 24px; }
   }
   /* Homepage: transparent over the hero photo, turns solid once you scroll (like the previous site). */
-  .header--overlay { position: fixed; left: 0; right: 0; background: transparent; backdrop-filter: none; color: #fff; transition: background .35s ease, color .35s ease, border-color .2s, box-shadow .2s; animation: header-in .9s cubic-bezier(.2,.7,.2,1) both; }
+  .header--overlay { position: fixed; left: 0; right: 0; color: #fff; transition: background .35s ease, color .35s ease, border-color .2s, box-shadow .2s; animation: header-in .9s cubic-bezier(.2,.7,.2,1) backwards; }
   .header--overlay .header__logo, .header--overlay .header__search, .header--overlay .header__samples { color: inherit; }
   .header--overlay .burger span { background: currentColor; }
   .header--overlay .header__logo :global(.logo) { color: inherit; transition: color .35s ease; }
@@ -147,7 +150,11 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path === href 
     .header--overlay:not(.is-scrolled) .nav__link.is-active { box-shadow: inset 0 -2px 0 currentColor; }
   }
   .header--overlay:not(.is-scrolled) .header__search:hover, .header--overlay:not(.is-scrolled) .header__samples:hover { background: rgb(255 255 255 / 0.14); border-color: transparent; }
-  .header--overlay.is-scrolled, .header--overlay:has(.burger[aria-expanded='true']) { background: rgb(241 238 233 / 0.94); backdrop-filter: blur(12px); color: var(--ink); }
+  .header--overlay::before { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .header--overlay.is-scrolled, .header--overlay:has(.burger[aria-expanded='true']) { color: var(--ink); }
+  .header--overlay.is-scrolled::before { background: rgb(241 238 233 / 0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  /* Menu open: solid header so it reads as one panel with the menu below. */
+  .header:has(.burger[aria-expanded='true'])::before { background: var(--cream); backdrop-filter: none; -webkit-backdrop-filter: none; }
   @keyframes header-in { from { opacity: 0; transform: translateY(-24px); } }
   @media (prefers-reduced-motion: reduce) { .header--overlay { animation: none; } }
 </style>
